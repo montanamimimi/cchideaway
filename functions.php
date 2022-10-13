@@ -8,6 +8,17 @@ show_admin_bar(false);
 	
 add_theme_support( 'post-thumbnails' );
 
+// Register scripts 
+
+function cchideaway_files() {
+    wp_enqueue_script('cchideaway_scripts', get_theme_file_uri('/build/index.js'), NULL, false, true);    
+    wp_enqueue_style('cchideaway_styles', get_theme_file_uri('/build/index.css'));
+}
+
+
+add_action('wp_enqueue_scripts', 'cchideaway_files');
+
+
 // Register custom post types
 
 function cchideaway_post_types() {

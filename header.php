@@ -9,7 +9,9 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header style="background-color: #FFFF11; width: 100%; height: 100px">This is a header</header>  
+<header style="background-color: #EEEEEE; width: 100%; height: 100px">
+    <a href="<?php echo site_url(); ?>">Mainpage</a>  
+</header>  
 
 
 <?php  // wp_body_open(); ?>
