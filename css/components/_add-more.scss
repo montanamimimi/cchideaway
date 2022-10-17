@@ -1,0 +1,107 @@
+// --------------------------------------------------------------------------
+// Add More
+// --------------------------------------------------------------------------
+
+.add-more {
+    margin: 0 0 90px;
+    @include breakpoint(lg) {
+        margin: 0 0 60px;
+    }
+}
+
+.add-more__title {
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    margin: 0 0 42px;
+    mark {
+        background: none;
+        color: #FFB7C7;
+    }
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 40px 32%;
+    }
+}
+
+.add-more__grid {
+    .row {
+        margin: 0 -10px -20px;
+        & > [class^="col"] {
+            padding: 0 10px 20px;
+        }
+    }
+    @include breakpoint(lg) {
+        .row {
+            margin: 0 -13px -26px;
+            & > [class^="col"] {
+                padding: 0 13px 26px;
+            }
+            & > .col-lg-3 {
+                flex: 0 0 31%;
+                max-width: 31%;
+                width: 31%;
+            }
+            & > .col-lg-7 {
+                flex: 0 0 44%;
+                max-width: 44%;
+                width: 44%;
+            }
+            & > .col-lg-2 {
+                flex: 0 0 25%;
+                max-width: 25%;
+                width: 25%;
+            }
+        }
+    }
+}
+
+
+.add-more__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #DAD9D3;
+    padding: 20px 76px 20px 20px;
+    min-height: 300px;
+    position: relative;
+    @include breakpoint(lg) {
+        &--474 {
+            min-height: 474px;
+        }
+        &--328 {
+            min-height: 328px;
+        }
+        &--355 {
+            min-height: 355px;
+        }
+        &--300 {
+            min-height: 300px;
+        }
+        &--446 {
+            min-height: 446px;
+        }
+        &--419 {
+            min-height: 419px;
+        }
+    }
+}
+
+.add-more__item-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.add-more__item-title {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    @include breakpoint(lg) {
+        font-size: 16px;
+        max-width: 320px;
+    }
+}

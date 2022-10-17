@@ -1,0 +1,104 @@
+// --------------------------------------------------------------------------
+// Includes
+// --------------------------------------------------------------------------
+
+.includes {
+    margin: 0 0 115px;
+    
+}
+
+.includes__title {
+    display: block;
+    margin: 0 0 43px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid #444;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 60px;
+        padding: 0 0 50px;
+        margin: 0 0 100px;
+    }
+}
+
+.includes__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+        margin: 0 0 26px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 0 50%;
+        & > li {
+            margin: 0 0 82px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.includes__item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    transition: color 0.25s;
+    &:hover {
+        text-decoration: none;
+        color: #FFB7C7;
+        .includes__item-arrow {
+            transform: translate(10px,0);
+        }
+    }
+}
+
+.includes__item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 43px;
+    flex: 0 0 auto;
+    margin: 0 10px 0 0;
+    img, svg {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    @include breakpoint(lg) {
+        margin: 0 40px 0 0;
+    }
+}
+
+.includes__item-title {
+    display: block;
+    margin: 0 30px 0 0;
+    font: 400 18px/1.1 $fontSecond;
+    letter-spacing: 0.04em;
+    @include breakpoint(lg) {
+        margin: 0 26px 0 0;
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+    }
+}
+
+.includes__item-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    transition: transform 0.25s;
+    img, svg {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

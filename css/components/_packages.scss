@@ -1,0 +1,191 @@
+
+// --------------------------------------------------------------------------
+// Packages
+// --------------------------------------------------------------------------
+
+.packages {
+    margin: 0 0 70px;
+    .container-fluid {
+        position: relative;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 95px;
+    }
+}
+
+.packages__title {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 0 0 44px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.55em;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 80px;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        margin: 0 0 62px;
+        width: 100%;
+        position: relative;
+        left: 16px;
+      
+    }
+}
+
+.packages__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+        padding: 0 0 20px;
+        margin: 0 0 40px;
+        border-bottom: 1px solid #444;;
+    }
+    @include breakpoint(lg) {
+        & > li {
+            padding: 0 0 50px;
+            margin: 0 0 50px;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+.packages__item {
+    @include breakpoint(lg) {
+        position: relative;
+        min-height: 200px;
+        .row {
+            margin: 0 0 -10px;
+            & > [class^="col"] {
+                padding: 0 0 10px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.packages__item-title {
+    display: block;
+    margin: 0 0 12px;
+    font: 400 22px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 36px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin: 0 0 26px;
+    }
+
+}
+
+.packages__item-icons {
+    display: none;
+    @include breakpoint(lg) {
+        margin: 0 -10px -20px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        & > li {
+            padding: 0 10px 20px;
+        }
+    }
+}
+
+.packages__item-text {
+    display: block;
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        margin: 0;
+        padding: 16px 0;
+        max-width: 420px;
+    }
+
+}
+
+.packages__item-image {
+    display: block;
+    margin: 0 0 12px;
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+        aspect-ratio: 1/0.61;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 -70px;
+        img {
+            aspect-ratio: 1/0.673;
+        }
+    }
+}
+
+.packages__item-info {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    & > li {
+        margin: 0 0 10px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        margin: auto 0 0 0;
+        & > li {
+            margin: 0 0 16px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+.packages__item-button {
+    text-align: right;
+    @include breakpoint(lg) {
+        text-align: left;
+        margin: auto 0 0 0;
+    }
+    @include breakpointMax(lg) {
+        .ui-btn--primary {
+            background: none;
+            color: #444;
+            border: 1px solid #444;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+// --------------------------------------------------------------------------
+// System
+// --------------------------------------------------------------------------
+
+.system {
+    position: relative;
+    z-index: 100;
+    background: #444444;
+    color: #F0F1EC;
+    padding: 168px 0 84px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    &--v1 {
+        display: flex;
+        align-items: stretch;
+        & > .container-fluid {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &--v2 {
+        
+    }
+}
+
+.system__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+}
+
+.system__title {
+    display: block;
+    margin: 0 0 376px;
+    font: 400 28px/1.4 $fontSecond;
+    letter-spacing: 0.04em;
+    color: #444;
+    @include breakpoint(lg) {
+        margin: 0 0 376px 180px;
+        font-size: 40px;
+    }
+}
+
+.system__button {
+    text-align: right;
+    margin: auto 0 0 0;
+}
+
+// -------
+
+.system__number {
+    display: block;
+    margin: 0 0 68px;
+    font: 400 150px/1 $fontSecond;
+    letter-spacing: 0.02em;
+    background: none;
+    color: inherit;
+    text-align: center;
+    @include breakpoint(lg) {
+        margin: 0 0 68px 210px;
+    }
+}
+
+.system__desc {
+    border: 1px solid #F0F1EC;
+   
+    padding: 24px 47px 89px 47px;
+    
+    width: 100%;
+    max-width: 455px;
+    margin: 0 auto;
+
+    @include breakpoint(lg) {
+        float: right;
+        margin: 0 -140px 0 0;
+    }
+}
+
+.system__desc-title {
+    display: block;
+    margin: 0 0 69px;
+    font: 400 28px/1.4 $fontSecond;
+    @include breakpoint(lg) {
+
+    }
+}
+
+.system__desc-button {
+    
+    @include breakpoint(lg) {
+        padding: 0 0 0 24px;
+    }
+}

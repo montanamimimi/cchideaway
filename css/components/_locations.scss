@@ -1,0 +1,138 @@
+// --------------------------------------------------------------------------
+// Locations
+// --------------------------------------------------------------------------
+
+.locations {
+    margin: 0 0 90px;
+    @include breakpoint(lg) {
+        margin: 0 0 140px;
+    }
+}
+
+.locations__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+        margin: 0 0 50px;
+        &:nth-of-type(even) {
+            .locations__item-title {
+                left: auto;
+                right: -16px;
+            }
+        }
+        &:last-child {
+            margin: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        & > li {
+            margin: 0 0 26px;
+            &:last-child {
+                margin: 0;
+                .locations__item-text {
+                    border: 1px solid #444;
+                    padding: 26px 26px 90px;
+                    margin: 0 0 20px;
+                }
+            }
+            &:nth-of-type(even) {
+                .locations__item {
+                    .row {
+                        flex-direction: row-reverse;
+                    }
+                }
+                .locations__item-image {
+                    margin: 0 0 0 80px;
+                }
+                .locations__item-title {
+                    left: auto;
+                    right: -100px;
+                    padding: 10px 112px 10px 12px;
+                    min-width: auto;
+                }
+                .locations__item-text {
+                    margin-left: 0;
+                }
+                
+            }
+        }
+    }
+}
+
+.locations__item {
+    .row {
+        margin: 0;
+        & > [class^="col"] {
+            padding: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        .row {
+            align-items: flex-end;
+        }
+    }
+}
+
+.locations__item-image {
+    margin: 0 -16px 20px;
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1.335;
+        
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+        img {
+            aspect-ratio: 1/0.58;
+        }
+    }
+}
+
+.locations__item-title {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 16px;
+    left: -16px;
+
+
+    font: 400 22px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+
+    padding: 16px;
+
+    background: #DAD9D3;
+    color: #444444;
+
+    @include breakpoint(lg) {
+        font-size: 40px;
+        letter-spacing: 0.04em;
+        padding: 10px 26px 10px 100px;
+
+        position: absolute;
+        top: 40px;
+        left: -100px;
+        min-width: 495px;
+
+    }
+
+}
+
+.locations__item-text {
+    display: block;
+    margin: 0 0 0 64px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        margin: 0 0 110px 26px;
+    }
+}

@@ -1,0 +1,181 @@
+// --------------------------------------------------------------------------
+// Rooftop
+// --------------------------------------------------------------------------
+
+.rooftop {
+    margin: 0 0 74px;
+    @include breakpoint(lg) {
+        margin: 0 0 198px;
+    }
+}
+
+.rooftop__wysiwyg {
+    position: relative;
+    z-index: 100;
+
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    margin: 0 0 78px;
+
+    h2 {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 20px 20px;
+        font: 400 30px/1.1 $fontSecond;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        svg {
+            display: inline-block;
+            vertical-align: baseline;
+            position: relative;
+            top: 0.05em;
+            width: auto;
+            height: 0.55em;
+
+        }
+        
+    }
+
+    p {
+        margin: 0 0 0 64px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        padding: 0 0 80px;
+        margin: 0 0 140px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -150px;
+            left: -20px;
+            bottom: 0;
+            width: 100vw;
+            border: 1px solid #444;
+            border-radius: 0 0 0 200px;
+
+            border-top: none;
+        }
+
+        h2 {
+            font-size: 60px;
+            margin: 0 0 90px;
+        }
+
+        p {
+            max-width: 560px;
+            padding: 0 30px 0 0;
+            margin: 0 auto;
+            position: relative;
+            left: 50px;
+        }
+    
+    }
+}
+
+
+.rooftop__grid {
+
+}
+
+.rooftop__mark {
+    margin: 0 0 40px -16px;
+    
+    color: #444;
+    display: block;
+    padding: 20px 16px 24px;
+    font: 400 22px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 100;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: #DAD9D3;
+
+    }
+    @include breakpoint(lg) {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        padding: 20px 55px 20px 0;
+        margin: 0 -150px 0 0;
+        position: relative;
+        top: 20px;
+        &:before {
+            left: -100px;
+        }
+    }
+}
+
+.rooftop__image {
+    position: relative;
+    display: block;
+    margin: 0 0 20px;
+    img {
+        display: block;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center top;
+        aspect-ratio: 1/1;
+    }
+    @include breakpoint(lg) {
+        margin: 0 -30px 0 -54px;
+        img {
+            aspect-ratio: 1/0.85;
+        }
+    }
+}
+
+.rooftop__text {
+    display: block;
+    margin: 0 0 20px 64px;
+    &--01 {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &--02 {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            margin: 0 0 -200px;
+            position: relative;
+            top: -200px;
+            font-size: 20px;
+            max-width: 334px;
+        }
+        &--02 {
+            margin: 0 0 -150px;
+            padding: 0 0 0 30px;
+            position: relative;
+            top: -154px;
+            font-size: 16px;
+        }
+    }
+}

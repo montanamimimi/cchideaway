@@ -1,0 +1,136 @@
+// --------------------------------------------------------------------------
+// Buttons
+// --------------------------------------------------------------------------
+
+.ui-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    background: none;
+    border-radius: 30px;
+    padding: 6px 20px;
+
+
+    font: 400 22px/1.5 $fontBase;
+    letter-spacing: 0.1em;
+
+    text-align: center;
+    text-decoration: none;
+
+    min-height: 45px;
+
+    svg {
+        display: block;
+        flex: 0 0 auto;
+        margin: 0 0 0 20px;
+        transition: transform 0.25s;
+    }
+
+    transition: 0.25s;
+    &:hover {
+        text-decoration: none;
+        svg {
+            transform: translate(5px,0);
+        }
+    }
+    &:active {
+        transition: none;
+    }
+
+}
+
+.ui-btn--responsive {
+    @include breakpointMax(lg) {
+        min-height: 36px;
+        font-size: 16px;
+       
+    }
+}
+
+.ui-btn--primary {
+    background: #FFB7C7;
+    color: #444;
+    &:hover {
+        background: #FFB7C7;
+        color: #444;
+        box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.25);
+    }
+    &:active {
+        background: #FFB7C7;
+        color: #444;
+        box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.25);
+    }
+    &:disabled {
+        background: #FFEAEF;
+        color: #444;
+        box-shadow: none;
+        pointer-events: none;
+    }
+}
+
+.ui-btn--secondary {
+    padding-left: 0;
+    padding-right: 0;
+    color: #444;
+    &:hover {
+        color: #FFB7C7;
+    }
+}
+
+
+
+.ui-btn--link {
+    padding: 0;
+    min-height: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFB7C7;
+    &:hover {
+        color: #FFB7C7;
+    }
+}
+
+.ui-btn--outline {
+    border: 1px solid currentColor;
+    color: #444;
+    &:hover {
+        color: #FFB7C7;
+    }
+}
+
+.ui-btn--booking {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    background: #FFB7C7;
+    color: #444;
+    border-radius: 100px 100px 50px 50px;
+
+    min-height: 80px;
+
+    padding: 16px 26px;
+
+    &:hover {
+        background: #FFB7C7;
+        color: #444;
+        box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.25);
+    }
+    &:active {
+        background: #FFB7C7;
+        color: #444;
+        box-shadow: 0px 4px 4px rgba(68, 68, 68, 0.25);
+    }
+    &:disabled {
+        background: #FFEAEF;
+        color: #444;
+        box-shadow: none;
+        pointer-events: none;
+    }
+}

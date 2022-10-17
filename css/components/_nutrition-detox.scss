@@ -1,0 +1,176 @@
+
+// --------------------------------------------------------------------------
+// Nutrition & Detox
+// --------------------------------------------------------------------------
+
+.nd {
+    margin: 0 0 60px;
+    .container-fluid {
+        position: relative;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 100px;
+    }
+}
+
+.nd__grid {
+    
+}
+
+.nd__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 50px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.75em;
+    }
+    @include breakpoint(lg) {
+        font-size: 80px;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        margin: 0 0 40px;
+      
+    }
+}
+
+.nd__image {
+    position: relative;
+    display: block;
+    margin: 0;
+    img {
+        display: block;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center top;
+    }
+    &--01 {
+        margin: 0 0 20px 64px;
+        img {
+            aspect-ratio: 1/1.115;
+        }
+    }
+    &--02 {
+        margin: 0 0 20px -16px;
+        img {
+            aspect-ratio: 1/1.1;
+            border-radius: 0 50% 50% 0;
+        }
+    }
+    &--03 {
+        margin: 0 0 48px -16px;
+        &:after {
+            content: '';
+            display: block;
+            border: 1px solid #444444;
+            border-radius: inherit;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            bottom: -16px;
+        }
+        img {
+            aspect-ratio: 1/0.53;
+        }
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            margin: 0 26px 26px -26px;
+            img {
+                aspect-ratio: 1/1.115;
+            }
+        }
+        &--02 {
+            padding: 70px 0 0;
+            margin: 0 0 26px -20px;
+            img {
+                aspect-ratio: 1/1.28;
+            }
+        }
+        &--03 {
+            margin: -26px 50px 64px -26px;
+            &:after {
+                top: 26px;
+                left: 20px;
+                right: -30px;
+                bottom: -26px;
+            }
+            img {
+                aspect-ratio: 1/0.508;
+            }
+        }
+    }
+}
+
+.nd__text {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+        max-width: 348px;
+        padding: 254px 0 0;
+    }
+}
+
+.nd__desc {
+    background: #DAD9D3;
+    padding: 20px;
+    margin: 0 0 24px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    h1, h2, h3 {
+        display: block;
+        margin: 0 0 32px;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0 0 20px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        margin: 0 0 0 -20px;
+        font-size: 16px;
+        padding: 20px 20px 40px;
+        h1, h2, h3 {
+            font-size: 20px;
+            margin: 0 0 20px;
+        }
+    }
+
+}
+
+
+.nd__button {
+    text-align: right;
+    margin: 0;
+    @include breakpoint(lg) {
+        text-align: left;
+        margin: 0 0 0 -26px;
+    }
+}

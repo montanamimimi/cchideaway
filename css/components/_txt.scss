@@ -1,0 +1,53 @@
+// --------------------------------------------------------------------------
+// Txt
+// --------------------------------------------------------------------------
+
+.txt {
+    margin: 0 0 80px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    h2 {
+        display: block;
+        margin: 0 0 56px;
+        font: 400 30px/1.1 $fontSecond;
+        letter-spacing: 0.02em;
+    }
+    p {
+        margin: 0 0 20px;
+        max-width: 1052px;
+    }
+
+    em {
+        display: block;
+        margin: 0 0 30px;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .row {
+        margin: 0;
+        & > [class^="col"] {
+            padding: 0;
+        }
+    }
+    
+    @include breakpoint(lg) {
+        h2 {
+            margin: 0 0 60px;
+            font-size: 60px;
+        }
+
+        em {
+            margin: 0 0 40px;
+            font-size: 20px;
+        }
+    }
+}

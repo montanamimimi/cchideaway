@@ -11,7 +11,9 @@ add_theme_support( 'post-thumbnails' );
 // Register scripts 
 
 function cchideaway_files() {
+    wp_enqueue_script('plugins_scripts', get_theme_file_uri('/assets/plugins.js'), NULL, false, true);    
     wp_enqueue_script('cchideaway_scripts', get_theme_file_uri('/build/index.js'), NULL, false, true);    
+    wp_enqueue_style('cchideaway_fonts', get_theme_file_uri('/fonts/font.css'));
     wp_enqueue_style('cchideaway_styles', get_theme_file_uri('/build/index.css'));
 }
 

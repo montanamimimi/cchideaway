@@ -1,0 +1,92 @@
+// --------------------------------------------------------------------------
+// Yoga retreat
+// --------------------------------------------------------------------------
+
+.yr {
+    margin: 0 0 60px;
+    @include breakpoint(lg) {
+        margin: 0 0 150px;
+    }
+}
+
+.yr__title {
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    margin: 0 0 26px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #444;
+
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 215px 0 0 0;
+        padding: 0;
+        border: none;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: -60px;
+            width: 494px;
+            height: 1px;
+            background: #444444;
+            z-index: -1;
+            margin: 10px 0 0 0;
+        }
+    }
+}
+
+.yr__image {
+    position: relative;
+    display: block;
+    margin: 0 0 18px;
+    img {
+        display: block;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center top;
+        aspect-ratio: 1/1.07;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 26px 30px;
+        img {
+            aspect-ratio: 1/0.58625;
+            border-radius: 200px 0 0 0;
+        }
+    }
+}
+
+.yr__text {
+    display: block;
+    margin: 0 0 20px;
+    &--01 {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        
+    }
+    &--02 {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        padding: 0 10px 0 0;
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            margin: 0 0 0 30px;
+            font-size: 20px;
+        }
+        &--02 {
+            font-size: 16px;
+            padding: 84px 0 0 0;
+            margin: 0 0 0 -16px;
+           
+        }
+    }
+}

@@ -1,0 +1,213 @@
+
+// --------------------------------------------------------------------------
+// Events
+// --------------------------------------------------------------------------
+
+.events {
+    margin: 0 0 80px;
+    @include breakpoint(lg) {
+        padding: 48px 0 0;
+        margin: 0 0 170px;
+    }
+}
+
+.events__title {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    margin: 0 0 22px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.75em;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 8px;
+        bottom: -22px;
+        margin: -0.5em 0 0 0;
+        width: 1px;
+        background: currentColor;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 105px;
+        &:before {
+            left: 16px;
+            bottom: -105px;
+        }
+      
+    }
+}
+
+.events__list {
+    margin: 0 -16px 0 0;
+    padding: 20px 16px 40px 64px;
+    list-style: none;
+    border: 1px solid #444444;
+    border-right: none;
+    & > li {
+        margin: 0 0 40px;
+        &:last-child {
+            margin: 0;
+        }
+        &:nth-of-type(4n - 2) .events__item-figure:after {
+            top: 87px;
+            right: -34px;
+            bottom: 20px;
+            width: 58px;
+        }
+        &:nth-of-type(4n - 1) .events__item-figure:after {
+            top: 79px;
+            right: -34px;
+            bottom: 54px;
+            width: 61px;
+        }   
+        &:nth-of-type(4n) .events__item-figure:after {
+            top: 212px;
+            right: -34px;
+            bottom: 46px;
+            width: 128px;
+        }
+    }
+
+    @include breakpoint(lg) {
+       
+        margin: 0 -20px 0 0;
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        & > li {
+            margin: 0;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+}
+
+
+.events__item {
+    @include breakpoint(lg) {
+        border: 1px solid #444;
+        margin: 0 0 0 -1px;
+        background: #F0F1EC;
+        min-height: 100%;
+        padding: 40px 12px 20px;
+    }
+}
+
+.events__item-caption {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        padding: 0 8px;
+    }
+}
+
+.events__item-figure {
+    display: block;
+    margin: 0 0 10px;
+    background: #444444;
+    color: #F0F1EC;
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        float: left;
+        padding: 115% 0 0 0;
+    }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+       
+        border: 1px solid currentColor;
+        z-index: 100;
+    }
+
+    @include breakpoint(lg) {
+        position: relative;
+        top: -60px;
+        margin: 0 0 -40px;
+        &:before {
+            padding: 124% 0 0 0;
+        }
+    }
+}
+
+.events__item-image {
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.events__item-desc {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.events__item-title {
+    display: block;
+    margin: 0 0 24px;
+    font: 400 28px/1.4 $fontSecond;
+    letter-spacing: 0;
+}
+
+.events__item-time {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.events__item-text {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    @include breakpoint(lg) {
+        font-size: 16px;
+        margin: 0 0 90px;
+    }
+}
+
+.events__item-button {
+    text-align: right;
+    @include breakpoint(lg) {
+        text-align: center;
+    }
+}

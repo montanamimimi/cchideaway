@@ -1,0 +1,50 @@
+// --------------------------------------------------------------------------
+// Video
+// --------------------------------------------------------------------------
+
+.ui-video {
+    display: block;
+    margin: 50px 0;
+    color: #343434;
+    text-decoration: none;
+    &:hover {
+        color: #343434;
+        text-decoration: none;
+    }
+    @include breakpoint(xl) {
+        margin: 70px 0 100px;
+    }
+}
+
+.ui-video__figure {
+    position: relative;
+    margin: 0 0 20px;
+    svg.icon-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.ui-video__image {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.ui-video__caption {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 0;
+}

@@ -1,0 +1,112 @@
+// --------------------------------------------------------------------------
+// Nearby
+// --------------------------------------------------------------------------
+
+.nearby {
+    margin: 0 0 80px;
+    .container-fluid {
+        position: relative;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 140px;
+    }
+}
+
+.nearby__decor {
+    display: none;
+    @include breakpoint(lg) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 80px;
+        bottom: 0;
+        max-width: 500px;
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.nearby__wrapper {
+    position: relative;
+    padding: 20px 0 24px 20px;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        border: 1px solid #444;
+        z-index: -1;
+        pointer-events: none;
+    }
+    @include breakpoint(lg) {
+        padding: 30px 0 40px;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.nearby__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 40px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.75em;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 60px;
+      
+    }
+}
+
+.nearby__text {
+    display: block;
+    padding: 0 0 0 44px;
+    margin: 0 0 30px;
+    &:last-child {
+        margin: 0;
+    }
+    &--01 {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &--02 {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 534px;
+        margin: 0 auto 50px;
+        &:last-child {
+            margin: 0 auto;
+        }   
+        &--01 {
+            font-size: 20px;
+            
+        }
+        &--02 {
+            font-size: 16px;
+        }
+    }
+}

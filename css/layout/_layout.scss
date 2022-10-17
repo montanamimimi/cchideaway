@@ -1,0 +1,66 @@
+// --------------------------------------------------------------------------
+// Layout
+// --------------------------------------------------------------------------
+
+* {
+    outline: none;
+	box-sizing: border-box;
+	&:before, &:after {
+		box-sizing: border-box;
+	}
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	font-size: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+	@media (min-width: 992px) and (max-width: 1440px) {
+		font-size: calc(100vw / 14.4 / 100 * 10);
+	}
+
+}
+
+
+
+body {
+	font: 400 16px/1.5 $fontBase;
+	letter-spacing: 0.06em;
+	background: #F0F1EC;
+	color: #444444;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+}
+
+
+// html:not(.is-loaded) * {
+// 	transition: none !important;
+// 	&:before, &:after {
+// 		transition: none !important;
+// 	}
+// }
+
+.app {
+	position: relative;
+	min-height: 100%;
+	min-width: 320px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-fluid {
+	max-width: calc(1240px + 16px * 2);
+	padding: 0 16px;
+	max-width: 576px;
+	@include breakpoint(lg) {
+		max-width: 1440px;
+		padding: 0 100px;
+	}
+}
+
+

@@ -1,0 +1,53 @@
+// --------------------------------------------------------------------------
+// Request
+// --------------------------------------------------------------------------
+
+.request {
+    background: #F0F1EC url(../images/bg-request.png) 50% 0 no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 153px 0 34px;
+    text-align: center;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        height: 169px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(227,227,224,1) 100%);
+        z-index: -1;
+    }
+    @include breakpoint(lg) {
+        padding: 182px 0 240px;
+    }
+}
+
+.request__title {
+    display: block;
+    margin: 0 0 42px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        margin: 0 0 40px;
+        font-size: 60px;
+    }
+}
+
+.request__text {
+    display: block;
+    margin: 0 0 30px;
+    font: 400 16px/1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        margin: 0 0 16px;
+        font-size: 36px;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+}
+
+.request__booking {
+
+}

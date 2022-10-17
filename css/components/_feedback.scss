@@ -1,0 +1,92 @@
+// --------------------------------------------------------------------------
+// Feedback
+// --------------------------------------------------------------------------
+
+.feedback {
+    margin: 0 0 55px;
+}
+
+.feedback__title {
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    margin: 0 0 50px;
+    mark {
+        background: none;
+        color: #FFB7C7;
+    }
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 52px;
+    }
+}
+
+.feedback__form {
+    padding: 0 0 0 64px;
+    .ui-group {
+        margin: 0 0 10px;
+        .row {
+            align-items: center;
+        }
+    }
+    .ui-label {
+        margin: 0;
+    }
+    .ui-date {
+        margin: 0;
+    }
+    .ui-number {
+        margin: 0;
+        max-width: 66px;
+    }
+    .ui-input {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .ui-button {
+        padding: 30px 0 0;
+        text-align: center;
+    }
+    @include breakpoint(lg) {
+        padding: 0 0 0 32.5%;
+
+        .ui-label {
+            font-size: 18px;
+            line-height: 1.4;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin: 0 0 60px;
+            display: block;
+        }
+        .ui-date {
+            font-size: 28px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+        .ui-number {
+            max-width: 140px;
+        }
+        .ui-number__input,
+        .ui-number__decrease,
+        .ui-number__decrease {
+            font-size: 28px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+        .ui-input {
+            font-size: 28px;
+            line-height: 1.4;
+            font-weight: 400;
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+        .ui-button {
+            text-align: right;
+            padding: 60px 0 0;
+        }
+    }
+}

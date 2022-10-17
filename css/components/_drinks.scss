@@ -1,0 +1,138 @@
+// --------------------------------------------------------------------------
+// Drinks
+// --------------------------------------------------------------------------
+
+.drinks {
+    margin: 0 0 80px;
+    @include breakpoint(lg) {
+        margin: 0 0 140px;
+    }
+}
+
+.drinks__title {
+    display: block;
+    margin: 0 0 45px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 40px;
+    }
+}
+
+.drinks__image {
+    display: block;
+    margin: 0;
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+    &--01 {
+        margin: 0 0 20px;
+        img {
+            aspect-ratio: 1/0.82;
+        }
+    }
+    &--02 {
+       margin: 0 0 20px 64px;
+        img {
+            aspect-ratio: 1/1;
+        }
+    }
+    &--03 {
+        display: none;
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            margin: 0 0 26px;
+            img {
+                aspect-ratio: 1/0.585;
+            }
+        }
+        &--02 {
+            position: relative;
+            margin: 0 0 0 110px;
+            img {
+                aspect-ratio: 1/1.25;
+            }
+        }
+        &--03 {
+            display: block;
+            position: relative;
+            z-index: 10;
+            top: -105px;
+            margin: 0 26px 0 26px;
+            img {
+                aspect-ratio: 1/1.117;
+            }
+        }
+    }
+}
+
+.drinks__text {
+    display: block;
+    margin: 0;
+    &--01 {
+
+        margin: 0 -16px 20px 0;
+        padding: 20px 60px 20px 80px;
+        background: #DAD9D3;
+
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &--02 {
+
+        margin: 0 0 30px -16px;
+        padding: 20px 36px 20px 80px;
+        background: #DAD9D3;
+
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            font-size: 18px;
+            line-height: 1.4;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin: 180px -100px 0 0;
+            padding: 25px 140px 25px 20px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -20px;
+                left: -26px;
+                right: 80px;
+                bottom: -20px;
+                border: 1px solid #444;
+                pointer-events: none;
+            }
+        }
+        &--02 {
+            margin: 0 0 0 -26px;
+            padding: 20px;
+            min-height: 360px;
+            max-width: 336px;
+        }
+    }
+}
+
+.drinks__button {
+    text-align: center;
+    @include breakpoint(lg) {
+        padding: 90px 0 0 0;
+    }
+}

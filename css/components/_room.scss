@@ -1,0 +1,241 @@
+// --------------------------------------------------------------------------
+// Room
+// --------------------------------------------------------------------------
+
+.room {
+    margin: 0 0 95px;
+    @include breakpoint(lg) {
+        margin: 0 0 180px;
+    }
+}
+
+.room__head {
+    margin: 0 0 26px;
+    .row {
+        margin: 0 -8px -16px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        & > [class^="col"] {
+            padding: 0 8px 16px;
+        }
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 30px;
+        .row {
+            margin: 0 -12px -24px;
+            & > [class^="col"] {
+                padding: 0 12px 24px;
+            }
+        }
+    }
+}
+
+.room__body {
+    .row {
+        margin: 0;
+        & > [class^="col"] {
+            padding: 0;
+        }
+    }
+}
+
+// ------
+
+
+.room__title {
+    display: block;
+    margin: 0;
+    font: 400 22px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+
+    @include breakpoint(lg) {
+        font-size: 60px;
+    }
+
+}
+
+.room__people {
+    display: flex;
+    align-items: center;
+    svg {
+        display: block;
+        height: 22px;
+    }
+    @include breakpoint(lg) {
+        svg {
+            width: 45px;
+            height: 31px;
+        }
+    }
+}
+
+.room__size {
+    display: flex;
+    align-items: center;
+    font: 400 16px/1.4 $fontSecond;
+    letter-spacing: 0.02em;
+    svg {
+        display: block;
+        margin: 0 5px 0 0;
+    }
+    @include breakpoint(lg) {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0;
+        svg {
+            width: 22px;
+            height: 22px;
+            margin: 0 8px 0 0;
+        }
+    }
+}
+
+.room__swiper {
+    margin: 0 0 30px;
+    
+    @include breakpoint(lg) {
+        margin: 0 0 40px;
+       
+    }
+}
+
+.room__conditions {
+    margin: 0 0 50px;
+    @include breakpoint(lg) {
+        margin: 0;
+        
+    }
+}
+
+.room__conditions-title {
+    display: block;
+    margin: 0 0 22px;
+    font: 400 16px/1.4 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0;
+        margin: 0 0 25px;
+
+    }
+}
+
+.room__conditions-list {
+    margin: 0 -15px -30px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    & > li {
+        padding: 0 15px 30px;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    @include breakpoint(lg) {
+        max-width: 410px;
+    }
+}
+
+.room__conditions-item {
+
+}
+
+.room__conditions-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 34px;
+    img, svg {
+        display: block;
+        max-height: 100%;
+    }
+}
+
+.room__conditions-item-title {
+    display: block;
+    margin: 0;
+    font: 400 10px/1.2 $fontSecond;
+    text-align: center;
+}
+
+
+// --------
+
+.room__blockquote {
+    margin: 0;
+    padding: 20px 8px 32px 10px;
+    border: 1px solid #444;
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(lg) {
+        margin: 65px 0 0 -20px;
+        padding: 20px 90px 20px 20px;
+    }
+}
+
+.room__blockquote-author {
+    width: 60px;
+    flex: 0 0 auto;
+    margin: 0 10px 0 0;
+    display: block;
+    @include breakpoint(lg) {
+        margin: 0 20px 0 0;
+    }
+}
+
+.room__blockquote-author-image {
+    display: block;
+    margin: 0 auto 6px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #444444;
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.room__blockquote-author-title {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.room__blockquote-text {
+    display: block;
+    margin: 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    flex: 1;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.125 9.5H15V7C15 5.63281 16.0938 4.5 17.5 4.5H17.8125C18.3203 4.5 18.75 4.10938 18.75 3.5625V1.6875C18.75 1.17969 18.3203 0.75 17.8125 0.75H17.5C14.0234 0.75 11.25 3.5625 11.25 7V16.375C11.25 17.4297 12.0703 18.25 13.125 18.25H18.125C19.1406 18.25 20 17.4297 20 16.375V11.375C20 10.3594 19.1406 9.5 18.125 9.5ZM6.875 9.5H3.75V7C3.75 5.63281 4.84375 4.5 6.25 4.5H6.5625C7.07031 4.5 7.5 4.10938 7.5 3.5625V1.6875C7.5 1.17969 7.07031 0.75 6.5625 0.75H6.25C2.77344 0.75 0 3.5625 0 7V16.375C0 17.4297 0.820312 18.25 1.875 18.25H6.875C7.89062 18.25 8.75 17.4297 8.75 16.375V11.375C8.75 10.3594 7.89062 9.5 6.875 9.5Z' fill='%23879A77'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+    }
+    @include breakpoint(lg) {
+        padding: 5px 0 5px 31px;
+    }
+}

@@ -1,0 +1,198 @@
+// --------------------------------------------------------------------------
+// ECO adventures
+// --------------------------------------------------------------------------
+
+.ea {
+    margin: 0 0 70px;
+    .container-fluid {
+        position: relative;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 124px;
+    }
+}
+
+
+.ea__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 40px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.75em;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 80px;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        margin: 0 0 70px;
+        text-align: right;
+        width: 100%;
+      
+    }
+
+}
+
+.ea__image {
+    position: relative;
+    display: block;
+    margin: 0;
+    img {
+        display: block;
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center top;
+    }
+    &--01 {
+        display: none;
+    }
+    &--02 {
+       padding: 16px 0 0 16px;
+       margin: 0 0 50px;
+       &:after {
+            content: '';
+            display: block;
+            border: 1px solid #444444;
+            border-radius: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: -16px;
+            bottom: 16px;
+            
+        }
+        img {
+            aspect-ratio: 1/0.975;
+            border-radius: 0px 0px 120px 0px;
+        }
+    }
+    &--03 {
+        margin: 0 0 20px;
+        img {
+            aspect-ratio: 1/0.58;
+        }
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            display: block;
+            margin: 0 26px 20px 0;
+            img {
+                border-radius: 200px 200px 0px 0px;
+            }
+        }
+        &--02 {
+            margin: 130px 0 0 -20px;
+            padding: 0;
+            &:after {
+                top: -26px;
+                left: -26px;
+                right: -20px;
+                bottom: 29%;
+            }
+            img {
+                aspect-ratio: 1/1.025;
+            }
+        }
+        &--03 {
+            margin: 0 20px 0 -26px;
+            img {
+                aspect-ratio: 1/0.516;
+            }
+        }
+    }
+}
+
+.ea__desc {
+    margin: 0 0 30px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    h1, h2, h3 {
+        display: block;
+        padding: 0 16px 0 0;
+        margin: 0 0 32px;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0 0 20px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+        padding: 240px 0 0;
+        margin: 0 26px 20px -26px;
+
+        h1, h2, h3 {
+            font-size: 20px;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.ea__blockquote {
+    background: #879A77;
+    color: #F0F1EC;
+    padding: 20px;
+    margin: 0 0 40px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    h1, h2, h3 {
+        display: block;
+        margin: 0 0 32px;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin: 0 0 20px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+        padding: 20px 20px 30px;
+        margin: 0 26px 0 0;
+    }
+
+
+}
+
+
+.ea__button {
+    text-align: right;
+    margin: 0;
+    @include breakpoint(lg) {
+        position: relative;
+        top: -30px;
+        margin: 0 0 -30px;
+    }
+}

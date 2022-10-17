@@ -1,0 +1,46 @@
+// --------------------------------------------------------------------------
+// Pictures
+// --------------------------------------------------------------------------
+
+
+
+
+//- --------------------------------------------------------------------------
+//- Ui - Image
+//- --------------------------------------------------------------------------
+
+
+.ui-picture {
+	overflow: hidden;
+	margin: 0 0 40px;
+	display: block;
+    background: #444;
+	img {
+		display: block;
+		width: 100%;
+        min-height: 200px;
+        object-fit: cover;
+	}
+
+	&.pull-left {
+		float: left;
+		max-width: 340px;
+		margin: 0 40px 40px 0;
+		@include breakpointMax(lg) {
+			margin: 0 0 40px;
+			float: none;
+			max-width: none;
+		}
+	}
+	&.pull-right {
+		float: right;
+		max-width: 340px;
+		margin: 0 0 40px 40px;
+		@include breakpointMax(lg) {
+			margin: 0 0 40px;
+			float: none;
+			max-width: none;
+		}
+	}
+
+}

@@ -1,0 +1,46 @@
+// --------------------------------------------------------------------------
+// Mouse follow
+// --------------------------------------------------------------------------
+
+.mouse-follow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    pointer-events: none;
+    display: block;
+    
+    will-change: transform;
+
+    
+    
+    @media (hover: none) {
+        display: none;
+    }
+
+    display: none;
+}
+
+.mouse-follow__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    transform: translate(-50%,-50%);
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+    
+    mix-blend-mode: difference;
+}
+
+.is-mouseenter .mouse-follow__circle {
+    background: transparent;
+
+    width: 280px;
+    height: 280px;
+
+    opacity: 0.75;
+}

@@ -1,0 +1,106 @@
+// --------------------------------------------------------------------------
+// Wysiwyg
+// --------------------------------------------------------------------------
+
+.ui-wysiwyg {
+
+    font: 400 16px/1.5 $fontBase;
+    letter-spacing: 0.06em;
+
+
+    h1:not([class]) {
+        display: block;
+        margin: 0 0 20px;
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+    h2:not([class]) {
+        display: block;
+        margin: 0 0 20px;
+        font-size: 24px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+    h3:not([class]) {
+        display: block;
+        margin: 0 0 20px;
+        font-size: 20px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+    h4:not([class]) {
+        display: block;
+        margin: 0 0 20px;
+        font-size: 18px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+    h5:not([class]) {
+        display: block;
+        margin: 0 0 20px;
+        font-size: 16px;
+        line-height: 1.25;
+        font-weight: 500;
+    }
+
+    p:not([class]) {
+        margin: 0 0 20px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    ul:not([class]) {
+        @extend .ui-ul;
+    }
+
+    ol:not([class]) {
+        @extend .ui-ol;
+    }
+
+    dl:not([class]) {
+        @extend .ui-dl;
+    }
+
+    table:not([class]) {
+        @extend .ui-table;
+    }
+
+
+    a:not([class]) {
+        // @extend .ui-link;
+        // @extend .ui-link--blue;
+        // @extend .ui-link--underline;
+    }
+
+
+}
+
+
+
+.ui-title-80 {
+
+}
+
+.ui-title-60 {
+
+}
+
+.ui-title-40 {
+    
+}
+
+.ui-title-36 {
+    
+}
+
+.ui-title-28 {
+    
+}
+
+// ----------

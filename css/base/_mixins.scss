@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Utilites
+   ========================================================================== */
+
+@mixin breakpoint($point) {
+    @if $point == xs {
+        @media (min-width: $xs) { @content ; }
+    }
+    @if $point == sm {
+        @media (min-width: $sm) { @content ; }
+    }
+    @else if $point == md {
+        @media (min-width: $md) { @content ; }
+    }
+    @else if $point == lg {
+        @media (min-width: $lg) { @content ; }
+    }
+    @else if $point == xl {
+        @media (min-width: $xl) { @content ; }
+    }
+    @else if $point == wide {
+        @media (min-width: $wide) { @content ; }
+    }
+    @else if $point == hd {
+        @media (min-width: $hd) { @content ; }
+    }
+}
+
+@mixin breakpointMax($point) {
+    @if $point == xs {
+        @media (max-width: $xs - 1px) { @content ; }
+    }
+    @if $point == sm {
+        @media (max-width: $sm - 1px) { @content ; }
+    }
+    @else if $point == md {
+        @media (max-width: $md - 1px) { @content ; }
+    }
+    @else if $point == lg {
+        @media (max-width: $lg - 1px) { @content ; }
+    }
+    @else if $point == xl {
+        @media (max-width: $xl - 1px) { @content ; }
+    }
+    @else if $point == wide {
+        @media (max-width: $wide - 1px) { @content ; }
+    }
+    @else if $point == hd {
+        @media (max-width: $hd - 1px) { @content ; }
+    }
+}
+
+
+@mixin grab-cursor {
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+@mixin grabbing-cursor {
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: -o-grabbing;
+    cursor: -ms-grabbing;
+    cursor: grabbing;
+}
+
+
+@mixin no-image {
+    box-shadow: inset 0 0 0 1px #EEF0F3;
+    background: #F7F7FB url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M45.8333 71.6667H25.8333C7.73333 71.6667 0 63.9333 0 45.8333V25.8333C0 7.73333 7.73333 0 25.8333 0H45.8333C63.9333 0 71.6667 7.73333 71.6667 25.8333V45.8333C71.6667 63.9333 63.9333 71.6667 45.8333 71.6667ZM25.8333 5C10.4667 5 5 10.4667 5 25.8333V45.8333C5 61.2 10.4667 66.6667 25.8333 66.6667H45.8333C61.2 66.6667 66.6667 61.2 66.6667 45.8333V25.8333C66.6667 10.4667 61.2 5 45.8333 5H25.8333Z' fill='%23E6E7EA'/%3E%3Cpath d='M25.2334 28.3333C22.4 28.3333 19.5667 27.2667 17.4 25.1C16.4334 24.1333 16.4334 22.5333 17.4 21.5667C18.3667 20.6 19.9667 20.6 20.9334 21.5667C23.3 23.9333 27.1667 23.9333 29.5334 21.5667C30.5 20.6 32.1 20.6 33.0667 21.5667C34.0334 22.5333 34.0334 24.1333 33.0667 25.1C30.9001 27.2333 28.0667 28.3333 25.2334 28.3333Z' fill='%23E6E7EA'/%3E%3Cpath d='M46.4333 28.3333C43.6 28.3333 40.7667 27.2667 38.6 25.1C37.6333 24.1333 37.6333 22.5333 38.6 21.5667C39.5667 20.6 41.1667 20.6 42.1333 21.5667C44.5 23.9333 48.3667 23.9333 50.7333 21.5667C51.7 20.6 53.3 20.6 54.2667 21.5667C55.2333 22.5333 55.2333 24.1333 54.2667 25.1C52.1 27.2333 49.2667 28.3333 46.4333 28.3333Z' fill='%23E6E7EA'/%3E%3Cpath d='M35.8333 59.6667C26.1666 59.6667 18.3333 51.8 18.3333 42.1667C18.3333 39.1333 20.7999 36.6667 23.8333 36.6667H47.8333C50.8666 36.6667 53.3333 39.1333 53.3333 42.1667C53.3333 51.8 45.4999 59.6667 35.8333 59.6667ZM23.8333 41.6667C23.5666 41.6667 23.3333 41.9 23.3333 42.1667C23.3333 49.0667 28.9333 54.6667 35.8333 54.6667C42.7333 54.6667 48.3333 49.0667 48.3333 42.1667C48.3333 41.9 48.0999 41.6667 47.8333 41.6667H23.8333Z' fill='%23E6E7EA'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+}
+
+
+@mixin linkBlueUnderline {
+    color: #4791FF;
+    border-bottom: 1px solid #E3EEFF;
+    text-decoration: none;
+    &:hover {
+        color: #4791FF;
+        opacity: 0.7;
+        text-decoration: none;
+    }
+}

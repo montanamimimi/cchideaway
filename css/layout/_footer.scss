@@ -1,0 +1,255 @@
+// --------------------------------------------------------------------------
+// Footer
+// --------------------------------------------------------------------------
+
+.footer { 
+    background: #444444;
+    color: #F0F1EC;
+    padding: 40px 0 16px 84px;
+    position: relative;
+    overflow: hidden;
+    .row {
+        margin: 0 -42px -62px;
+        align-items: flex-end;
+        & > [class^="col"] {
+            padding: 0 42px 62px;
+        }
+    }
+    @include breakpoint(lg) {
+        padding: 52px 0 18px;
+    }
+}
+
+
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    position: relative;
+    left: -42px;
+    img, svg {
+        display: block;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 18px;
+        position: relative;
+        left: 0;
+        justify-content: flex-start;
+    }
+}
+
+.footer__nav {
+    margin: 0 0 40px;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -20px;
+        width: 1px;
+        
+        background: #F0F1EC;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+        &:before {
+            position: absolute;
+            top: -50vh;
+            bottom: -50vh;
+            left: -42px;
+        }
+    }
+}
+
+.footer__nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    & > li {
+        margin: 0 0 11px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        & > li {
+            margin: 0 0 12px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.footer__nav-link {
+    color: #F0F1EC;
+    text-decoration: none;
+    transition: color 0.25s;
+    &:hover {
+        text-decoration: none;
+        color: #FFB7C7;
+    }
+}
+
+// ---------
+
+
+.footer__address {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+
+// ---------
+
+.footer__contacts {
+    margin: 0 0 36px;
+    padding: 0;
+    list-style: none;
+
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+
+    & > li {
+        margin: 0 0 10px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+
+// ---------
+
+.footer__feedback {
+    margin: 0 0 42px;
+
+    .ui-field {
+        margin: 0 0 18px;
+    }
+
+    .ui-input {
+        border-color: #F0F1EC;
+        color: #F0F1EC;
+        &::placeholder {
+            color: #F0F1EC;
+        }
+        &:focus {
+            border-color: #FFB7C7;
+        }
+    }
+
+    .ui-btn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0 0 0 -21px;
+    }
+}
+
+
+// ---------
+
+.footer__social {
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    left: -42px;
+
+    & > li {
+        margin: 0 16px 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        position: relative;
+        left: 0;
+        justify-content: flex-start;
+        margin: 0;
+    }
+}
+
+.footer__social-link {
+    text-decoration: none;
+    color: #FFB7C7;
+    &:hover {
+        text-decoration: none;
+        color: #FFB7C7;
+    }
+    svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// ---------
+
+.footer__copyright {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    position: relative;
+    left: -42px;
+    @include breakpoint(lg) {
+        position: relative;
+        left: 0;
+    }
+}
+
+// ---------
+
+
+.footer__policy {
+    display: none;
+    @include breakpoint(lg) {
+        display: block;
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+    }
+}
+
+.footer__policy-link {
+    @include breakpoint(lg) {
+        text-decoration: none;
+        color: #F0F1EC;
+        border-bottom: 1px solid currentColor;
+        transition: color 0.25s;
+        &:hover {
+            text-decoration: none;
+            color: #FFB7C7;
+        }
+    }
+}

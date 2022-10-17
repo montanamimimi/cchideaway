@@ -1,0 +1,111 @@
+
+// --------------------------------------------------------------------------
+// Clean
+// --------------------------------------------------------------------------
+
+.clean {
+    margin: 0 0 80px;
+    .container-fluid {
+        position: relative;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 140px;
+    }
+}
+
+.clean__decor {
+    display: none;
+    @include breakpoint(lg) {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 80px;
+        right: 25%;
+        z-index: -1;
+        pointer-events: none;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.clean__wrapper {
+    position: relative;
+    padding: 20px 0 20px 64px;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        border: 1px solid #444;
+        z-index: -1;
+        pointer-events: none;
+    }
+    @include breakpoint(lg) {
+        padding: 120px 0 70px calc(50% + 80px);
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.clean__title {
+    display: block;
+    margin: 0 0 32px -44px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        margin: 0 0 40px;
+        font-size: 60px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+    }
+
+}
+
+.clean__image {
+    display: block;
+    margin: 0 0 20px;
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1.05;
+    }
+    @include breakpoint(lg) {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(50% + 20px);
+        margin: 0;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: auto;
+        }
+    }
+}
+
+.clean__text {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}

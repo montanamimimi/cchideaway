@@ -1,0 +1,304 @@
+// --------------------------------------------------------------------------
+// Week
+// --------------------------------------------------------------------------
+
+.week {
+    margin: 0 0 80px;
+    @include breakpoint(lg) {
+        margin: 0 0 76px;
+    }
+}
+
+
+.week__title {
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    margin: 0 0 42px;
+    mark {
+        background: none;
+        color: #FFB7C7;
+    }
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 106px;
+    }
+}
+
+.week__steps {
+    margin: 0 0 82px;
+    padding: 0;
+    list-style: none;
+    & > li {
+        position: relative;
+        margin: 0 0 112px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    @include breakpointMax(lg) {
+        & > li {
+            &:nth-of-type(1):after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 154px;
+                height: 120px;
+                background: url("data:image/svg+xml,%3Csvg width='154' height='121' viewBox='0 0 154 121' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.45862 1C2.55463 13.2702 -6.61101 38.7738 11.9583 42.6268C35.17 47.4431 89.0928 -1.75219 132.659 25.0816C167.513 46.5487 149.8 96.6385 136.587 119' stroke='%23444444'/%3E%3Cpath d='M136.5 119L138.5 103L147.5 107.5L136.5 119Z' fill='%23444444' stroke='%23444444'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+                background-size: contain;
+                margin: 10px 0 0 -88px;
+    
+            }
+            &:nth-of-type(2):after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 87px;
+                height: 118px;
+                background: url("data:image/svg+xml,%3Csvg width='87' height='118' viewBox='0 0 87 118' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M81 1.49996C53 0.5 0.657085 5.55283 1.00169 54.5248C1.3463 103.497 57.1442 114.565 85 113.978' stroke='%23444444'/%3E%3Cpath d='M85 114L69.5 108.5V117L85 114Z' fill='%23444444' stroke='%23444444'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+                background-size: contain;
+                margin: 20px 0 0 -117px;
+                
+            }
+            
+        }
+    }
+    @include breakpoint(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -60px;
+        padding: 0 0 80px;
+        & > li {
+            padding: 0 60px;
+            margin: 0;
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 23px;
+                right: -23px;
+                width: 46px;
+                height: 46px;
+                background: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.5303 23.5303C36.8232 23.2374 36.8232 22.7626 36.5303 22.4697L31.7574 17.6967C31.4645 17.4038 30.9896 17.4038 30.6967 17.6967C30.4038 17.9896 30.4038 18.4645 30.6967 18.7574L34.9393 23L30.6967 27.2426C30.4038 27.5355 30.4038 28.0104 30.6967 28.3033C30.9896 28.5962 31.4645 28.5962 31.7574 28.3033L36.5303 23.5303ZM10 23.75L36 23.75V22.25L10 22.25L10 23.75Z' fill='%23444444'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+                background-size: contain;
+            }
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.week__step {
+    text-align: center;
+    @include breakpoint(lg) {
+        text-align: left;
+    }
+}
+
+.week__step-title {
+    display: block;
+    margin: 0 0 12px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 42px;
+        text-align: center;
+    }
+}
+
+.week__step-text {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}
+
+
+
+.week__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+        margin: 0 0 40px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        & > li {
+            margin: 0 0 100px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.week__day {
+
+}
+
+.week__day-title {
+    display: block;
+    text-align: center;
+    font: 400 22px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #444;
+    margin: 0 0 12px;
+    padding: 0 0 32px;
+    @include breakpoint(lg) {
+        border: none;
+        margin: 0 0 40px;
+        padding: 0;
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+    }
+}
+
+.week__day-group {
+    position: relative;
+    .row {
+        margin: 0 -8px;
+        & > [class^="col"] {
+            padding: 0 8px;
+        }
+    }
+    @include breakpoint(lg) {
+        .row {
+            margin: 0 -20px;
+            & > [class^="col"] {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+.week__day-choose {
+    position: absolute;
+    top: 176px;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%,0);
+    @include breakpoint(lg) {
+        top: 162px;
+    }
+}
+
+.week__day-info {
+
+}
+
+
+.week__day-item {
+    @include breakpoint(lg) {
+        border-top: 1px solid #444;
+        padding: 10px 0 0;
+    }
+}
+
+.week__day-item-title {
+    display: block;
+    margin: 0 0 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    min-height: 54px;
+    @include breakpoint(lg) {
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0;
+        min-height: auto;
+        margin: 0 0 60px;
+    }
+}
+
+.week__day-item-info {
+    margin: 0 0 6px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    & > li {
+        margin: 0 0 6px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        font-size: 16px;
+        margin: 0 0 10px;
+        & > li {
+            margin: 0 0 10px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.week__day-item-image {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 0 0 12px;
+    &:before {
+        content: '';
+        float: left;
+        padding: 98% 0 0 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 20px;
+        &:before {
+            padding: 49% 0 0 0;
+        }
+    }
+}
+
+.week__day-item-text {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+        margin: 0 0 0 40%;
+    }
+}

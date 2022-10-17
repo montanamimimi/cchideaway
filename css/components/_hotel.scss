@@ -1,0 +1,108 @@
+
+// --------------------------------------------------------------------------
+// Hotel
+// --------------------------------------------------------------------------
+
+.hotel {
+    margin: 0 0 100px;
+    .container-fluid {
+        position: relative;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 156px;
+    }
+}
+
+.hotel__wrapper {
+    position: relative;
+    margin: 0 -16px;
+    padding: 280px 16px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    @include breakpoint(lg) {
+        margin: 0;
+        padding: 468px 16px 80px;
+    }
+}
+
+.hotel__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    &:after {
+        content: '';
+        display: block;
+        border: 1px solid #444444;
+        border-radius: inherit;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        bottom: -16px;
+        
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include breakpoint(lg) {
+        &:after {
+            top: 20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+        }
+    }
+}
+
+.hotel__desc {
+    padding: 16px 38px 20px;
+    background: #F0F1EC;
+    border: 1px solid #444444;
+    margin: 0 0 30px;
+    @include breakpoint(lg) {
+        margin: 0 0 71px;
+        padding: 34px 96px 30px;
+    }
+}
+
+.hotel__title {
+    display: block;
+    margin: 0;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    small {
+        display: block;
+        margin: 0 0 12px;
+        font: 400 16px/1.5 $fontBase;
+        letter-spacing: 0.1em;
+
+    }
+
+    @include breakpoint(lg) {
+        font-size: 60px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        small {
+            font-size: 20px;
+            line-height: 1.4;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin: 0 0 28px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.hotel__button {
+
+}

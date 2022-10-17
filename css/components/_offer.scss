@@ -1,0 +1,101 @@
+// --------------------------------------------------------------------------
+// Offer
+// --------------------------------------------------------------------------
+
+.offer {
+    margin: 0 0 60px;
+    @include breakpoint(lg) {
+        margin: 0 0 230px;
+    }
+}
+
+.offer__title {
+    display: block;
+    margin: 0 0 40px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    text-align: center;
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.75em;
+    }
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 116px;
+      
+    }
+}
+
+
+.offer__desc {
+
+}
+
+.offer__desc-title {
+    display: block;
+    margin: 0 0 30px;
+    font: 400 22px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        margin: 0 0 64px;
+    }
+}
+
+.offer__desc-text {
+    display: block;
+    margin: 0 0 36px;
+    padding: 0 20px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    @include breakpoint(lg) {
+        margin: 0 0 64px;
+        padding: 0;
+        max-width: 318px;
+    }
+}
+
+.offer__desc-image {
+    margin: 0 -16px 30px;
+    display: block;
+    img {
+        display: block;
+        width: 100%;
+    }
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.offer__desc-button {
+    text-align: right;
+    @include breakpoint(lg) {
+        text-align: left;
+    }
+}
+
+// -------
+
+.offer__image {
+    display: none;
+    @include breakpoint(lg) {
+        display: flex;
+        min-height: 100%;
+        margin: 0;
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

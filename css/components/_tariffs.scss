@@ -1,0 +1,150 @@
+// --------------------------------------------------------------------------
+// Tariffs
+// --------------------------------------------------------------------------
+
+.tariffs {
+    margin: 0 0 96px;
+}
+
+.tariffs__wrapper {
+    @include breakpoint(lg) {
+        padding: 0 0 0 184px;
+    }
+}
+
+.tariffs__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 36px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 80px 210px;
+      
+    }
+}
+
+
+.tariffs__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+        padding: 0 0 16px;
+        margin: 0 0 18px;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-bottom: 1px solid #444;
+        }
+        &:last-child {
+            margin: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        position: relative;
+        border-left: 4px solid #DAD9D3;
+        padding: 0 0 0 95px;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -4px;
+            width: 4px;
+            height: 250px;
+            background: #444444;
+            z-index: 100;
+        }
+        & > li {
+            padding: 0 0 36px;
+            margin: 0 0 50px;
+            &:after {
+                right: -100px;
+            }
+        }
+    }
+}
+
+
+.tariffs__item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.tariffs__item-title {
+    flex: 0 0 100%;
+    display: block;
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    @include breakpoint(lg) {
+        flex: 0 0 34%;
+        max-width: 34%;
+        margin: 0;
+        padding: 0 16px 0 0;
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+}
+
+.tariffs__item-text {
+    display: block;
+    margin: 0 40px 0 0;
+    flex: 1;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    @include breakpoint(lg) {
+        flex: 0 0 46%;
+        max-width: 46%;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+
+    }
+}
+
+.tariffs__item-price {
+    display: block;
+    margin: 0;
+    flex: 0 0 auto;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+    @include breakpoint(lg) {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        flex: 0 0 20%;
+        max-width: 20%;
+        text-align: right;
+    }
+}

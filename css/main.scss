@@ -1,1 +1,139 @@
-@import 'basic/reset';
+// --------------------------------------------------------------------------
+// Sprite Auto Generated
+// --------------------------------------------------------------------------
+
+@import 'sprites/_spritesSvg'; 
+
+// --------------------------------------------------------------------------
+// Config
+// --------------------------------------------------------------------------
+
+// Fonts
+$fontBase: 'Lato', Arial, Helvetica, sans-serif;
+$fontSecond: 'Geometrica Sans', Arial, Helvetica, sans-serif;
+
+// Grid
+$xs: 420px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+    
+:root {
+    --theme-size: 10px;
+    --theme-primary-color: #7266F3;
+
+    --safe-area-inset-top: env(safe-area-inset-top);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+}
+
+// Example var(--theme-primary-color);
+
+
+// --------------------------------------------------------------------------
+// Base
+// --------------------------------------------------------------------------
+
+@import 'base/_mixins';
+
+@import 'base/_normalize';
+@import 'base/_icons';
+
+@import 'base/_buttons';
+@import 'base/_links';
+
+@import 'base/_forms';
+
+@import 'base/_lists';
+@import 'base/_tables';
+@import 'base/_pictures';
+@import 'base/_video';
+
+@import 'base/_wysiwyg';
+
+@import 'base/_booking';
+@import 'base/_choose';
+
+@import 'base/_switch';
+
+// --------------------------------------------------------------------------
+// Plugins
+// --------------------------------------------------------------------------
+
+@import 'plugins/_fancybox';
+@import 'plugins/_aos';
+@import 'plugins/_air-datepicker';
+@import 'plugins/_swiper';
+
+// --------------------------------------------------------------------------
+// Components
+// --------------------------------------------------------------------------
+
+@import 'components/_intro';
+@import 'components/_welcome';
+@import 'components/_yoga-wellness';
+@import 'components/_nutrition-detox';
+@import 'components/_eco-adventures';
+@import 'components/_hotel';
+@import 'components/_packages';
+@import 'components/_testimonials';
+// @import 'components/_request';
+
+@import 'components/_try';
+@import 'components/_room';
+@import 'components/_offer';
+@import 'components/_dishes';
+@import 'components/_country';
+@import 'components/_drinks';
+
+@import 'components/_notes';
+@import 'components/_convenience';
+@import 'components/_gallery';
+@import 'components/_team';
+
+@import 'components/_clean';
+@import 'components/_move';
+@import 'components/_events';
+
+@import 'components/_nearby';
+@import 'components/_locations';
+@import 'components/_places';
+@import 'components/_txt';
+
+@import 'components/_rooftop';
+@import 'components/_yoga-styles';
+@import 'components/_tariffs';
+
+@import 'components/_yoga-retreat';
+@import 'components/_why';
+@import 'components/_week';
+@import 'components/_add-more';
+@import 'components/_feedback';
+
+@import 'components/_beauty';
+@import 'components/_activity';
+@import 'components/_includes';
+
+@import 'components/_system';
+
+
+// --------------------------------------------------------------------------
+// Layout
+// --------------------------------------------------------------------------
+
+
+@import 'layout/_grid';
+@import 'layout/_layout';
+@import 'layout/_header';
+@import 'layout/_main';
+@import 'layout/_footer';
+@import 'layout/_pages';
+@import 'layout/_mouse-follow';
+@import 'layout/_loading';
+
+// --------------------------------------------------------------------------
+// States
+// --------------------------------------------------------------------------
+
+@import 'states/_states';
+

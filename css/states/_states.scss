@@ -1,0 +1,111 @@
+// --------------------------------------------------------------------------
+// States
+// --------------------------------------------------------------------------
+
+
+.text-red {
+	color: #F45656 !important;
+}
+
+.row-gutter-120 {
+	margin: 0 -60px;
+	& > [class^="col-"] {
+		padding: 0 60px;
+	}
+}
+
+.row-gutter-10 {
+	margin: 0 -5px -10px;
+	& > [class^="col"] {
+		padding: 0 5px 10px;
+	}
+}
+
+.row-gutter-24 {
+	margin: 0 -12px -24px;
+	& > [class^="col"] {
+		padding: 0 12px 24px;
+	}
+}
+
+.row-gutter-4 {
+	margin: 0 -2px -4px;
+	& > [class^="col"] {
+		padding: 0 2px 4px;
+	}
+}
+
+
+.col-20pct {
+	flex: 0 0 20%;
+	max-width: 20%;
+}
+
+.col-md-10pct {
+	@include breakpoint(md) {
+		flex: 0 0 10%;
+		max-width: 10%;
+	}
+}
+
+
+
+// ------
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+// -----
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-sm-visible {
+	@include breakpointMax(sm) {
+		display: none !important;
+	}
+}
+
+.is-md-visible {
+	@include breakpointMax(md) {
+		display: none !important;
+	}
+}
+
+.is-lg-visible {
+	@include breakpointMax(lg) {
+		display: none !important;
+	}
+}
+
+.is-xl-visible {
+	@include breakpointMax(xl) {
+		display: none !important;
+	}
+}
+
+// -----
+
+.is-md-hidden {
+	@include breakpoint(md) {
+		display: none !important;
+	}
+}
+
+.is-lg-hidden {
+	@include breakpoint(lg) {
+		display: none !important;
+	}
+}
+
+.is-xl-hidden {
+	@include breakpoint(xl) {
+		display: none !important;
+	}
+}
+

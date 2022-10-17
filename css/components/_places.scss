@@ -1,0 +1,106 @@
+// --------------------------------------------------------------------------
+// places
+// --------------------------------------------------------------------------
+
+.places {
+    margin: 0 0 120px;
+    @include breakpoint(lg) {
+        margin: 0 0 96px;
+    }
+}
+
+.places__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+        margin: 0 0 50px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    @include breakpoint(lg) {
+        & > li {
+            padding: 0 0 50px;
+            margin: 0 0 50px;
+            border-bottom: 1px solid #444;
+            &:last-child {
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+}
+
+.places__item {
+    .row {
+        margin: 0;
+        & > [class^="col"] {
+            padding: 0;
+        }
+    }
+    @include breakpoint(lg) {
+        .row {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.places__item-desc {
+    @include breakpoint(lg) {
+        padding: 16px 0 0;
+        margin: 0 0 0 -20px;
+    }
+}
+
+.places__item-title {
+    display: block;
+    margin: 0 0 36px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 40px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        margin: 0 0 46px;
+    }
+
+}
+
+.places__item-text {
+    display: block;
+    margin: 0 0 26px;
+    padding: 0 0 0 64px;
+
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        padding: 0;
+        max-width: 348px;
+
+    }
+}
+
+.places__item-image {
+    display: block;
+    margin: 0 -16px;
+    img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1/0.8;
+        object-fit: cover;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+        img {
+            aspect-ratio: 1/0.725;
+        }
+    }
+}

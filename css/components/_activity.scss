@@ -1,0 +1,159 @@
+// --------------------------------------------------------------------------
+// Activity
+// --------------------------------------------------------------------------
+
+.activity {
+    margin: 0 0 115px;
+    @include breakpoint(lg) {
+        margin: 0 0 156px;
+    }
+}
+
+.activity__title {
+    display: block;
+    margin: 0 0 40px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 10px;
+    }
+}
+
+.activity__text {
+    display: block;
+    margin: 0 0 46px 64px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        max-width: 450px;
+        margin: 0 auto 116px;
+        position: relative;
+    }
+}
+
+.activity__swiper {
+
+}
+
+.activity__item {
+    border-top: 1px solid #444;
+    padding: 20px 0 0;
+    .row {
+        align-items: center;
+    }
+    @include breakpoint(lg) {
+        padding: 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+}
+
+.activity__item-title {
+    display: block;
+    margin: 0 0 24px;
+    font: 400 18px/1.1 $fontSecond;
+    letter-spacing: 0.04em;
+    @include breakpoint(lg) {
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: 0;
+        margin: 0 0 36px;
+    }
+}
+
+.activity__item-info {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+}
+
+.activity__item-image {
+    display: block;
+    margin: 0 0 20px;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    position: relative;
+    &:before {
+        content: '';
+        float: left;
+        padding: 100% 0 0 0;
+    }
+    img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include breakpoint(lg) {
+        margin: 0 0 20px;
+        &:before {
+            padding: 80% 0 0 0;
+        }
+    }
+}
+
+.activity__item-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -22px;
+    right: 20px;
+
+    background: #DAD9D3;
+    border-radius: 30px;
+
+    padding: 6px 20px;
+
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+
+    height: 45px;
+
+    color: #444444;
+
+}
+
+.activity__item-text {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    @include breakpoint(lg) {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        margin: 0 0 30px;
+    }
+}
+
+
+.activity__item-button {
+    margin: 0 0 10px;
+    @include breakpoint(lg) {
+        margin: auto 0 0 0;
+        text-align: right;
+    }
+}

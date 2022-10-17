@@ -1,0 +1,135 @@
+// --------------------------------------------------------------------------
+// Country
+// --------------------------------------------------------------------------
+
+.country {
+    margin: 0 0 80px;
+    @include breakpoint(lg) {
+        margin: 0 0 140px;
+    }
+}
+
+.country__title {
+    display: block;
+    margin: 0 0 45px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    @include breakpoint(lg) {
+        font-size: 60px;
+        text-align: right;
+        margin: 0 0 45px;
+    }
+}
+
+.country__grid {
+
+}
+
+.country__grid-group  {
+   
+}
+
+.country__image {
+    display: block;
+    margin: 0;
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+    &--01 {
+        margin: 0 0 20px;
+        img {
+            aspect-ratio: 1/0.82;
+        }
+    }
+    &--02 {
+        margin: 0 0 20px 64px;
+        img {
+            aspect-ratio: 1/1;
+        }
+    }
+    &--03 {
+        display: none;
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            margin: 0;
+            img {
+                aspect-ratio: 1/0.58;
+            }
+        }
+        &--02 {
+            position: relative;
+            margin: 0 20px 0 80px;
+        }
+        &--03 {
+            margin: 0;
+            display: block;
+        }
+    }
+}
+
+.country__text {
+    display: block;
+    margin: 0;
+    &--01 {
+
+        margin: 0 -16px 20px 0;
+        padding: 20px 60px 20px 80px;
+        background: #DAD9D3;
+
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    &--02 {
+
+        margin: 0 -16px 30px 0;
+        padding: 20px 36px 20px 80px;
+        background: #DAD9D3;
+
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+
+    }
+
+    @include breakpoint(lg) {
+        &--01 {
+            margin: 180px 0 100px -26px;
+            padding: 25px 20px 25px 26px;
+
+            font-size: 18px;
+            line-height: 1.4;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        &--02 {
+            margin: 26px 0 0 0;
+            padding: 20px 26px 20px 20px;
+
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+            max-width: 394px;
+            text-transform: none;
+        }
+    }
+}
+
+
+.country__button {
+    text-align: center;
+    @include breakpoint(lg) {
+        padding: 140px 0 0;
+    }
+}

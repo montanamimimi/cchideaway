@@ -1,0 +1,121 @@
+// --------------------------------------------------------------------------
+// Yoga styles
+// --------------------------------------------------------------------------
+
+.yoga-styles {
+    margin: 0 0 60px;
+    @include breakpoint(lg) {
+        margin: 0 0 150px;
+    }
+}
+
+
+
+.yoga-styles__grid {
+    padding: 0 0 0 64px;
+    margin: 0 0 40px;
+    .row {
+        margin: 0 -10px -20px;
+        & > [class^="col"] {
+            padding: 0 10px 20px;
+        }
+    }
+    @include breakpoint(lg) {
+        padding: 0;
+        margin: 0 0 100px;
+        .row {
+            margin: 0 -13px -50px;
+            & > [class^="col"] {
+                padding: 0 13px 50px;
+            }
+        }
+    }
+}
+
+.yoga-styles__title {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 16px -64px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 40px;
+      
+    }
+}
+
+.yoga-styles__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 279px;
+    background: #DAD9D3;
+    padding: 20px;
+    color: #444;
+    &--light {
+
+    }
+    &--dark {
+        background: #444444;
+        color: #F0F1EC;
+    }
+    @include breakpoint(lg) {
+        min-height: 330px;
+    }
+}
+
+.yoga-styles__item-title {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        margin: 0 0 16px;
+    }
+}
+
+.yoga-styles__item-text {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+}
+
+.yoga-styles__item-image {
+    margin: 0 -20px 10px;
+    img {
+        display: block;
+        width: 100%;
+    }
+    @include breakpoint(lg) {
+        margin: 0 -20px 12px;
+        &:last-child {
+            margin: auto -20px;
+        }
+    }
+}
+
+
+.yoga-styles__line {
+    display: block;
+    border: none;
+    border-top: 1px solid #444;
+    margin: 0;
+}
+
+.yoga-styles__button {
+    text-align: right;
+    @include breakpoint(lg) {
+        text-align: center;
+    }
+}

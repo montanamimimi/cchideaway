@@ -1,0 +1,40 @@
+// --------------------------------------------------------------------------
+// Welcome
+// --------------------------------------------------------------------------
+
+.welcome {
+    margin: 0 0 48px;
+    @include breakpoint(lg) {
+        margin: 0 0 204px;
+    }
+}
+
+.welcome__title {
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    margin: 0 0 50px;
+
+    @include breakpoint(lg) {
+        font-size: 80px;
+        margin: 0 0 56px;
+    }
+}
+
+.welcome__text {
+    display: block;
+    margin: 0 0 0 23px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 400;
+        max-width: 560px;
+        margin: 0 auto;
+        position: relative;
+        left: 54px;
+    }
+}

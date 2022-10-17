@@ -1,0 +1,97 @@
+// --------------------------------------------------------------------------
+// convenience
+// --------------------------------------------------------------------------
+
+.convenience {
+    margin: 0 0 80px;
+    @include breakpoint(lg) {
+        margin: 0 0 100px;
+    }
+}
+
+.convenience__title {
+    display: block;
+    margin: 0 0 55px;
+    font: 400 30px/1.1 $fontSecond;
+    letter-spacing: 0.02em;
+    text-align: center;
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.05em;
+        width: auto;
+        height: 0.55em;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 60px;
+        margin: 0 0 125px;
+        text-align: center;
+    }
+}
+
+.convenience__list {
+    margin: 0 -15px -30px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    & > li {
+        padding: 0 15px 30px;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @include breakpoint(lg) {
+        margin: -15px -52px;
+        padding: 0 40px;
+        & > li {
+            padding: 0 15px 52px;
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+    }
+}
+
+.convenience__item {
+    display: flex;
+    align-items: center;
+}
+
+.convenience__item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 36px;
+    margin: 0 4px 0 0;
+    flex: 0 0 auto;
+    svg {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    @include breakpoint(lg) {
+        width: 47px;
+        height: 46px;
+        margin: 0 30px 0 0;
+    }
+}
+
+.convenience__item-title {
+    display: block;
+    margin: 0;
+    flex: 1;
+    font-size: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include breakpoint(lg) {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}
