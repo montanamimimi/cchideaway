@@ -12,6 +12,7 @@ show_admin_bar(false);
 add_theme_support( 'post-thumbnails' );
 
 add_image_size('packagesLandscape', 544, 332, true);
+add_image_size('teamAvatar', 200, 200, true);
 
 // Register scripts 
 
@@ -125,7 +126,7 @@ function cchideaway_post_types() {
     ));
 
     register_post_type( 'testimonial', array(    
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'rewrite' => array(
             'slug' => 'testimonials'
         ),

@@ -18,3 +18,16 @@ function cchideaway_get_featured_packages() {
     $posts = query_posts($args);
     return $posts;
 }
+
+
+function cchideaway_get_testimonials() {
+
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'testimonial',
+    );
+
+    $posts = query_posts($args);
+    
+    return $posts;
+}
