@@ -1,12 +1,17 @@
 <?php 
 
+require_once( get_template_directory() . "/inc/helpers.php" );
+
 // Dont show admin bar
 
 show_admin_bar(false);
 
+
 // We want some thumbnails! 
 	
 add_theme_support( 'post-thumbnails' );
+
+add_image_size('packagesLandscape', 544, 332, true);
 
 // Register scripts 
 
@@ -83,7 +88,7 @@ function cchideaway_post_types() {
     ));
 
     register_post_type( 'package', array(    
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'taxonomies'  => array( 'category' ),
         'rewrite' => array(
             'slug' => 'packages'
@@ -102,7 +107,7 @@ function cchideaway_post_types() {
     ));
 
     register_post_type( 'room', array(    
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'supports' => array('title'),
         'rewrite' => array(
             'slug' => 'rooms'
         ),
