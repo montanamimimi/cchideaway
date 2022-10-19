@@ -22,10 +22,14 @@
                 <div class="mouse-follow">
                 <div class="mouse-follow__circle"></div>
             </div><!-- Mouse-follow :: End-->
-            <!-- Header :: Start-->
+        
             <header class="header compensate-for-scrollbar">
                 <div class="container-fluid">
                     <nav class="header__nav">
+                        <div class="header__logo_cc">
+                            <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_file_uri('/assets/images/logo.svg'); ?>" alt="CC hideaway logo"></a>
+                            
+                        </div>
                         <button class="header__nav-toggle">
                             <span> </span>
                             <span> </span>
@@ -104,7 +108,7 @@
                                         <div class="col-lg-9">
                                             <ul class="header__services">
                                                 <li>
-                                                    <a class="header__services-item" href="#">
+                                                    <a class="header__services-item" href="<?php echo get_site_url() . '/yoga'; ?>">
                                                         <picture class="header__services-item-image">
                                                             
                                                             <img src="<?php echo get_theme_file_uri('/assets/images/img-services-01.png'); ?>" alt="Yoga and wellness page" />
@@ -115,7 +119,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__services-item" href="#">
+                                                    <a class="header__services-item" href="<?php echo get_site_url() . '/detox'; ?>">
                                                         <picture class="header__services-item-image">
                                                            
                                                             <img src="<?php echo get_theme_file_uri('assets/images/img-services-02.png'); ?>" alt="Nutrition and detox page" />
@@ -126,7 +130,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__services-item" href="#">
+                                                    <a class="header__services-item" href="<?php echo get_site_url() . '/adventures'; ?>">
                                                         <picture class="header__services-item-image">
                                                             
                                                             <img src="<?php echo get_theme_file_uri('assets/images/img-services-03.png'); ?>" alt="Eco adventures page" />
@@ -225,10 +229,10 @@
                                     </ul>
                                     <ul class="header__services">
                                         <li>
-                                            <a class="header__services-item" href="#">
+                                            <a class="header__services-item" href="<?php echo get_site_url() . '/yoga'; ?>">
                                                 <picture class="header__services-item-image">
                                                    
-                                                    <img src="<?php echo get_theme_file_uri('assets/images/img-services-01.png'); ?>" alt="[Alt]" />
+                                                    <img src="<?php echo get_theme_file_uri('assets/images/img-services-01.png'); ?>" alt="Yoga options" />
                                                 </picture>
                                                 <span class="header__services-item-title">Yoga
                                                     <br> & Wellness
@@ -236,10 +240,10 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="header__services-item" href="#">
+                                            <a class="header__services-item" href="<?php echo get_site_url() . '/detox'; ?>">
                                                 <picture class="header__services-item-image">
                                                     
-                                                    <img src="<?php echo get_theme_file_uri('assets/images/img-services-02.png'); ?>" alt="[Alt]" />
+                                                    <img src="<?php echo get_theme_file_uri('assets/images/img-services-02.png'); ?>" alt="Detox options" />
                                                 </picture>
                                                 <span class="header__services-item-title">Nutrition
                                                     <br> & Detox
@@ -247,10 +251,10 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="header__services-item" href="#">
+                                            <a class="header__services-item" href="<?php echo get_site_url() . '/adventures'; ?>">
                                                 <picture class="header__services-item-image">
                                                     
-                                                    <img src="<?php echo get_theme_file_uri('assets/images/img-services-03.png'); ?>" alt="[Alt]" />
+                                                    <img src="<?php echo get_theme_file_uri('assets/images/img-services-03.png'); ?>" alt="Eco adventure" />
                                                 </picture>
                                                 <span class="header__services-item-title">Eco
                                                     <br> adventures
@@ -350,28 +354,6 @@
                         </div>
                     </nav>
                 </div>
-            </header><!-- Header :: End-->
-            <!-- Main :: Start-->
+            </header>
 
-<!-- <body class="is-page-index"> -->
 
-<!--  
-    
-
-        <meta name="theme-color" content="#000000">
-        <meta name="format-detection" content="telephone=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <title>Homepage - CC-Hideway</title>
-        <meta property="og:type" content="OG:Type">
-        <meta property="og:title" content="OG:Title">
-        <meta property="og:description" content="OG:Description">
-        <meta property="og:url" content="http://websiteurl">
-        <meta property="og:image" content="http://websiteurl/image.jpg">
-        <meta property="og:site_name" content="OG:SiteName">
-        <link rel="preconnect" href="https://cssio.github.io/">
-        <link rel="dns-prefetch" href="https://cssio.github.io/">
-        <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="fonts/GeometricaSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="css/app.css"> -->
- 

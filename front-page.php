@@ -113,7 +113,7 @@
                     </div>
                     <div class="col-lg-12 order-lg-6">
                         <div class="yw__button" data-aos="fade-up" data-aos-delay="1400">
-                            <a class="ui-btn ui-btn--secondary" href="#">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a class="ui-btn ui-btn--secondary" href="<?php echo get_site_url() . '/yoga'; ?>">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="currentColor" />
                                 </svg>
                             </a>
@@ -159,7 +159,7 @@
                             <img src="<?php echo get_theme_file_uri('assets/images/img-nd-03.png'); ?>" alt="[Alt]" />
                         </picture>
                         <div class="nd__button" data-aos="fade-up" data-aos-delay="1400">
-                            <a class="ui-btn ui-btn--secondary" href="#">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a class="ui-btn ui-btn--secondary" href="<?php echo get_site_url() . '/detox'; ?>">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="currentColor" />
                                 </svg>
                             </a>
@@ -210,7 +210,7 @@
                     </div>
                     <div class="col-lg-12 order-lg-5">
                         <div class="ea__button" data-aos="fade-up" data-aos-delay="1400">
-                            <a class="ui-btn ui-btn--secondary" href="#">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a class="ui-btn ui-btn--secondary" href="<?php echo get_site_url() . '/adventures'; ?>">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="currentColor" />
                                 </svg>
                             </a>

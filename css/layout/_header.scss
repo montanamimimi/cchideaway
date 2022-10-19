@@ -68,6 +68,9 @@
     margin: 0 0 0 auto;
     position: relative;
     pointer-events: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .header__nav-toggle {
