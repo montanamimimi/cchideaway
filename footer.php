@@ -44,19 +44,19 @@
                                 <nav class="footer__nav">
                                     <ul class="footer__nav-menu">
                                         <li>
-                                            <a class="footer__nav-link" href="#">Homepage</a>
+                                            <a class="footer__nav-link" href="<?php echo get_site_url(); ?>">Homepage</a>
                                         </li>
                                         <li>
                                             <a class="footer__nav-link" href="#">About Us</a>
                                         </li>
                                         <li>
-                                            <a class="footer__nav-link" href="#">Yoga & wellness</a>
+                                            <a class="footer__nav-link" href="<?php echo get_site_url() . '/yoga'; ?>">Yoga & wellness</a>
                                         </li>
                                         <li>
-                                            <a class="footer__nav-link" href="#">Nutrition & detox</a>
+                                            <a class="footer__nav-link" href="<?php echo get_site_url() . '/detox'; ?>">Nutrition & detox</a>
                                         </li>
                                         <li>
-                                            <a class="footer__nav-link" href="#">Eco adventures</a>
+                                            <a class="footer__nav-link" href="<?php echo get_site_url() . '/adventures'; ?>">Eco adventures</a>
                                         </li>
                                         <li>
                                             <a class="footer__nav-link" href="#">Book now</a>
@@ -100,7 +100,7 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-menu">
                                 <li>
-                                    <a class="footer__nav-link" href="#">Homepage</a>
+                                    <a class="footer__nav-link" href="<?php echo get_site_url(); ?>">Homepage</a>
                                 </li>
                                 <li>
                                     <a class="footer__nav-link" href="#">About Us</a>

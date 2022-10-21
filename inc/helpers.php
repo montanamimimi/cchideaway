@@ -22,6 +22,26 @@ function cchideaway_get_packages($slug = false) {
     return $posts;
 }
 
+function cchideaway_get_activities( $slug = false ) {
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'activity',
+    );
+
+    if ( $slug ) {
+        $args['tax_query'] = array(
+            array(
+                'field' => 'slug',
+                'taxonomy' => 'category',
+                'terms' => $slug
+            )
+        );
+    }
+
+    $posts = query_posts($args);
+    return $posts;
+}
+
 
 function cchideaway_get_testimonials() {
 

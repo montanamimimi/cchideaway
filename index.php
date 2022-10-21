@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-Blog?
+<?php get_template_part('template-parts/blocks/text', 'simple');  ?>
 
 
 <?php get_footer(); ?>

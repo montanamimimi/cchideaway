@@ -34,7 +34,7 @@ add_action('wp_enqueue_scripts', 'cchideaway_files');
 function cchideaway_post_types() {
 
     register_post_type( 'activity', array(    
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'taxonomies'  => array( 'category' ),
         'rewrite' => array(
             'slug' => 'activities'
