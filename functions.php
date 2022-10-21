@@ -14,6 +14,7 @@ add_theme_support( 'post-thumbnails' );
 
 add_image_size('packagesLandscape', 544, 332, true);
 add_image_size('teamAvatar', 200, 200, true);
+add_image_size('eventImage', 290, 360, true);
 
 // Register scripts 
 
@@ -71,7 +72,7 @@ function cchideaway_post_types() {
     ));
 
     register_post_type( 'event', array(    
-        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'taxonomies'  => array( 'category' ),
         'rewrite' => array(
             'slug' => 'events'
@@ -87,6 +88,25 @@ function cchideaway_post_types() {
             'singular_name' => 'Event'
         ),
         'menu_icon' => 'dashicons-carrot'
+    ));
+
+    register_post_type( 'team', array(    
+        'supports' => array('title', 'thumbnail'),
+        'taxonomies'  => array( 'category' ),
+        'rewrite' => array(
+            'slug' => 'teams'
+        ),
+        'has_archive' => true,
+        'public' => true,
+        'show_in_rest' => true,
+        'labels' => array(
+            'name' => 'Teams',
+            'add_new_item' => 'Add new team',
+            'edit_item' => 'Edit team',
+            'all_items' => 'All teams',
+            'singular_name' => 'Team'
+        ),
+        'menu_icon' => 'dashicons-id'
     ));
 
     register_post_type( 'package', array(    

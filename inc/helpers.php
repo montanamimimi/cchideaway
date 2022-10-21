@@ -1,19 +1,22 @@
 <?php 
 
 
-function cchideaway_get_featured_packages() {
+function cchideaway_get_packages($slug = false) {
 
     $args = array(
         'posts_per_page' => -1,
         'post_type' => 'package',
-        'tax_query' => array(
+    );
+
+    if ( $slug ) {
+        $args['tax_query'] = array(
             array(
                 'field' => 'slug',
                 'taxonomy' => 'category',
-                'terms' => 'featured'
+                'terms' => $slug
             )
-        )
-    );
+        );
+    }
 
     $posts = query_posts($args);
     return $posts;
@@ -30,4 +33,50 @@ function cchideaway_get_testimonials() {
     $posts = query_posts($args);
     
     return $posts;
+}
+
+function cchideaway_get_teams( $slug = false ) {
+
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'team',
+    );
+
+    if ( $slug ) {
+        $args['tax_query'] = array(
+            array(
+                'field' => 'slug',
+                'taxonomy' => 'category',
+                'terms' => $slug
+            )
+        );
+    }
+
+    $posts = query_posts($args);
+    
+    return $posts;
+}
+
+function cchideaway_get_events( $slug = false ) {
+
+    $args = array(
+        'posts_per_page' => -1,
+        'post_type' => 'event'
+    );
+
+    if ( $slug ) {
+        $args['tax_query'] = array(
+            array(
+                'field' => 'slug',
+                'taxonomy' => 'category',
+                'terms' => $slug
+            )
+        );
+    }
+
+
+    $posts = query_posts($args);
+    
+    return $posts;
+
 }
