@@ -28,7 +28,6 @@ function cchideaway_files() {
 
 add_action('wp_enqueue_scripts', 'cchideaway_files');
 
-
 // Register custom post types
 
 function cchideaway_post_types() {
@@ -166,6 +165,18 @@ function cchideaway_post_types() {
 
 }
 
+// Add custom options page
+
+acf_add_options_page([
+    'page_title' => __('Settings','cchideaway'),
+    'menu_title' => __('Settings','cchideaway'),
+    'menu_slug' => 'theme-settings',
+    'capability' => 'publish_pages',
+    'redirect' => false
+]);
+
+
 add_action('init', 'cchideaway_post_types');
+
 
 
