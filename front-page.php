@@ -6,11 +6,9 @@
         <div class="container-fluid">
             <picture class="intro__image">                                
 
-                <video autoplay="" id="heroVideo" loop="" muted="" poster="<?php echo get_theme_file_uri('/assets/images/img-intro-homepage.png'); ?>">
-                    <source src="<?php  echo get_field('frontpage_video', 'options'); ?>" type="video/mp4" />
-                    
+                <video autoplay="" id="heroVideo" loop="" style="height: 100%;" muted="" poster="<?php echo get_theme_file_uri('/assets/images/img-intro-homepage.png'); ?>">
+                    <source src="<?php  echo get_field('frontpage_video', 'options'); ?>" type="video/mp4" />                    
                 </video>
-
                 
             </picture>
             <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro">&nbsp;<br></h1>
