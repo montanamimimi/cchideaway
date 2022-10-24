@@ -7,7 +7,7 @@
 .intro {
     background: #444444;
     color: #F0F1EC;
-    padding: 212px 0 72px;
+    padding: 0 0 72px;
     margin: 0 0 74px;
     position: relative;
     z-index: 100;
@@ -16,7 +16,7 @@
     display: flex;
     align-items: flex-end;
     @include breakpoint(lg) {
-        padding: 300px 0 100px;
+        padding: 0 0 100px;
         margin: 0 0 200px;
     }
 
@@ -35,11 +35,20 @@
     margin: 0;
     display: block;
     z-index: -1;
+    overflow: hidden;
     img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: unset;
+        max-height: unset;
     }
 }
 
