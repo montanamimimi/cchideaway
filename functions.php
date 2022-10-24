@@ -89,6 +89,44 @@ function cchideaway_post_types() {
         'menu_icon' => 'dashicons-carrot'
     ));
 
+    register_post_type( 'service', array(    
+        'supports' => array('title', 'thumbnail'),
+        'taxonomies'  => array( 'category' ),
+        'rewrite' => array(
+            'slug' => 'services'
+        ),
+        'has_archive' => true,
+        'public' => true,
+        'show_in_rest' => true,
+        'labels' => array(
+            'name' => 'Services',
+            'add_new_item' => 'Add new option',
+            'edit_item' => 'Edit option',
+            'all_items' => 'All options',
+            'singular_name' => 'Service'
+        ),
+        'menu_icon' => 'dashicons-editor-alignright'
+    ));
+
+    register_post_type( 'offer', array(    
+        'supports' => array('title', 'thumbnail'),
+        'taxonomies'  => array( 'category' ),
+        'rewrite' => array(
+            'slug' => 'offers'
+        ),
+        'has_archive' => true,
+        'public' => true,
+        'show_in_rest' => true,
+        'labels' => array(
+            'name' => 'Offers',
+            'add_new_item' => 'Add new offer',
+            'edit_item' => 'Edit offer',
+            'all_items' => 'All offers',
+            'singular_name' => 'Offer'
+        ),
+        'menu_icon' => 'dashicons-star-filled'
+    ));
+
     register_post_type( 'team', array(    
         'supports' => array('title', 'thumbnail'),
         'taxonomies'  => array( 'category' ),

@@ -238,7 +238,7 @@
                 </a>
             </li>
             <li>
-                <a class="includes__item" href="#">
+                <a class="includes__item" href="<?php echo get_site_url() . '/spa'; ?>">
                     <span class="includes__item-icon">
                         <svg width="56" height="43" viewBox="0 0 56 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="path-1-outside-1_1_3366" maskUnits="userSpaceOnUse" x="8.53125" y="4.97223" width="38" height="31" fill="black">

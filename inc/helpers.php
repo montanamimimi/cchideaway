@@ -1,5 +1,27 @@
 <?php 
 
+function cchideaway_get_posts( $posttype, $slug = false, $max = -1 ) {
+    
+    $args = array(
+        'posts_per_page' => $max,
+        'post_type' => $posttype,
+    );
+
+    if ( $slug ) {
+        $args['tax_query'] = array(
+            array(
+                'field' => 'slug',
+                'taxonomy' => 'category',
+                'terms' => $slug
+            )
+        );
+    }
+
+    $posts = query_posts($args);
+    return $posts;
+
+}
+
 
 function cchideaway_get_packages($slug = false) {
 
