@@ -138,7 +138,7 @@
             </li>
             <?php
 
-            $events = cchideaway_get_events('detox');
+            $events = cchideaway_get_posts('event', 'detox');
 
             foreach ($events as $post) {
                 get_template_part('template-parts/event');
