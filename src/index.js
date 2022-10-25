@@ -187,44 +187,49 @@ $(function() {
 
 	// ---------
 
+	let swiperGallerySlides = document.querySelectorAll('.js-swiper-gallery-slides');
 
-	var swiperThumbs = new Swiper('.js-swiper-gallery-thumbs', {
-		spaceBetween: 16,
-		slidesPerView: 'auto',
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		watchOverflow: true,
-		loop: false,
-		breakpoints: {
-			992: {
-				spaceBetween: 20,
-				slidesPerView: 3,
+	swiperGallerySlides.forEach(swiperElement => {
+
+		var swiperThumbs = new Swiper(document.querySelector('.js-swiper-gallery-thumbs'), {
+			spaceBetween: 16,
+			slidesPerView: 'auto',
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			watchOverflow: true,
+			loop: false,
+			breakpoints: {
+				992: {
+					spaceBetween: 20,
+					slidesPerView: 3,
+				}
 			}
-		}
-	});
-	var swiperSlides = new Swiper('.js-swiper-gallery-slides', {
-		spaceBetween: 20,
-		slidesPerView: 1,
-		watchSlidesVisibility: true,
-		watchSlidesProgress: true,
-		watchOverflow: true,
-		loop: true,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
-		navigation: {
-			nextEl: '.js-swiper-gallery-next',
-			prevEl: '.js-swiper-gallery-prev',
-		},
-		pagination: {
-			el: '.js-swiper-gallery-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-		thumbs: {
-			swiper: swiperThumbs
-		}
+		});
+
+		var swiperSlides = new Swiper(swiperElement, {
+			spaceBetween: 20,
+			slidesPerView: 1,
+			watchSlidesVisibility: true,
+			watchSlidesProgress: true,
+			watchOverflow: true,
+			loop: true,
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			navigation: {
+				nextEl: '.js-swiper-gallery-next',
+				prevEl: '.js-swiper-gallery-prev',
+			},
+			pagination: {
+				el: '.js-swiper-gallery-pagination',
+				type: 'bullets',
+				clickable: true,
+			},
+			thumbs: {
+				swiper: swiperThumbs
+			}
+		});
 	});
 
 	// --------------------------------------------------------------------------

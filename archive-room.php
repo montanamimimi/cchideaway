@@ -66,6 +66,7 @@
 // }
 
 get_template_part('template-parts/room');
+get_template_part('template-parts/room');
 ?>
 
 
