@@ -34,8 +34,8 @@
                         <div class="row">
                             <div class="col-lg-9">
                                 <picture class="locations__item-image" data-aos="fade-in" data-aos-delay="200">
-                                    <source type="image/webp" srcset="images/img-locations-01.webp" />
-                                    <img src="images/img-locations-01.png" alt="[Alt]" />
+                                    
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/img-locations-01.png'); ?>" alt="[Alt]" />
                                 </picture>
                                 <h2 class="locations__item-title" data-aos="fade-right" data-aos-delay="400">Karon beach</h2>
                             </div>
@@ -50,8 +50,8 @@
                         <div class="row">
                             <div class="col-lg-9">
                                 <picture class="locations__item-image" data-aos="fade-in" data-aos-delay="200">
-                                    <source type="image/webp" srcset="images/img-locations-02.webp" />
-                                    <img src="images/img-locations-02.png" alt="[Alt]" />
+                                    
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/img-locations-02.png'); ?>" alt="[Alt]" />
                                 </picture>
                                 <h2 class="locations__item-title" data-aos="fade-left" data-aos-delay="400">Kata Noi beach</h2>
                             </div>
@@ -66,8 +66,8 @@
                         <div class="row">
                             <div class="col-lg-9">
                                 <picture class="locations__item-image" data-aos="fade-in" data-aos-delay="200">
-                                    <source type="image/webp" srcset="images/img-locations-03.webp" />
-                                    <img src="images/img-locations-03.png" alt="[Alt]" />
+                                    
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/img-locations-03.png'); ?>" alt="[Alt]" />
                                 </picture>
                                 <h2 class="locations__item-title" data-aos="fade-right" data-aos-delay="400">Kata Sourth, North</h2>
                             </div>
@@ -95,8 +95,8 @@
                             </div>
                             <div class="col-lg-4">
                                 <picture class="places__item-image" data-aos="fade-in" data-aos-delay="600">
-                                    <source type="image/webp" srcset="images/img-places-01.webp" />
-                                    <img src="images/img-places-01.png" alt="[Alt]" />
+                                    
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/img-places-01.png'); ?>" alt="[Alt]" />
                                 </picture>
                             </div>
                         </div>
@@ -113,8 +113,8 @@
                             </div>
                             <div class="col-lg-4">
                                 <picture class="places__item-image" data-aos="fade-in" data-aos-delay="600">
-                                    <source type="image/webp" srcset="images/img-places-02.webp" />
-                                    <img src="images/img-places-02.png" alt="[Alt]" />
+                                    
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/img-places-02.png'); ?>" alt="[Alt]" />
                                 </picture>
                             </div>
                         </div>
@@ -123,20 +123,9 @@
             </ul>
         </div>
     </section><!-- Places :: End-->
-    <!-- Txt :: Start-->
-    <section class="txt" data-aos="fade-in" data-aos-anchor=".txt">
-        <div class="container-fluid">
-            <h2>Simple text</h2>
-            <div class="row justify-content-between">
-                <div class="col-lg-4">
-                    <p>At CC's, our goal is to provide excellent service to our guests. We have developed a transportation schedule that will hit all the major tourist areas in Kata and Karon throughout the day so that our guest do not feel stranded. This service, ehich runs from 9.00 am to 11.00 pm, is free for our guests. Our vehicle will leave CC's start from 9.00 am, and leaving every hour afterwards. The last shuttle will leaves from CC's at 11.00 pm. Pick-ups will be by appointment only.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>At CC's, our goal is to provide excellent service to our guests. We have developed a transportation schedule that will hit all the major tourist areas in Kata and Karon throughout the day so that our guest do not feel stranded. This service, ehich runs from 9.00 am to 11.00 pm, is free for our guests. Our vehicle will leave CC's start from 9.00 am, and leaving every hour afterwards. The last shuttle will leaves from CC's at 11.00 pm. Pick-ups will be by appointment only.</p>
-                </div>
-            </div>
-        </div>
-    </section><!-- Txt :: End-->
+    <?php 
+    $textType = get_field('plain_text_type');
+    get_template_part('template-parts/blocks/text', $textType); ?>
 </main><!-- Main :: End-->
 
 <?php get_footer(); ?>

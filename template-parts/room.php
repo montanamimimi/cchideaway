@@ -1,21 +1,38 @@
   <!-- Room :: Start-->
+
+  <?php $images = get_field('gallery'); 
+  $largeImages = array();
+  $smallImages = array();
+
+  foreach ($images as $image) {
+    $imageId = $image['ID'];    
+    array_push($largeImages, wp_get_attachment_image_src($imageId, 'large')[0]);
+    array_push($smallImages, wp_get_attachment_image_src($imageId, 'medium')[0]);     
+  }
+
+ $review = get_field('testimonial')->ID;
+$icon = get_field('icon');
+  ?> 
   <section class="room" data-aos="fade-in" data-aos-anchor=".room1">
     <div class="container-fluid">
       <div class="room__head">
         <div class="row">
           <div class="col">
-            <h2 class="room__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".room1">Standart room</h2>
+            <h2 class="room__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".room1"><?php the_title(); ?></h2>
           </div>
           <div class="col-auto">
             <span class="room__people" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".room1">
-              <svg width="45" height="31" viewBox="0 0 45 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <svg width="45" height="31" viewBox="0 0 45 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.53066 17.1299L13.4532 9.14684C13.5352 8.97979 13.6625 8.8391 13.8206 8.74076C13.9786 8.64243 14.1611 8.5904 14.3473 8.59058L22.6493 8.5984C22.8329 8.59857 23.0128 8.64953 23.1693 8.74562C23.3257 8.84171 23.4525 8.97919 23.5356 9.14286L27.4259 16.8015C27.574 17.093 27.6125 17.428 27.5346 17.7455C27.4567 18.063 27.2675 18.3421 27.0013 18.5321C26.8419 18.6458 26.6598 18.724 26.4675 18.7612C26.2752 18.7984 26.0772 18.7939 25.8868 18.7479C25.6964 18.7019 25.5181 18.6155 25.364 18.4945C25.2099 18.3736 25.0837 18.2209 24.9938 18.0469L22.3661 12.9598L21.8223 18.1438L23.0981 29.007C23.1269 29.2527 23.1034 29.5018 23.0291 29.7377C22.9547 29.9737 22.8312 30.1913 22.6667 30.3761C22.5022 30.5609 22.3005 30.7088 22.0747 30.81C21.8489 30.9113 21.6042 30.9635 21.3568 30.9634H21.3529C20.9254 30.9632 20.5127 30.8067 20.1925 30.5235C19.8724 30.2403 19.6668 29.8498 19.6145 29.4256L18.5434 20.7327L17.506 29.4277C17.4552 29.8534 17.25 30.2457 16.9293 30.5304C16.6087 30.815 16.1947 30.9722 15.7659 30.9722C15.5192 30.9722 15.2753 30.9201 15.0501 30.8194C14.8249 30.7186 14.6235 30.5714 14.4592 30.3875C14.2948 30.2036 14.1711 29.987 14.0962 29.752C14.0213 29.517 13.9969 29.2688 14.0246 29.0237L15.2492 18.1722L14.6687 12.9954L11.9496 18.3391C11.7905 18.6518 11.5161 18.8904 11.1843 19.0045C10.8525 19.1187 10.4894 19.0994 10.1716 18.9508C10.0087 18.8747 9.86269 18.7669 9.74201 18.6336C9.62134 18.5004 9.52844 18.3444 9.46877 18.1749C9.40909 18.0053 9.38383 17.8256 9.39445 17.6461C9.40508 17.4667 9.45139 17.2912 9.53066 17.1299Z" fill="#444444" />
                 <path d="M18.4707 7.29675C20.486 7.29675 22.1196 5.66331 22.1196 3.64837C22.1196 1.63343 20.486 0 18.4707 0C16.4555 0 14.8218 1.63343 14.8218 3.64837C14.8218 5.66331 16.4555 7.29675 18.4707 7.29675Z" fill="#444444" />
                 <path d="M35.0742 7.29675C37.0895 7.29675 38.7232 5.66331 38.7232 3.64837C38.7232 1.63343 37.0895 0 35.0742 0C33.059 0 31.4253 1.63343 31.4253 3.64837C31.4253 5.66331 33.059 7.29675 35.0742 7.29675Z" fill="#444444" />
                 <path d="M25.4034 16.628L31.2265 9.00801C31.3257 8.87821 31.4535 8.77303 31.5999 8.70063C31.7464 8.62823 31.9076 8.59057 32.0709 8.59058H38.0149C38.1766 8.59058 38.3363 8.62751 38.4817 8.69857C38.627 8.76963 38.7542 8.87294 38.8536 9.00061L44.7363 16.56C44.8375 16.6901 44.912 16.8389 44.9555 16.9979C44.999 17.1569 45.0107 17.3229 44.9897 17.4865C44.9688 17.65 44.9158 17.8077 44.8336 17.9507C44.7515 18.0936 44.6419 18.2189 44.5112 18.3193C44.2756 18.5003 43.9833 18.5915 43.6866 18.5766C43.39 18.5617 43.1083 18.4417 42.892 18.2381L38.7363 13.4508L40.5969 21.5287H38.0014L38.2626 29.6419C38.2678 29.8068 38.2399 29.971 38.1806 30.1248C38.1213 30.2787 38.0317 30.4192 37.9173 30.5379C37.8028 30.6566 37.6657 30.7512 37.514 30.8161C37.3624 30.881 37.1993 30.9149 37.0344 30.9158H37.0334C36.7253 30.9174 36.4278 30.8038 36.1991 30.5974C35.9705 30.391 35.8272 30.1066 35.7974 29.8L35.0947 22.3505L34.4157 29.812C34.3871 30.1172 34.2461 30.4009 34.0199 30.6078C33.7938 30.8148 33.4988 30.9304 33.1922 30.9319C33.0265 30.9328 32.8624 30.9003 32.7095 30.8365C32.5567 30.7726 32.4182 30.6787 32.3024 30.5602C32.1866 30.4418 32.0958 30.3012 32.0354 30.147C31.975 29.9928 31.9463 29.8279 31.9509 29.6624L32.1832 21.5542L29.5966 21.5555L31.3915 13.4823L27.2616 18.2926C27.0471 18.4973 26.7668 18.6191 26.4708 18.6363C26.1748 18.6535 25.8823 18.565 25.6455 18.3866L25.6443 18.3857C25.5126 18.2864 25.4019 18.1621 25.3184 18.0199C25.235 17.8777 25.1805 17.7203 25.1581 17.557C25.1357 17.3936 25.1458 17.2274 25.1879 17.068C25.23 16.9085 25.3032 16.759 25.4034 16.628Z" fill="#444444" />
                 <path d="M5.8357 18.4552C6.9649 18.4509 7.87678 17.5321 7.87245 16.4031C7.86811 15.2741 6.9492 14.3623 5.81999 14.3667C4.69079 14.371 3.77891 15.2898 3.78324 16.4188C3.78758 17.5478 4.70649 18.4596 5.8357 18.4552Z" fill="#444444" />
                 <path d="M7.78259 24.909L8.39438 29.8799C8.41164 30.0202 8.39891 30.1625 8.35702 30.2975C8.31512 30.4325 8.24503 30.5571 8.15138 30.663C8.05772 30.7689 7.94264 30.8537 7.81375 30.9117C7.68486 30.9698 7.5451 30.9999 7.40373 30.9999C7.17023 30.9999 6.94411 30.9181 6.7647 30.7687C6.58529 30.6192 6.46395 30.4117 6.42178 30.182L5.82776 26.9474L5.23371 30.182C5.19154 30.4117 5.0702 30.6192 4.89079 30.7687C4.71138 30.9181 4.48526 30.9999 4.25176 30.9999C4.11039 30.9999 3.97063 30.9698 3.84174 30.9118C3.71285 30.8537 3.59776 30.7689 3.50411 30.663C3.41045 30.5571 3.34036 30.4326 3.29846 30.2976C3.25657 30.1625 3.24384 30.0202 3.26111 29.8799L3.87291 24.909L3.47443 22.0573L1.08067 23.7765C0.938185 23.8789 0.761764 23.9224 0.588023 23.8981C0.414281 23.8738 0.256562 23.7836 0.147597 23.6461C0.0416451 23.5125 -0.0103957 23.344 0.00172637 23.1738C0.0138484 23.0037 0.0892541 22.8443 0.213089 22.7269L3.41062 19.6979C3.60868 19.5103 3.87108 19.4056 4.14393 19.4053L5.82776 19.4036L8.41768 19.4026L10.8114 17.6924C10.9539 17.59 11.1303 17.5465 11.3041 17.5708C11.4778 17.5951 11.6355 17.6853 11.7445 17.8228C11.8504 17.9565 11.9025 18.125 11.8904 18.2951C11.8782 18.4652 11.8028 18.6247 11.679 18.742L8.17305 22.0632L7.78259 24.909Z" fill="#444444" />
-              </svg>
+              </svg> -->
+
+             
+              <img src="<?php echo get_theme_file_uri('/assets/images/') . $icon . '.svg'; ?>" alt="[Alt]" />
             </span>
           </div>
           <div class="col-auto">
@@ -26,7 +43,9 @@
                 <path d="M22 20.5526C22 21.352 21.352 22 20.5526 22C19.7533 22 19.1053 21.352 19.1053 20.5526C19.1053 19.7533 19.7533 19.1053 20.5526 19.1053C21.352 19.1053 22 19.7533 22 20.5526Z" fill="#444444" />
                 <path d="M2.89474 20.5526C2.89474 21.352 2.24673 22 1.44737 22C0.648009 22 0 21.352 0 20.5526C0 19.7533 0.648009 19.1053 1.44737 19.1053C2.24673 19.1053 2.89474 19.7533 2.89474 20.5526Z" fill="#444444" />
                 <path d="M22 1.44737C22 2.24673 21.352 2.89474 20.5526 2.89474C19.7533 2.89474 19.1053 2.24673 19.1053 1.44737C19.1053 0.648009 19.7533 0 20.5526 0C21.352 0 22 0.648009 22 1.44737Z" fill="#444444" />
-              </svg>30 m2
+              </svg>
+               
+              <?php echo get_field('square') . ' m2'; ?>
             </span>
           </div>
         </div>
@@ -38,30 +57,19 @@
               <div class="swiper-gallery js-swiper-gallery">
                 <div class="swiper swiper-gallery-slides js-swiper-gallery-slides">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <picture>
-                        <source type="image/webp" srcset="images/img-room-01.webp" />
-                        <img src="images/img-room-01.png" alt="[Alt]" />
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture>
-                        <source type="image/webp" srcset="images/img-room-02.webp" />
-                        <img src="images/img-room-02.png" alt="[Alt]" />
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture>
-                        <source type="image/webp" srcset="images/img-room-03.webp" />
-                        <img src="images/img-room-03.png" alt="[Alt]" />
-                      </picture>
-                    </div>
-                    <div class="swiper-slide">
-                      <picture>
-                        <source type="image/webp" srcset="images/img-room-04.webp" />
-                        <img src="images/img-room-04.png" alt="[Alt]" />
-                      </picture>
-                    </div>
+
+                    <?php 
+                    
+                    foreach ($largeImages as $item) { ?>
+                      <div class="swiper-slide">
+                        <picture>                         
+                          <img src="<?php echo $item ?>" alt="[Alt]" />
+                        </picture>
+                      </div>
+                    <?php }
+                    
+                    ?>
+
                   </div>
                   <div class="swiper-pagination js-swiper-gallery-pagination"></div>
                   <div class="swiper-prev js-swiper-gallery-prev">
@@ -81,36 +89,22 @@
                   <div class="col-lg-7">
                     <div class="swiper swiper-gallery-thumbs js-swiper-gallery-thumbs">
                       <div class="swiper-wrapper">
+                      <?php 
+                    
+                      foreach ($smallImages as $item) { ?>
                         <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="images/img-room-01.webp" />
-                            <img src="images/img-room-01.png" alt="[Alt]" />
+                          <picture>                         
+                            <img src="<?php echo $item ?>" alt="[Alt]" />
                           </picture>
                         </div>
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="images/img-room-02.webp" />
-                            <img src="images/img-room-02.png" alt="[Alt]" />
-                          </picture>
-                        </div>
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="images/img-room-03.webp" />
-                            <img src="images/img-room-03.png" alt="[Alt]" />
-                          </picture>
-                        </div>
-                        <div class="swiper-slide">
-                          <picture>
-                            <source type="image/webp" srcset="images/img-room-04.webp" />
-                            <img src="images/img-room-04.png" alt="[Alt]" />
-                          </picture>
-                        </div>
+                      <?php }
+                      
+                      ?>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-5">
-                    <div class="swiper-gallery-caption">Elegant and stylish, every room is not only decorated in Modern Thai style but also equipped with the comforts of the Western world, rooms can accommodate up to 3 people; a maximum of 2 adults, and 1 child up to the age of 11.
-                      <br> With Beautiful mountain views with a semi private patio.
+                    <div class="swiper-gallery-caption"><?php echo get_field('description'); ?>
                     </div>
                   </div>
                 </div>
@@ -263,14 +257,12 @@
             <blockquote class="room__blockquote" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".room1">
               <cite class="room__blockquote-author">
                 <picture class="room__blockquote-author-image">
-                  <source type="image/webp" srcset="images/img-author-01.webp" />
-                  <img src="images/img-author-01.png" alt="[Alt]" />
+                  
+                  <img src="<?php echo get_the_post_thumbnail_url($review, 'thumbnail'); ?>" alt="[Alt]" />
                 </picture>
-                <span class="room__blockquote-author-title">Rose</span>
+                <span class="room__blockquote-author-title"><?php echo get_the_title($review); ?></span>
               </cite>
-              <p class="room__blockquote-text">Great place to relax and do yoga.
-                <br> Went with a friend for a retreat, she is also delighted.
-                <br> The program is thought out to the smallest detail, there were special sensations after the detox, I returned home a new person.
+              <p class="room__blockquote-text"><?php echo get_field('description', $review); ?>
               </p>
             </blockquote>
           </div>
