@@ -187,11 +187,12 @@ $(function() {
 
 	// ---------
 
-	let swiperGallerySlides = document.querySelectorAll('.js-swiper-gallery-slides');
+	let roomSwipers = document.querySelectorAll('.room__swiper');
 
-	swiperGallerySlides.forEach(swiperElement => {
+	roomSwipers.forEach(roomSwiper => {
+		console.log(roomSwiper);
 
-		var swiperThumbs = new Swiper(document.querySelector('.js-swiper-gallery-thumbs'), {
+		let swiperThumbs = new Swiper(roomSwiper.querySelector('.js-swiper-gallery-thumbs'), {
 			spaceBetween: 16,
 			slidesPerView: 'auto',
 			watchSlidesVisibility: true,
@@ -206,7 +207,7 @@ $(function() {
 			}
 		});
 
-		var swiperSlides = new Swiper(swiperElement, {
+		let swiperSlides = new Swiper(roomSwiper.querySelector('.js-swiper-gallery-slides'), {
 			spaceBetween: 20,
 			slidesPerView: 1,
 			watchSlidesVisibility: true,
@@ -230,6 +231,8 @@ $(function() {
 				swiper: swiperThumbs
 			}
 		});
+		console.log(swiperThumbs);
+		console.log(swiperSlides);
 	});
 
 	// --------------------------------------------------------------------------
