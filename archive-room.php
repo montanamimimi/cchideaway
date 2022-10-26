@@ -54,20 +54,19 @@
       </div>
     </div>
   </section><!-- Intro :: End-->
+ 
+ <?php
+  while (have_posts()) { 
+    the_post();
+    get_template_part('template-parts/room');
+  }
 
+  ?>
 
 
 </main><!-- Main :: End-->
 
-<?php
-// while (have_posts()) { 
-//   the_post();
-//   get_template_part('template-parts/room');
-// }
 
-get_template_part('template-parts/room');
-get_template_part('template-parts/room');
-?>
 
 
 <?php get_footer(); ?>
