@@ -1,58 +1,24 @@
 <?php get_header(); ?>
 
-<main class="main">
-    <!-- Intro :: Start-->
-    <section class="intro" data-aos="fade-in" data-aos-anchor=".intro">
-        <div class="container-fluid">
-            <picture class="intro__image">
+<?php 
 
-                <img src="<?php echo get_theme_file_uri('assets/images/img-intro-yr.png'); ?>" alt="[Alt]" />
-            </picture>
-            <div class="intro__desc">
-                <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro">Yoga retreats & holidays</h1>
-                <p class="intro__text" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".intro">Ashtanga is the original power yoga.
-                    <br> A systematic sequence of predetermined flowing postures linked together with the breath.
-                </p>
-            </div>
-            <div class="intro__booking" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".intro">
-                <div class="ui-booking">
-                    <form method="GET">
-                        <div class="ui-booking__data">
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="ui-booking__label">From date</label>
-                                    <input class="ui-booking__input js-datepicker" type="text" value="01/06" readonly>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">To date</label>
-                                    <input class="ui-booking__input js-datepicker" type="text" value="14/06" readonly>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">Adults</label>
-                                    <div class="ui-booking__number">
-                                        <button class="ui-booking__decrease">-</button>
-                                        <input class="ui-booking__input" type="number" value="2">
-                                        <button class="ui-booking__increase">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">Children</label>
-                                    <div class="ui-booking__number">
-                                        <button class="ui-booking__decrease">-</button>
-                                        <input class="ui-booking__input" type="number" value="0">
-                                        <button class="ui-booking__increase">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ui-booking__button">
-                            <a class="ui-btn ui-btn--booking" href="#">Book</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section><!-- Intro :: End-->
+$weekNames = array(
+    'monday' => 'Monday',
+    'tuesday' => 'Tuesday',
+    'wednesday' => 'Wednesday',
+    'thursday' => 'Thursday',
+    'friday' => 'Friday',
+    'saturday' => 'Saturday',
+    'sunday' => 'Sunday',
+);
+
+ ?>
+
+<main class="main">
+    
+
+    <?php get_template_part('template-parts/blocks/intro', 'description'); ?>
+
     <!-- Yoga retreat  :: Start-->
     <section class="yr" data-aos="fade-in" data-aos-anchor=".yr">
         <div class="container-fluid">
@@ -129,7 +95,8 @@
     <!-- Week  :: Start-->
     <section class="week" data-aos="fade-in" data-aos-anchor=".week">
         <div class="container-fluid">
-            <form method="GET" action="<?php echo get_rest_url(0, "cc/v2/register"); ?>">
+            <form method="GET" action="<?php // echo get_rest_url(0, "cc/v2/register"); ?>">
+                <input type="hidden" name="redirect" value="<?php  echo get_site_url() . '/yoga-retreats/'; ?>">
                 <h2 class="week__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".week">Select your perfect week</h2>
                 <ol class="week__steps" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".week">
                     <li>
@@ -152,335 +119,20 @@
                     </li>
                 </ol>
                 <ul class="week__list">
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Monday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="monday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="monday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                                
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-01.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                                
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-02.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Tuesday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="tuesday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="tuesday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                                
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-03.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                                
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-04.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Wednesday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="wednesday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="wednesday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                                
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-05.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                                
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-06.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Thursday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="thursday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="thursday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                             
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-07.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                               
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-08.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Friday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="friday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="friday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                             
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-09.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                               
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-10.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Saturday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="saturday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="saturday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                              
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-11.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                               
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-12.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="week__day" data-aos="fade-up">
-                            <h3 class="week__day-title">Sunday</h3>
-                            <div class="week__day-group">
-                                <div class="week__day-choose">
-                                    <div class="ui-choose">
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="sunday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                        <label class="ui-choose__check">
-                                            <input class="ui-choose__check-input" type="radio" name="sunday">
-                                            <span class="ui-choose__check-btn">Get</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                            
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-13.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="week__day-item">
-                                            <h4 class="week__day-item-title">4 Waters Eco Adventure</h4>
-                                            <ul class="week__day-item-info">
-                                                <li>Duration: 1 hours</li>
-                                            </ul>
-                                            <picture class="week__day-item-image">
-                                              
-                                                <img src="<?php echo get_theme_file_uri('assets/images/img-week-14.png'); ?>" alt="[Alt]" />
-                                            </picture>
-                                            <p class="week__day-item-text">Escape Phuket’s tourist hotspots to explore off-the-beaten track mangroves, rainforests, and beaches on this full day eco adventure trip.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
+                    <?php 
+                        foreach ($weekNames as $key => $value) {
+
+
+                            get_template_part('template-parts/retreat', 'weekday', $args = array(
+                                'key' => $key, 
+                                'value' => $value, 
+                            ));
+
+                            // echo $key;
+                        }
+                    ?>
+
                 </ul>
             
         </div>

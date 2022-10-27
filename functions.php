@@ -51,6 +51,26 @@ function cchideaway_post_types() {
         'menu_icon' => 'dashicons-palmtree'
     ));
 
+    register_post_type( 'retreat', array(    
+        'supports' => array('title', 'thumbnail'),
+        'taxonomies'  => array( 'category' ),
+        'rewrite' => array(
+            'slug' => 'retreats'
+        ),
+        'has_archive' => true,
+        'public' => true,
+        'show_in_rest' => true,
+        'labels' => array(
+            'name' => 'Retreats',
+            'add_new_item' => 'Add new retreat',
+            'edit_item' => 'Edit retreat',
+            'all_items' => 'All retreates',
+            'singular_name' => 'Retreat'
+        ),
+        'menu_icon' => 'dashicons-pets'
+    ));
+
+
     register_post_type( 'training', array(    
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'taxonomies'  => array( 'category' ),

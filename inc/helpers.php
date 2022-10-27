@@ -23,6 +23,51 @@ function cchideaway_get_posts( $posttype, $slug = false, $max = -1 ) {
 }
 
 
+function cchideaway_get_weekday_retreats( $day ) {
+    $retreats = cchideaway_get_posts('retreat');
+
+    $args = array(
+        'posts_per_page' => 2,
+        'post_type' => 'retreat',
+        'meta_query' => array(
+            array(
+                'key' => 'weekday',
+                'value' => $day,
+                'compare' => '='
+            )
+        )
+    );
+    
+    $ifEmptyArgs= array(
+        'posts_per_page' => 1,
+        'post_type' => 'retreat',
+        'meta_query' => array(
+            array(
+                'key' => 'weekday',
+                'value' => 'ifempty',
+                'compare' => '='
+            )
+        )
+    );
+
+    $ifEmpty = query_posts($ifEmptyArgs)[0];
+
+    $weekdays = query_posts($args);
+
+    if (count($weekdays) < 2) {
+        
+        if (count($weekdays) < 1) {
+            array_push($weekdays, $ifEmpty);
+        }
+
+        array_push($weekdays, $ifEmpty);
+    }
+
+
+    return $weekdays;
+}
+
+
 function cchideaway_get_packages($slug = false) {
 
     $args = array(

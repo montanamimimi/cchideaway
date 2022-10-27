@@ -7,15 +7,21 @@ add_action('rest_api_init', function () {
     ]);
 });
 
-function user_create_callback($args)
+function user_create_callback(WP_REST_Request $request)
 {
     $name = 'Name';
     $email = 'mnt_13@mail.ru';
 
-    
+    $args = wp_parse_args(
+        $request->get_params(),
+        [
+            'redirect' => '',
+        ]
+    );
 
-    $message = "Пользователь: \r\n \r\n";       
-    $message .= "Выбранные модули: \r\n \r\n";   
+
+   
+    $message = "CCHIDEAWAY : \r\n \r\n";   
 
 
     $subject = "TESTTETSTSTSTSE";
@@ -29,7 +35,7 @@ function user_create_callback($args)
        
     
 
-  wp_redirect( 'http://localhost/cchideaway/' );
+  wp_redirect($args['redirect']);
         
   exit();
 }
