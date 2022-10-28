@@ -1,5 +1,9 @@
 import "../css/main.scss";
 
+import GMap from "./modules/GoogleMap";
+
+const googleMap = new GMap();
+
 $(function() {
 	
 	// --------------------------------------------------------------------------

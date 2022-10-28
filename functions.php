@@ -19,8 +19,10 @@ add_image_size('eventImage', 290, 360, true);
 // Register scripts 
 
 function cchideaway_files() {
+
+    wp_enqueue_script('googlemap_scripts', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCY1rBndKLweL1HbpVnMVK4Ntf_hx1RD6E&callback=initMap', NULL, false, true);      
     wp_enqueue_script('plugins_scripts', get_theme_file_uri('/assets/plugins.js'), NULL, false, true);    
-    wp_enqueue_script('cchideaway_scripts', get_theme_file_uri('/build/index.js'), NULL, false, true);    
+    wp_enqueue_script('cchideaway_scripts', get_theme_file_uri('/build/index.js'), NULL, false, true);     
     wp_enqueue_style('cchideaway_fonts', get_theme_file_uri('/fonts/font.css'));
     wp_enqueue_style('cchideaway_styles', get_theme_file_uri('/build/index.css'));
 }
@@ -236,5 +238,11 @@ acf_add_options_page([
 
 add_action('init', 'cchideaway_post_types');
 
+function cchideawayMapKey( $api ) {
+    $api['key'] = 'AIzaSyCY1rBndKLweL1HbpVnMVK4Ntf_hx1RD6E';
+    return $api; 
+}
+
+add_filter('acf/fields/google_map/api', 'cchideawayMapKey');
 
 
