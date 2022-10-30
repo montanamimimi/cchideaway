@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php $onmap = get_field('on_the_map', 'option'); ?>
-
 <main class="main">
 
     <?php get_template_part('template-parts/blocks/intro', 'description'); ?>
@@ -138,7 +136,9 @@
             </h2>
 
             <div class="acf-map">
-                <div class="marker" data-lat="<?php echo $onmap['lat']; ?>" data-lon="<?php echo $onmap['lon']; ?>"></div>
+                <div class="marker" data-lat="<?php echo get_field('lat', 'option'); ?>" data-lng="<?php echo get_field('lon', 'option'); ?>"></div>
+
+                
             </div>
             
         </div>

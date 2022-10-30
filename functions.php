@@ -1,5 +1,6 @@
 <?php 
 
+
 require_once( get_template_directory() . "/inc/helpers.php" );
 require_once( get_template_directory() . "/inc/api.php" );
 
@@ -20,7 +21,8 @@ add_image_size('eventImage', 290, 360, true);
 
 function cchideaway_files() {
 
-    wp_enqueue_script('googlemap_scripts', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCY1rBndKLweL1HbpVnMVK4Ntf_hx1RD6E&callback=initMap', NULL, false, true);      
+    wp_enqueue_script('googlemap_scripts', 'https://maps.googleapis.com/maps/api/js?key=' .  get_field('apikey', 'option') . '&callback=initMap', NULL, false, true);      
+    wp_enqueue_script('googlemap_scripts', 'test' . get_field('apikey', 'option'), NULL, false, true);      
     wp_enqueue_script('plugins_scripts', get_theme_file_uri('/assets/plugins.js'), NULL, false, true);    
     wp_enqueue_script('cchideaway_scripts', get_theme_file_uri('/build/index.js'), NULL, false, true);     
     wp_enqueue_style('cchideaway_fonts', get_theme_file_uri('/fonts/font.css'));
@@ -239,7 +241,7 @@ acf_add_options_page([
 add_action('init', 'cchideaway_post_types');
 
 function cchideawayMapKey( $api ) {
-    $api['key'] = 'AIzaSyCY1rBndKLweL1HbpVnMVK4Ntf_hx1RD6E';
+    $api['key'] = get_field('apikey', 'option');
     return $api; 
 }
 
