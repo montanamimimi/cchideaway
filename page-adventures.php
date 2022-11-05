@@ -89,7 +89,7 @@
                     <div class="swiper-wrapper">
                     <?php
 
-                    $activities = cchideaway_get_activities('ours');                  
+                    $activities = cchideaway_get_posts('activity', 'ours');                  
 
                     foreach ($activities as $post) {
 
@@ -114,7 +114,7 @@
 
             <?php
 
-            $packages = cchideaway_get_packages('adventure');
+            $packages = cchideaway_get_posts('package', 'adventure');
 
             foreach ($packages as $post) {
 
@@ -135,7 +135,7 @@
                 <div class="swiper-wrapper">
                 <?php
 
-                $teams = cchideaway_get_teams('adventure');
+                $teams = cchideaway_get_posts('team', 'adventure');
 
                 foreach ($teams as $post) {
 

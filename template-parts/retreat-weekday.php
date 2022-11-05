@@ -13,11 +13,11 @@ $day2 = $days[1];
             <div class="week__day-choose">
                 <div class="ui-choose">
                     <label class="ui-choose__check">
-                        <input class="ui-choose__check-input" type="checkbox" name="<?php echo $args['key'] ?>1">
+                        <input class="ui-choose__check-input" type="checkbox" name="<?php echo $args['key'] ?>[<?php echo get_the_id(); ?>]">
                         <span class="ui-choose__check-btn">Get</span>
                     </label>
                     <label class="ui-choose__check">
-                        <input class="ui-choose__check-input" type="checkbox" name="<?php echo $args['key'] ?>2">
+                        <input class="ui-choose__check-input" type="checkbox" name="<?php echo $args['key'] ?>[<?php echo get_the_id(); ?>]">
                         <span class="ui-choose__check-btn">Get</span>
                     </label>
                 </div>

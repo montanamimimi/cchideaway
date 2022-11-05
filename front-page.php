@@ -251,7 +251,7 @@
 
                 <?php
 
-                $packages = cchideaway_get_packages('featured');
+                $packages = cchideaway_get_posts('package', 'featured');
 
                 foreach ($packages as $post) {
 
@@ -277,7 +277,7 @@
 
                         <?php
 
-                        $testimonials = cchideaway_get_testimonials();                        
+                        $testimonials = cchideaway_get_posts('testimonial');                        
 
                         foreach ($testimonials as $post) {
                             get_template_part('template-parts/testimonial');                            

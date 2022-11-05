@@ -99,6 +99,11 @@
 
 
 .events__item {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     @include breakpoint(lg) {
         border: 1px solid #444;
         margin: 0 0 0 -1px;
@@ -144,8 +149,8 @@
 
     @include breakpoint(lg) {
         position: relative;
-        top: -60px;
-        margin: 0 0 -40px;
+        top: -50px;
+        margin: 0 0 -100px;
         &:before {
             padding: 124% 0 0 0;
         }

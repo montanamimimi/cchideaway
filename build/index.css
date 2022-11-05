@@ -1231,6 +1231,10 @@ label:not([class]) {
   text-transform: uppercase;
 }
 
+.retreats-email {
+  font-size: 12px !important;
+}
+
 .ui-number {
   display: flex;
   align-items: center;
@@ -6213,7 +6217,7 @@ button.swiper-pagination-bullet {
 @media (min-width: 992px) {
   .intro {
     padding: 0 0 100px;
-    margin: 0 0 200px;
+    margin: 0 0 60px;
   }
 }
 @media (hover: none) {
@@ -8573,6 +8577,10 @@ button.swiper-pagination-bullet {
     text-transform: uppercase;
   }
 }
+.convenience__item-title a {
+  color: #444444;
+  text-decoration: none;
+}
 
 .gallery {
   margin: 0 0 80px;
@@ -9168,6 +9176,11 @@ button.swiper-pagination-bullet {
   }
 }
 
+.events__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 @media (min-width: 992px) {
   .events__item {
     border: 1px solid #444;
@@ -9216,8 +9229,8 @@ button.swiper-pagination-bullet {
 @media (min-width: 992px) {
   .events__item-figure {
     position: relative;
-    top: -60px;
-    margin: 0 0 -40px;
+    top: -50px;
+    margin: 0 0 -100px;
   }
   .events__item-figure:before {
     padding: 124% 0 0 0;

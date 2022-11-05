@@ -35,7 +35,7 @@ function user_create_callback(WP_REST_Request $request)
        
     
 
-  wp_redirect($args['redirect']);
+  wp_redirect($args['redirect'] . '/yoga-retreats/');
         
   exit();
 }

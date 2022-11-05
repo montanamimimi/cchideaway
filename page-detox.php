@@ -98,6 +98,8 @@
     <?php 
     $textType = get_field('plain_text_type');
     get_template_part('template-parts/blocks/text', $textType); ?>
+
+
 <!-- Packages :: Start-->
 <section class="packages" data-aos="fade-in">
     <div class="container-fluid">
@@ -109,7 +111,7 @@
 
             <?php
 
-            $packages = cchideaway_get_packages('detox');
+            $packages = cchideaway_get_posts('package', 'detox');
 
             foreach ($packages as $post) {
 

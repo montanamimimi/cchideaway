@@ -76,7 +76,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__menu-link" href="#">
+                                                    <a class="header__menu-link" href="<?php echo get_site_url() . '/yoga-rooftop'; ?>">
                                                         <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M26.5303 6.53033C26.8232 6.23744 26.8232 5.76256 26.5303 5.46967L21.7574 0.6967C21.4645 0.403806 20.9896 0.403806 20.6967 0.6967C20.4038 0.989593 20.4038 1.46447 20.6967 1.75736L24.9393 6L20.6967 10.2426C20.4038 10.5355 20.4038 11.0104 20.6967 11.3033C20.9896 11.5962 21.4645 11.5962 21.7574 11.3033L26.5303 6.53033ZM6.55671e-08 6.75L26 6.75V5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z" fill="currentColor" />
                                                         </svg>Yoga rooftop
@@ -97,7 +97,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__menu-link" href="#">
+                                                    <a class="header__menu-link" href="<?php echo get_site_url() . '/tour'; ?>">
                                                         <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M26.5303 6.53033C26.8232 6.23744 26.8232 5.76256 26.5303 5.46967L21.7574 0.6967C21.4645 0.403806 20.9896 0.403806 20.6967 0.6967C20.4038 0.989593 20.4038 1.46447 20.6967 1.75736L24.9393 6L20.6967 10.2426C20.4038 10.5355 20.4038 11.0104 20.6967 11.3033C20.9896 11.5962 21.4645 11.5962 21.7574 11.3033L26.5303 6.53033ZM6.55671e-08 6.75L26 6.75V5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z" fill="currentColor" />
                                                         </svg>Eco Tours
@@ -150,16 +150,16 @@
                                             </ul>
                                             <ul class="header__additional">
                                                 <li>
-                                                    <a class="header__additional-link" href="#">Packages</a>
+                                                    <a class="header__additional-link" href="<?php echo get_site_url() . '/packages'; ?>">Packages</a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__additional-link" href="#">Special Offers</a>
+                                                    <a class="header__additional-link" href="<?php echo get_site_url() . '/offers'; ?>">Special Offers</a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__additional-link" href="#">Training & Workshops</a>
+                                                    <a class="header__additional-link" href="<?php echo get_site_url() . '/training'; ?>">Training & Workshops</a>
                                                 </li>
                                                 <li>
-                                                    <a class="header__additional-link" href="#"> Hire the Venue Events</a>
+                                                    <a class="header__additional-link" href="<?php echo get_site_url() . '/events'; ?>"> Hire the Venue Events</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -299,7 +299,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="header__menu-link" href="#">
+                                            <a class="header__menu-link" href="<?php echo get_site_url() . '/yoga-rooftop'; ?>">
                                                 <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M26.5303 6.53033C26.8232 6.23744 26.8232 5.76256 26.5303 5.46967L21.7574 0.6967C21.4645 0.403806 20.9896 0.403806 20.6967 0.6967C20.4038 0.989593 20.4038 1.46447 20.6967 1.75736L24.9393 6L20.6967 10.2426C20.4038 10.5355 20.4038 11.0104 20.6967 11.3033C20.9896 11.5962 21.4645 11.5962 21.7574 11.3033L26.5303 6.53033ZM6.55671e-08 6.75L26 6.75V5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z" fill="currentColor" />
                                                 </svg>Yoga rooftop
@@ -320,7 +320,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="header__menu-link" href="#">
+                                            <a class="header__menu-link" href="<?php echo get_site_url() . '/tour'; ?>">
                                                 <svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M26.5303 6.53033C26.8232 6.23744 26.8232 5.76256 26.5303 5.46967L21.7574 0.6967C21.4645 0.403806 20.9896 0.403806 20.6967 0.6967C20.4038 0.989593 20.4038 1.46447 20.6967 1.75736L24.9393 6L20.6967 10.2426C20.4038 10.5355 20.4038 11.0104 20.6967 11.3033C20.9896 11.5962 21.4645 11.5962 21.7574 11.3033L26.5303 6.53033ZM6.55671e-08 6.75L26 6.75V5.25L-6.55671e-08 5.25L6.55671e-08 6.75Z" fill="currentColor" />
                                                 </svg>Eco Tours

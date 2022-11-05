@@ -279,7 +279,7 @@
             </li>
             <?php
 
-            $events = cchideaway_get_events('yoga');
+            $events = cchideaway_get_posts('event', 'yoga');
 
             foreach ($events as $post) {
                 get_template_part('template-parts/event');
@@ -302,7 +302,7 @@
 
             <?php
 
-            $packages = cchideaway_get_packages('yoga');
+            $packages = cchideaway_get_posts('package', 'yoga');
 
             foreach ($packages as $post) {
 
@@ -324,7 +324,7 @@
                 <div class="swiper-wrapper">
                 <?php
 
-                $teams = cchideaway_get_teams('yoga');
+                $teams = cchideaway_get_posts('team', 'yoga');
 
                 foreach ($teams as $post) {
 

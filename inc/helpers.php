@@ -5,6 +5,7 @@ function cchideaway_get_posts( $posttype, $slug = false, $max = -1 ) {
     $args = array(
         'posts_per_page' => $max,
         'post_type' => $posttype,
+        'fields' => 'ids'
     );
 
     if ( $slug ) {
@@ -17,18 +18,19 @@ function cchideaway_get_posts( $posttype, $slug = false, $max = -1 ) {
         );
     }
 
-    $posts = query_posts($args);
-    return $posts;
+    $res = get_posts($args);
+
+    return $res;
 
 }
 
 
 function cchideaway_get_weekday_retreats( $day ) {
-    $retreats = cchideaway_get_posts('retreat');
 
     $args = array(
         'posts_per_page' => 2,
         'post_type' => 'retreat',
+        'fields' => 'ids',
         'meta_query' => array(
             array(
                 'key' => 'weekday',
@@ -37,10 +39,13 @@ function cchideaway_get_weekday_retreats( $day ) {
             )
         )
     );
+
+    $res = get_posts($args);
     
-    $ifEmptyArgs= array(
+    $ifEmptyArgs = array(
         'posts_per_page' => 1,
         'post_type' => 'retreat',
+        'fields' => 'ids',
         'meta_query' => array(
             array(
                 'key' => 'weekday',
@@ -50,83 +55,60 @@ function cchideaway_get_weekday_retreats( $day ) {
         )
     );
 
-    $ifEmpty = query_posts($ifEmptyArgs)[0];
+    $res2 = get_posts($ifEmptyArgs);
 
-    $weekdays = query_posts($args);
-
-    if (count($weekdays) < 2) {
+    if (count($res) < 2) {
         
-        if (count($weekdays) < 1) {
-            array_push($weekdays, $ifEmpty);
+        if (count($res) < 1) {
+            array_push($res, $res2[0]);
         }
 
-        array_push($weekdays, $ifEmpty);
+        array_push($res, $res2[0]);
     }
 
-
-    return $weekdays;
+    return $res;
 }
 
+function cchideaway_get_retreats_add() {
 
-function cchideaway_get_packages($slug = false) {
+    $res = array();
 
     $args = array(
         'posts_per_page' => -1,
-        'post_type' => 'package',
-    );
-
-    if ( $slug ) {
-        $args['tax_query'] = array(
+        'post_type' => 'retreat',
+        'fields' => 'ids',
+        'meta_query' => array(
             array(
-                'field' => 'slug',
-                'taxonomy' => 'category',
-                'terms' => $slug
+                'key' => 'weekday',
+                'value' => 'additional',
+                'compare' => '='
             )
-        );
-    }
-
-    $posts = query_posts($args);
-    return $posts;
-}
-
-function cchideaway_get_activities( $slug = false ) {
-    $args = array(
-        'posts_per_page' => -1,
-        'post_type' => 'activity',
+        )
     );
 
-    if ( $slug ) {
-        $args['tax_query'] = array(
-            array(
-                'field' => 'slug',
-                'taxonomy' => 'category',
-                'terms' => $slug
-            )
-        );
-    }
+    $the_query = new WP_query($args);
 
-    $posts = query_posts($args);
-    return $posts;
+    if ( $the_query->have_posts() ) {
+       
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            array_push($res, get_the_ID());
+        }
+        
+    } 
+
+    wp_reset_postdata();
+
+    return $res;
 }
 
 
-function cchideaway_get_testimonials() {
-
-    $args = array(
-        'posts_per_page' => -1,
-        'post_type' => 'testimonial',
-    );
-
-    $posts = query_posts($args);
+function cchideaway_get_events_by_date( $slug = false, $max = -1 ) {
     
-    return $posts;
-}
-
-function cchideaway_get_teams( $slug = false ) {
-
     $args = array(
-        'posts_per_page' => -1,
-        'post_type' => 'team',
+        'posts_per_page' => $max,
+        'post_type' => 'event',
+        'fields' => 'ids'
     );
 
     if ( $slug ) {
@@ -139,31 +121,30 @@ function cchideaway_get_teams( $slug = false ) {
         );
     }
 
-    $posts = query_posts($args);
-    
-    return $posts;
-}
+    $posts = get_posts($args);
 
-function cchideaway_get_events( $slug = false ) {
+    $dates = array();
 
-    $args = array(
-        'posts_per_page' => -1,
-        'post_type' => 'event'
-    );
-
-    if ( $slug ) {
-        $args['tax_query'] = array(
-            array(
-                'field' => 'slug',
-                'taxonomy' => 'category',
-                'terms' => $slug
-            )
-        );
+    foreach ($posts as $post) {
+        $date = get_field('date', $post);
+        array_push($dates, array(
+            'id' => $post,
+            'date' => strtotime($date)
+        ));
     }
 
+    usort($dates,  function ($a, $b) {
+		return $a['date'] - $b['date'];
+	});
 
-    $posts = query_posts($args);
-    
-    return $posts;
+    $res = array();
 
+    foreach ($dates as $date) {
+        array_push($res, $date['id']);
+    }
+
+    return $res;
 }
+
+
+
