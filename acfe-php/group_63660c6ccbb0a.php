@@ -31,7 +31,7 @@ acf_add_local_field_group(array(
 			'label' => 'Header at the top',
 			'name' => 'mainpage_header',
 			'type' => 'text',
-			'instructions' => '',
+			'instructions' => 'Insert ~ before fancy letter',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -69,7 +69,7 @@ acf_add_local_field_group(array(
 			'label' => 'Yoga header',
 			'name' => 'mainpage_yoga_header',
 			'type' => 'text',
-			'instructions' => '',
+			'instructions' => 'Insert ~ before fancy letter',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -223,7 +223,7 @@ acf_add_local_field_group(array(
 			'label' => 'Detox header',
 			'name' => 'mainpage_detox_header',
 			'type' => 'text',
-			'instructions' => '',
+			'instructions' => 'Insert ~ before fancy letter',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -377,7 +377,7 @@ acf_add_local_field_group(array(
 			'label' => 'Adventures header',
 			'name' => 'mainpage_adventures_header',
 			'type' => 'text',
-			'instructions' => '',
+			'instructions' => 'Insert ~ before fancy letter',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -557,7 +557,7 @@ acf_add_local_field_group(array(
 			'label' => 'Booking header',
 			'name' => 'mainpage_booking_header',
 			'type' => 'text',
-			'instructions' => '',
+			'instructions' => 'Insert ~ before fancy letter',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -616,7 +616,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1667637635,
+	'modified' => 1667646141,
 ));
 
 endif;

@@ -1087,6 +1087,24 @@ button {
   fill-rule: evenodd;
 }
 
+.svg-image-text {
+  margin-bottom: -4px;
+}
+
+@media (max-width: 992px) {
+  .svg-uppercase {
+    max-height: 30px;
+  }
+  .svg-lowercase-basic, .svg-lowercase-wide {
+    max-height: 22px;
+  }
+  .svg-lowercase-hight, .svg-lowercase-low {
+    max-height: 28px;
+  }
+  .svg-lowercase-i {
+    max-height: 25px;
+  }
+}
 .ui-btn {
   display: inline-flex;
   align-items: center;

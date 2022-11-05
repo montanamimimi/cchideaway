@@ -54,7 +54,9 @@
     <!-- Welcome :: Start-->
     <section class="welcome" data-aos="fade-in">
         <div class="container-fluid">
-            <h2 class="welcome__title" data-aos="fade-up" data-aos-delay="200"> <?php echo get_field('mainpage_header', 'options'); ?></h2>
+            <h2 class="welcome__title" data-aos="fade-up" data-aos-delay="200"> 
+                <?php echo cchideaway_text_icons(get_field('mainpage_header', 'options'));  ?>
+            </h2>
             <p class="welcome__text" data-aos="fade-up" data-aos-delay="400"><?php echo get_field('mainpage_description', 'options'); ?></p>
         </div>
     </section><!-- Welcome :: End-->
@@ -64,7 +66,7 @@
             <div class="yw__grid yw-grid-helper">
                 <div class="row">
                     <div class="col-lg-4 order-lg-1">
-                        <h2 class="yw__title" data-aos="fade-up" data-aos-delay="200"> <?php echo get_field('mainpage_yoga_header', 'options'); ?></h2>
+                        <h2 class="yw__title" data-aos="fade-up" data-aos-delay="200"> <?php echo cchideaway_text_icons(get_field('mainpage_yoga_header', 'options'));  ?></h2>
                     </div>
                     <div class="col-lg-5 order-lg-2">
                         <picture class="yw__image yw__image--01" data-aos="fade-in" data-aos-delay="400">
@@ -99,7 +101,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="yw-border-block">
+                    <div class="yw-border-block" data-aos="fade-in" data-aos-delay="1200">
                         
                     </div>
                 </div>
@@ -110,11 +112,7 @@
     <section class="nd" data-aos="fade-in">
         <div class="container-fluid">
             <h2 class="nd__title" data-aos="fade-up" data-aos-delay="200">
-                 <!-- Nutrition & <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                    <path d="M8.6747 1.00011L8.66735 1H8.66H2H1V2V22.25V23.25H2H8.66C10.1871 23.25 11.6313 22.9657 12.9821 22.3899L12.9821 22.39L12.9893 22.3868C14.335 21.8008 15.518 21.0141 16.5293 20.0248L16.5293 20.0249L16.5371 20.0171C17.5484 19.0058 18.3393 17.8296 18.9084 16.4958C19.5041 15.1264 19.8 13.6711 19.8 12.14C19.8 10.5908 19.5049 9.13289 18.9057 7.77815C18.3165 6.42596 17.5045 5.24829 16.4694 4.2552C15.4569 3.24467 14.2705 2.45592 12.9194 1.88894C11.5777 1.31747 10.1601 1.02195 8.6747 1.00011ZM8.65068 19.24H5.01V5.01H8.66C9.64496 5.01 10.5547 5.20257 11.4004 5.58227L11.4115 5.58726L11.4228 5.59198C12.3053 5.96266 13.0516 6.46842 13.6733 7.10736L13.6828 7.11717L13.6926 7.12673C14.3316 7.74839 14.8373 8.49467 15.208 9.37723L15.2127 9.38847L15.2177 9.39959C15.5974 10.2453 15.79 11.155 15.79 12.14C15.79 13.125 15.5974 14.0347 15.2177 14.8804C14.8271 15.7504 14.3073 16.5073 13.6577 17.158C13.0096 17.7875 12.2549 18.2885 11.3861 18.6609C10.5313 19.0272 9.62226 19.2213 8.65068 19.24Z" fill="#F0F1EC" stroke="#879A77" stroke-width="2" />
-                    <path d="M5 5H9C12.866 5 16 8.13401 16 12C16 15.866 12.866 19 9 19H5V5Z" fill="#879A77" />
-                </svg>etox -->
-                <?php echo get_field('mainpage_detox_header', 'options'); ?>
+            <?php echo cchideaway_text_icons(get_field('mainpage_detox_header', 'options'));  ?>
             </h2>
             <div class="nd__grid">
                 <div class="row">
@@ -162,11 +160,7 @@
                 <div class="row">
                     <div class="col-lg-12 order-lg-1">
                         <h2 class="ea__title" data-aos="fade-up" data-aos-delay="200">
-                             <!-- EC<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.35392 18.6609C8.48506 18.2885 7.7304 17.7875 7.08225 17.158C6.43707 16.5116 5.93038 15.7612 5.56058 14.8994C5.19469 14.027 5.01 13.1002 5.01 12.11C5.01 11.141 5.1942 10.2355 5.55915 9.38392L5.55917 9.38393L5.56198 9.37723C5.93266 8.49467 6.43842 7.74839 7.07736 7.12673L7.07742 7.12679L7.08711 7.11711C7.73543 6.46878 8.4886 5.96 9.35392 5.58914L9.36178 5.58577L9.36959 5.58227C10.2153 5.20257 11.125 5.01 12.11 5.01C13.095 5.01 14.0047 5.20257 14.8504 5.58227L14.8582 5.58577L14.8661 5.58914C15.7314 5.96 16.4846 6.46878 17.1329 7.11711L17.1328 7.11717L17.1426 7.12673C17.7816 7.74839 18.2873 8.49467 18.658 9.37723L18.658 9.37724L18.6609 9.38392C19.0258 10.2355 19.21 11.141 19.21 12.11C19.21 13.1002 19.0253 14.027 18.6595 14.8993C18.2897 15.7611 17.7829 16.5116 17.1377 17.1581C16.4896 17.7875 15.7349 18.2885 14.8661 18.6609C14.0168 19.0248 13.1015 19.21 12.11 19.21C11.1185 19.21 10.2032 19.0248 9.35392 18.6609ZM19.9493 19.9948L19.9493 19.9949L19.9571 19.9871C20.9684 18.9758 21.7594 17.7994 22.3285 16.4655C22.9242 15.0962 23.22 13.6411 23.22 12.11C23.22 10.58 22.9246 9.13351 22.3272 7.78158C21.7583 6.44887 20.9677 5.27349 19.9571 4.26289C18.9465 3.25229 17.7711 2.46172 16.4384 1.89277C15.0865 1.29545 13.64 1 12.11 1C10.5789 1 9.12369 1.29585 7.75433 1.8916C6.42048 2.46064 5.24419 3.2516 4.23289 4.26289L4.23285 4.26285L4.22517 4.27071C3.23851 5.27929 2.45216 6.44999 1.86557 7.77525L1.86548 7.77521L1.86008 7.7879C1.28433 9.1387 1 10.5829 1 12.11C1 13.6372 1.28434 15.0892 1.85781 16.4567L1.8616 16.4658L1.86557 16.4747C2.45216 17.8 3.23851 18.9707 4.22517 19.9793L4.23285 19.9872L4.24071 19.9948C5.24929 20.9815 6.41999 21.7678 7.74525 22.3544L7.75423 22.3584L7.76327 22.3622C9.13078 22.9357 10.5828 23.22 12.11 23.22C13.6371 23.22 15.0813 22.9357 16.4321 22.3599L16.4321 22.36L16.4447 22.3544C17.77 21.7678 18.9407 20.9815 19.9493 19.9948Z" fill="#F0F1EC" stroke="#879A77" stroke-width="2" />
-                                <circle cx="12.1001" cy="12.25" r="7" fill="#879A77" />
-                            </svg> adventures -->
-                            <?php echo get_field('mainpage_adventures_header', 'options'); ?>
+                            <?php echo cchideaway_text_icons(get_field('mainpage_adventures_header', 'options'));  ?>
                         </h2>
                     </div>
                     <div class="col-lg-4 order-lg-4">
@@ -295,7 +289,7 @@
     >
         <div class="container-fluid">
             <h2 class="request__title" data-aos="fade-up" data-aos-anchor=".request" data-aos-delay="200">
-            <?php echo get_field('mainpage_booking_header', 'options'); ?>
+                <?php echo cchideaway_text_icons(get_field('mainpage_booking_header', 'options'));  ?>
             </h2>
             <p class="request__text" data-aos="fade-up" data-aos-anchor=".request" data-aos-delay="400"> <?php echo get_field('mainpage_booking_description', 'options'); ?></p>
             <div class="request__booking" data-aos="fade-up" data-aos-anchor=".request" data-aos-delay="600">
