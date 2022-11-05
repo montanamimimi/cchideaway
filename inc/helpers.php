@@ -354,7 +354,6 @@ function cchideaway_text_icons($text) {
         $lastPos = $lastPos + strlen($needle);
     }
 
-    $counter = 0;
     $prevPos = 0;
     
     foreach ($positions as $value) {
@@ -374,10 +373,6 @@ function cchideaway_text_icons($text) {
 
     $result .= substr($text, $prevPos);
     
-    $prevPos = $value + 2;
-    $counter++;
-
-
     return $result;
 }
 
