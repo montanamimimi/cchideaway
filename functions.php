@@ -229,13 +229,33 @@ function cchideaway_post_types() {
 
 // Add custom options page
 
-acf_add_options_page([
-    'page_title' => __('Settings','cchideaway'),
-    'menu_title' => __('Settings','cchideaway'),
-    'menu_slug' => 'theme-settings',
-    'capability' => 'publish_pages',
-    'redirect' => false
-]);
+if( function_exists('acf_add_options_page')) {
+    acf_add_options_page([
+        'page_title' => __('Settings','cchideaway'),
+        'menu_title' => __('Settings','cchideaway'),
+        'menu_slug' => 'theme-settings',
+        'capability' => 'publish_pages',
+        'redirect' => false
+    ]);
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Mainpage Settings',
+        'menu_title'    => 'Mainpage',
+        'parent_slug'   => 'theme-settings',
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Hotel Settings',
+        'menu_title'    => 'Hotel',
+        'parent_slug'   => 'theme-settings',
+    ));
+
+    // acf_add_options_page();
+    // acf_add_options_sub_page('Mainpage');
+    // acf_add_options_sub_page('Hotel');
+}
+
+
 
 
 add_action('init', 'cchideaway_post_types');

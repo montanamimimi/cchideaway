@@ -1323,7 +1323,7 @@ label:not([class]) {
 }
 @media (min-width: 992px) {
   .ui-number__decrease,
-.ui-number__increase {
+  .ui-number__increase {
     font-size: 28px;
     padding: 0 10px;
   }
@@ -2170,7 +2170,7 @@ label:not([class]) {
 }
 @media (min-width: 992px) {
   .ui-booking__decrease,
-.ui-booking__increase {
+  .ui-booking__increase {
     font-size: 28px;
     padding: 0 15px;
   }
@@ -5953,7 +5953,7 @@ button.swiper-pagination-bullet {
     bottom: 108px;
   }
   .swiper-testimonials .swiper-prev,
-.swiper-testimonials .swiper-next {
+  .swiper-testimonials .swiper-next {
     top: 194px;
   }
   .swiper-testimonials .swiper-prev {
@@ -6039,7 +6039,7 @@ button.swiper-pagination-bullet {
     bottom: 0;
   }
   .swiper-team .swiper-prev,
-.swiper-team .swiper-next {
+  .swiper-team .swiper-next {
     top: 80px;
   }
   .swiper-team .swiper-prev {
@@ -6576,6 +6576,20 @@ button.swiper-pagination-bullet {
     position: relative;
     top: -206px;
   }
+}
+
+.yw-grid-helper .row {
+  position: relative;
+}
+.yw-grid-helper .yw-border-block {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  width: 60%;
+  height: 30%;
+  z-index: -1;
 }
 
 .nd {
@@ -10842,8 +10856,8 @@ button.swiper-pagination-bullet {
     max-width: 140px;
   }
   .feedback__form .ui-number__input,
-.feedback__form .ui-number__decrease,
-.feedback__form .ui-number__decrease {
+  .feedback__form .ui-number__decrease,
+  .feedback__form .ui-number__decrease {
     font-size: 28px;
     line-height: 1.4;
     font-weight: 400;

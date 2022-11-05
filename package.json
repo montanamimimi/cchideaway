@@ -1,24 +1,34 @@
 {
-  "name": "cchideaway-theme",
+  "name": "cchideaway",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start",
-    "dev": "wp-scripts start",
-    "devFast": "wp-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montanamimimi/cchideaway.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@glidejs/glide": "^3.4.1",
-    "axios": "^0.21.4",
-    "normalize.css": "^8.0.1"
+  "bugs": {
+    "url": "https://github.com/montanamimimi/cchideaway/issues"
   },
+  "homepage": "https://github.com/montanamimimi/cchideaway#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^21.0.1"
+    "@wordpress/scripts": "^24.5.0"
   }
 }

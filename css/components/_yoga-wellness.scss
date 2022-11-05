@@ -216,3 +216,21 @@
     }
 }
 
+.yw-grid-helper {
+
+    .row {
+        position: relative;
+    }
+
+    .yw-border-block {
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        width: 60%;
+        height: 30%;
+        z-index: -1;
+    }
+
+}

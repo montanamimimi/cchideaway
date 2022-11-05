@@ -7,25 +7,6 @@ acf_add_local_field_group(array(
 	'title' => 'Options fields',
 	'fields' => array(
 		array(
-			'key' => 'field_63539d18df008',
-			'label' => 'Frontpage video',
-			'name' => 'frontpage_video',
-			'type' => 'file',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'library' => 'all',
-			'min_size' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
 			'key' => 'field_635dff95f687b',
 			'label' => 'Latitude',
 			'name' => 'lat',
@@ -93,7 +74,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1667104688,
+	'modified' => 1667637210,
 ));
 
 endif;
