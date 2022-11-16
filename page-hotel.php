@@ -17,12 +17,16 @@
             <div class="notes__wrapper">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p class="notes__text notes__text--01" data-aos="fade-right" data-aos-delay="400" data-aos-anchor=".notes"> seeking a respite from the crowds and noise from the more urban locations as well as those seeking a yoga retreat or a wellness holiday. </p>
+                        <p class="notes__text notes__text--01" data-aos="fade-right" data-aos-delay="400" data-aos-anchor=".notes">
+                            <?php echo get_field('hotel_short_text', 'options') ?>
+                        </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 offset-lg-6">
-                        <p class="notes__text notes__text--02" data-aos="fade-left" data-aos-delay="600" data-aos-anchor=".notes"> CC’s Hideaway offers a unique combination of breathtaking views and modern accommodations infused with traditional and authentic Thai furnishings. CC’s is an oasis for guests seeking a respite from the crowds and noise from the more urban locations as well as those seeking a yoga retreat or a wellness holiday. We offer yoga retreats all year around and our program is designed to allow you to make various choices about activities to participate in and make sure your dietary needs are met.</p>
+                        <p class="notes__text notes__text--02" data-aos="fade-left" data-aos-delay="600" data-aos-anchor=".notes">
+                        <?php echo get_field('hotel_long_text', 'options') ?>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -31,10 +35,8 @@
     <!-- Convenience  :: Start-->
     <section class="convenience" data-aos="fade-in" data-aos-anchor=".convenience">
         <div class="container-fluid">
-            <h2 class="convenience__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".convenience"> Everything for y<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.83608 16.3291L5.83607 16.3292L5.84386 16.3324C6.82982 16.7452 7.87145 16.95 8.96 16.95C10.047 16.95 11.0804 16.7457 12.05 16.3308C13.0207 15.9239 13.8704 15.3638 14.5871 14.6471C15.3167 13.9175 15.8875 13.0727 16.297 12.119C16.7329 11.1304 16.95 10.0843 16.95 8.99C16.95 7.89874 16.7341 6.86197 16.297 5.89084C15.8896 4.92229 15.3201 4.07589 14.5872 3.36282C13.8741 2.62986 13.0277 2.06038 12.0592 1.65303C11.088 1.21595 10.0513 1 8.96 1C7.86571 1 6.81949 1.2171 5.83096 1.65305C4.87729 2.06251 4.03244 2.63335 3.30289 3.36289C2.58616 4.07962 2.02605 4.92932 1.61918 5.89998C1.20428 6.86957 1 7.90299 1 8.99C1 10.0786 1.20483 11.1202 1.61756 12.1061L1.61753 12.1062L1.62085 12.1139C2.02761 13.063 2.58477 13.906 3.29176 14.6358L3.3028 14.6472L3.3142 14.6582C4.044 15.3652 4.88698 15.9224 5.83608 16.3291ZM10.4933 12.6278L10.4932 12.6277L10.4824 12.6324C10.0129 12.8359 9.5088 12.94 8.96 12.94C8.4112 12.94 7.90709 12.8359 7.43761 12.6324C6.95035 12.4213 6.52571 12.1415 6.15732 11.7927C5.80854 11.4243 5.5287 10.9997 5.31756 10.5124C5.11411 10.0429 5.01 9.5388 5.01 8.99C5.01 8.4412 5.11411 7.93709 5.31756 7.46761L5.31762 7.46764L5.32219 7.45673C5.53605 6.94676 5.81609 6.52813 6.15711 6.18711C6.52763 5.81658 6.95249 5.52778 7.43761 5.31756C7.90709 5.11411 8.4112 5.01 8.96 5.01C9.5088 5.01 10.0129 5.11411 10.4824 5.31756L10.4824 5.31762L10.4933 5.32219C10.9939 5.53212 11.4076 5.81598 11.7474 6.17122L11.7627 6.18728L11.7788 6.20264C12.134 6.54244 12.4179 6.95613 12.6278 7.45673L12.6277 7.45675L12.6324 7.46761C12.8359 7.93709 12.94 8.4412 12.94 8.99C12.94 9.5388 12.8359 10.0429 12.6324 10.5124C12.4222 10.9975 12.1334 11.4224 11.7629 11.7929C11.4219 12.1339 11.0032 12.4139 10.4933 12.6278Z" fill="#F0F1EC" stroke="#879A77" stroke-width="2" />
-                    <circle cx="9.09961" cy="8.9502" r="4" fill="#879A77" />
-                </svg>ur convenience:</h2>
+            <h2 class="convenience__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".convenience">
+            <?php echo cchideaway_text_icons(get_field('hotel_service_header', 'options'));  ?></h2>
             <ul class="convenience__list" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".convenience">
                 <li>
                     <div class="convenience__item">
@@ -267,7 +269,18 @@
     </section><!-- Convenience  :: End-->
 
 
-    <?php get_template_part('template-parts/blocks/gallery'); ?>
+    <?php 
+
+    $gallery = get_field('hotel_gallery', 'options'); 
+    $text1 = get_field('hotel_gallery_text1', 'options');
+    $text2 = get_field('hotel_gallery_text_2', 'options');
+    
+    get_template_part('template-parts/blocks/gallery', null, $args = array(
+        'gallery' => $gallery,
+        'text1' => $text1,
+        'text2' => $text2,
+        )); ?>
+
 
     <!-- Plain text :: Start -->
     <?php

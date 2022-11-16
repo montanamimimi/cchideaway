@@ -1,5 +1,9 @@
-    <?php $gallery = get_field('gallery'); 
-   
+    <?php 
+
+    $text1 = $args['text1'];
+    $text2 = $args['text2'];
+    $gallery = $args['gallery']; 
+ 
     ?>
     
     <!-- Gallery  :: Start-->
@@ -17,7 +21,7 @@
                     </div>
                     <div class="col-lg-2" data-aos="fade-up">
                         <div class="gallery__item">
-                            <p class="gallery__item-text">seeking a respite from the crowds and noise from the more urban locations as well as those seeking a yoga retreat or a wellness holiday. </p>
+                            <p class="gallery__item-text"><?php echo $text1; ?></p>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up">
@@ -37,7 +41,7 @@
                     </div>
                     <div class="col-lg-3" data-aos="fade-up">
                         <div class="gallery__item">
-                            <p class="gallery__item-text">seeking a respite from the crowds and noise from the more urban locations as well as those seeking a yoga retreat or a wellness holiday. </p>
+                            <p class="gallery__item-text"><?php echo $text2; ?></p>
                         </div>
                     </div>
                     <div class="col-lg-6" data-aos="fade-up">

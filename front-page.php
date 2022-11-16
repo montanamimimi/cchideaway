@@ -91,7 +91,7 @@
                         </picture>
                     </div>
                     <div class="col-lg-4 order-lg-3">
-                        <p class="yw__text" data-aos="fade-up" data-aos-delay="600"> Come enjoy CC's Yoga Holiday Retreat Program including the gorgeous beaches, amazing nature hikes, super-nutritiously delicious foods, attentive yoga instructors and so much more.</p>
+                        <p class="yw__text" data-aos="fade-up" data-aos-delay="600"><?php echo get_field('mainpage_yoga_short', 'options'); ?> </p>
                     </div>
                     <div class="col-lg-12 order-lg-6">
                         <div class="yw__button" data-aos="fade-up" data-aos-delay="1400">
@@ -119,7 +119,7 @@
                     <div class="col-lg-4 order-lg-2">
                         <picture class="nd__image nd__image--01" data-aos="fade-in" data-aos-delay="400">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_detox_image_1', 'options'), 'medium'); ?>" alt="Detox image 1" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_detox_image_1', 'options'), 'medium_large'); ?>" alt="Detox image 1" />
                         </picture>
                     </div>
                     <div class="col-lg-5 order-lg-1">
@@ -128,7 +128,7 @@
                     <div class="col-lg-3 order-lg-3">
                         <picture class="nd__image nd__image--02" data-aos="fade-in" data-aos-delay="800">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_detox_image_2', 'options'), 'medium'); ?>" alt="Detox image 2" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_detox_image_2', 'options'), 'medium_large'); ?>" alt="Detox image 2" />
                         </picture>
                     </div>
                     <div class="col-lg-3 push-lg-5 order-lg-5">
@@ -140,7 +140,7 @@
                     <div class="col-lg-4 push-lg-4 order-lg-4">
                         <picture class="nd__image nd__image--03" data-aos="fade-in" data-aos-delay="1200">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_detox_image_3', 'options'), 'medium'); ?>" alt="Detox image 3" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_detox_image_3', 'options'), 'medium_large'); ?>" alt="Detox image 3" />
                         </picture>
                         <div class="nd__button" data-aos="fade-up" data-aos-delay="1400">
                             <a class="ui-btn ui-btn--secondary" href="<?php echo get_site_url() . '/detox'; ?>">read more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +166,7 @@
                     <div class="col-lg-4 order-lg-4">
                         <picture class="ea__image ea__image--02" data-aos="fade-in" data-aos-delay="400">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_adventures_image_1', 'options'), 'medium'); ?>" alt="Adventures image 1" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_adventures_image_1', 'options'), 'medium_large'); ?>" alt="Adventures image 1" />
                         </picture>
                     </div>
                     <div class="col-lg-4 order-lg-3">
@@ -176,13 +176,13 @@
                         </div>
                         <picture class="ea__image ea__image--03" data-aos="fade-up" data-aos-delay="800">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_adventures_image_2', 'options'), 'medium'); ?>" alt="Adventures image 2" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_adventures_image_2', 'options'), 'medium_large'); ?>" alt="Adventures image 2" />
                         </picture>
                     </div>
                     <div class="col-lg-4 order-lg-2">
                         <picture class="ea__image ea__image--01" data-aos="fade-in" data-aos-delay="1000">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_adventures_image_3', 'options'), 'medium'); ?>" alt="Adventures image 3" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_adventures_image_3', 'options'), 'medium_large'); ?>" alt="Adventures image 3" />
                         </picture>
                         <blockquote class="ea__blockquote" data-aos="fade-up" data-aos-delay="1200"><?php echo get_field('mainpage_adventures_short', 'options'); ?>
                         </blockquote>
