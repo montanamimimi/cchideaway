@@ -71,7 +71,7 @@
                     <div class="col-lg-5 order-lg-2">
                         <picture class="yw__image yw__image--01" data-aos="fade-in" data-aos-delay="400">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_yoga_image_1', 'options'), 'medium'); ?>" alt="Yoga and wellness" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_yoga_image_1', 'options'), 'medium_large'); ?>" alt="Yoga and wellness" />
                         </picture>
                     </div>
                     <div class="col-lg-5 order-lg-4">
@@ -83,11 +83,11 @@
                     <div class="col-lg-3 order-lg-5">
                         <picture class="yw__image yw__image--02" data-aos="fade-in" data-aos-delay="1000">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_yoga_image_2', 'options')); ?>" alt="Yoga image 2" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_yoga_image_2', 'options'), 'medium_large'); ?>" alt="Yoga image 2" />
                         </picture>
                         <picture class="yw__image yw__image--03" data-aos="fade-in" data-aos-delay="1200">
 
-                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_yoga_image_3', 'options')); ?>" alt="Yoga image 3" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('mainpage_yoga_image_3', 'options'), 'medium_large'); ?>" alt="Yoga image 3" />
                         </picture>
                     </div>
                     <div class="col-lg-4 order-lg-3">
