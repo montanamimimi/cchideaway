@@ -250,6 +250,19 @@ if( function_exists('acf_add_options_page')) {
         'parent_slug'   => 'theme-settings',
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Location Settings',
+        'menu_title'    => 'Location',
+        'parent_slug'   => 'theme-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Restaurant Settings',
+        'menu_title'    => 'Restaurant',
+        'parent_slug'   => 'theme-settings',
+    ));
+
+
     // acf_add_options_page();
     // acf_add_options_sub_page('Mainpage');
     // acf_add_options_sub_page('Hotel');

@@ -36,7 +36,8 @@
     <section class="convenience" data-aos="fade-in" data-aos-anchor=".convenience">
         <div class="container-fluid">
             <h2 class="convenience__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".convenience">
-            <?php echo cchideaway_text_icons(get_field('hotel_service_header', 'options'));  ?></h2>
+                <?php echo cchideaway_text_icons(get_field('hotel_service_header', 'options'));  ?>
+            </h2>
             <ul class="convenience__list" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".convenience">
                 <li>
                     <div class="convenience__item">

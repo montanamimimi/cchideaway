@@ -1,55 +1,9 @@
 <?php get_header(); ?>
 
 <main class="main">
-    <!-- Intro :: Start-->
-    <section class="intro" data-aos="fade-in" data-aos-anchor=".intro">
-        <div class="container-fluid">
-            <picture class="intro__image">
+    <?php get_template_part('template-parts/blocks/intro', 'description'); ?>
 
-                <img src="<?php echo get_the_post_thumbnail_url($post, 'large'); ?>" alt="CC hideaway hotel" />
-            </picture>
-            <div class="intro__desc">
-                <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro">Truly heavenly places</h1>
-            </div>
-            <div class="intro__booking" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".intro">
-                <div class="ui-booking">
-                    <form action="#">
-                        <div class="ui-booking__data">
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="ui-booking__label">From date</label>
-                                    <input class="ui-booking__input js-datepicker js-datepicker-from" type="text" value="01/06" readonly>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">To date</label>
-                                    <input class="ui-booking__input js-datepicker js-datepicker-to" type="text" value="14/06" readonly>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">Adults</label>
-                                    <div class="ui-booking__number">
-                                        <button class="ui-booking__decrease">-</button>
-                                        <input class="ui-booking__input" type="number" value="2">
-                                        <button class="ui-booking__increase">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">Children</label>
-                                    <div class="ui-booking__number">
-                                        <button class="ui-booking__decrease">-</button>
-                                        <input class="ui-booking__input" type="number" value="0">
-                                        <button class="ui-booking__increase">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ui-booking__button">
-                            <a class="ui-btn ui-btn--booking" href="#">Book</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section><!-- Intro :: End-->
+
     <!-- Dishes :: Start-->
     <section class="dishes" data-aos="fade-in" data-aos-anchor=".dishes">
         <div class="container-fluid">
@@ -58,15 +12,19 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <span class="dishes__decor" data-aos="fade-in" data-aos-delay="200" data-aos-anchor=".dishes"></span>
-                            <h2 class="dishes__title" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".dishes">Wellness cousine</h2>
+                            <h2 class="dishes__title" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".dishes">
+                            <?php echo cchideaway_text_icons(get_field('reastaurant_wellness', 'options'));  ?>
+                            </h2>
                         </div>
                         <div class="col-lg-3">
-                            <p class="dishes__text dishes__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".dishes">Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach.</p>
+                            <p class="dishes__text dishes__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".dishes">
+                            <?php echo get_field('restaurant_wellness_text', 'options');  ?>
+                            </p>
                         </div>
                         <div class="col-lg-9">
                             <picture class="dishes__image dishes__image--01" data-aos="fade-in" data-aos-delay="800" data-aos-anchor=".dishes">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-dishes-01.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_wellness_first_image', 'options'), 'medium_large'); ?>" alt="<?php echo get_field('location_first_attraction', 'options');  ?>" alt="[Alt]" />
                             </picture>
                         </div>
                     </div>
@@ -74,25 +32,27 @@
                 <div class="dishes__grid-group">
                     <div class="row">
                         <div class="col-lg-3 order-lg-2">
-                            <p class="dishes__text dishes__text--02" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".dishes">Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach. Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach. Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach.</p>
+                            <p class="dishes__text dishes__text--02" data-aos="fade-up" data-aos-delay="1000" data-aos-anchor=".dishes">
+                            <?php echo get_field('restaurant_wellness_long_text', 'options');  ?>
+                            </p>
                         </div>
                         <div class="col-lg-6 order-lg-1">
                             <picture class="dishes__image dishes__image--02" data-aos="fade-in" data-aos-delay="1200" data-aos-anchor=".dishes">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-dishes-02.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_wellness_second_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-3 order-lg-3">
                             <picture class="dishes__image dishes__image--03" data-aos="fade-in" data-aos-delay="1400" data-aos-anchor=".dishes">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-dishes-03.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_wellness_third_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="dishes__button" data-aos="fade-up" data-aos-delay="1600" data-aos-anchor=".dishes">
-                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="#">see menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="<?php echo get_field('restaurant_wellness_menu', 'options');  ?>" target="_blank">see menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="#444444" />
                     </svg>
                 </a>
@@ -102,18 +62,22 @@
     <!-- Country :: Start-->
     <section class="country" data-aos="fade-in" data-aos-anchor=".country">
         <div class="container-fluid">
-            <h2 class="country__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".country"> Authentic Thai</h2>
+            <h2 class="country__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".country"> 
+            <?php echo cchideaway_text_icons(get_field('restaurant_authentic', 'options'));  ?>
+            </h2>
             <div class="country__grid">
                 <div class="country__grid-group">
                     <div class="row">
                         <div class="col-lg-9">
                             <picture class="country__image country__image--01" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".country">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-country-01.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_authentic_first_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-3">
-                            <p class="country__text country__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".country"> Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach.</p>
+                            <p class="country__text country__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".country"> 
+                            <?php echo get_field('restaurant_authentic_text', 'options');  ?>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -122,23 +86,25 @@
                         <div class="col-lg-4 order-lg-2">
                             <picture class="country__image country__image--02" data-aos="fade-in" data-aos-delay="800" data-aos-anchor=".country">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-country-02.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_authentic_second_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-3 order-lg-3">
                             <picture class="country__image country__image--03" data-aos="fade-in" data-aos-delay="1000" data-aos-anchor=".country">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-country-03.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_authentic_third_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-5 order-lg-1">
-                            <p class="country__text country__text--02" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".country"> Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach. Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach. Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach.</p>
+                            <p class="country__text country__text--02" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".country">
+                                <?php echo get_field('restaurant_authentic_long_text', 'options');  ?>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="country__button" data-aos="fade-up" data-aos-delay="1400" data-aos-anchor=".country">
-                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="#">see menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="<?php echo get_field('restaurant_authentic_menu', 'options');  ?>" target="_blank">see menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="#444444" />
                     </svg>
                 </a>
@@ -148,18 +114,22 @@
     <!-- Drinks :: Start-->
     <section class="drinks" data-aos="fade-in" data-aos-anchor=".drinks">
         <div class="container-fluid">
-            <h2 class="drinks__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".drinks">Artizan drinks</h2>
+            <h2 class="drinks__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".drinks">
+            <?php echo cchideaway_text_icons(get_field('restaurant_artizan', 'options'));  ?>
+            </h2>
             <div class="drinks__grid">
                 <div class="drinks__grid-group">
                     <div class="row">
                         <div class="col-lg-9">
                             <picture class="drinks__image drinks__image--01" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".drinks">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-drinks-01.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_artizan_first_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-3">
-                            <p class="drinks__text drinks__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".drinks"> Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach.</p>
+                            <p class="drinks__text drinks__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".drinks"> 
+                            <?php echo get_field('restaurant_artizan_text', 'options');  ?>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -168,30 +138,34 @@
                         <div class="col-lg-4 order-lg-3">
                             <picture class="drinks__image drinks__image--02" data-aos="fade-in" data-aos-delay="800" data-aos-anchor=".drinks">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-drinks-02.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_artizan_second_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-4 order-lg-1">
                             <picture class="drinks__image drinks__image--03" data-aos="fade-in" data-aos-delay="1000" data-aos-anchor=".drinks">
 
-                                <img src="<?php echo get_theme_file_uri('/assets/images/img-drinks-03.png'); ?>" alt="[Alt]" />
+                                <img src="<?php echo wp_get_attachment_image_url(get_field('restaurant_artizan_third_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                             </picture>
                         </div>
                         <div class="col-lg-4 order-lg-2">
-                            <p class="drinks__text drinks__text--02" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".drinks"> Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach. Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach. Refuge Restaurant is located in CC's Hideaway near Kata Beach and Karon Beach.</p>
+                            <p class="drinks__text drinks__text--02" data-aos="fade-up" data-aos-delay="1200" data-aos-anchor=".drinks">
+                                <?php echo get_field('restaurant_artizan_long_text', 'options');  ?> 
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="drinks__button" data-aos="fade-up" data-aos-delay="1400" data-aos-anchor=".drinks">
-                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="#">see menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="<?php echo get_field('restaurant_artizan_menu', 'options');  ?>" target="_blank">see menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="#444444" />
                     </svg>
                 </a>
             </div>
         </div>
     </section><!-- Drinks :: End-->
-
+    <?php 
+    $textType = get_field('plain_text_type');
+    get_template_part('template-parts/blocks/text', $textType); ?>
 
     <!-- Events :: Start-->
     <section class="events" data-aos="fade-in" data-aos-anchor=".events">
@@ -220,6 +194,9 @@
             </ul>
         </div>
     </section><!-- Events :: End-->
+
+
+
 
 
 </main><!-- Main :: End-->
