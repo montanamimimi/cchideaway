@@ -57,7 +57,7 @@
     }
 
     @include breakpoint(lg) {
-        height: 126px;
+        height: 106px;
     }
 }
 
@@ -501,4 +501,8 @@
         bottom: 0;
         right: 44px;
     }
+}
+
+.header-background {
+    background-color: #09090961;
 }

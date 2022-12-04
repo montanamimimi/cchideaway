@@ -18,12 +18,12 @@
                     <div class="col-lg-8">
                         <picture class="try__image" data-aos="fade-right" data-aos-anchor=".try">
 
-                            <img src="<?php echo get_theme_file_uri('/assets/images/img-try.png'); ?>" alt="[Alt]" />
+                            <img src="<?php echo wp_get_attachment_image_url(get_field('spa_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                         </picture>
                     </div>
                     <div class="col-lg-4">
-                        <p class="try__text" data-aos="fade-left" data-aos-anchor=".try"> We want your time with us to be absolutely wonderful.
-                            <br> Try our new Therapies & Massages by Khun Bowie! Please note that reservation in advance is required.
+                        <p class="try__text" data-aos="fade-left" data-aos-anchor=".try"> 
+                        <?php echo get_field('spa_text', 'options');  ?>
                         </p>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="yoga-styles__button" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".yoga-styles">
-                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="#">see spa menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="ui-btn ui-btn--responsive ui-btn--primary" href="<?php echo get_field('spa_menu', 'options');  ?>" target="_blank">see spa menu<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="#444444" />
                     </svg>
                 </a>

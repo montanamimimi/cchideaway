@@ -22,8 +22,8 @@
                 <div class="mouse-follow">
                 <div class="mouse-follow__circle"></div>
             </div><!-- Mouse-follow :: End-->
-        
-            <header class="header compensate-for-scrollbar">
+    
+            <header id="header" class="header compensate-for-scrollbar">
                 <div class="container-fluid">
                     <nav class="header__nav">
                         <div class="header__logo_cc">

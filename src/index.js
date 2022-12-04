@@ -439,3 +439,22 @@ $(function() {
 });
 
 
+const header = document.getElementById('header');
+
+if (header) {
+
+	if (self.pageYOffset > 20) {
+		header.classList.add('header-background');
+	}
+
+	document.addEventListener('scroll', () => {
+
+		if (self.pageYOffset > 20) {
+			header.classList.add('header-background');
+		} else {
+			header.classList.remove('header-background');
+		}
+	})
+}
+
+

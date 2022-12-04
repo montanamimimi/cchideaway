@@ -13411,7 +13411,7 @@ body {
 }
 @media (min-width: 992px) {
   .header {
-    height: 126px;
+    height: 106px;
   }
 }
 
@@ -13817,6 +13817,10 @@ body {
     bottom: 0;
     right: 44px;
   }
+}
+
+.header-background {
+  background-color: rgba(9, 9, 9, 0.3803921569);
 }
 
 .main {

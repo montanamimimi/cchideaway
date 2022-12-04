@@ -28,21 +28,26 @@ $textType = get_field('plain_text_type');
             <div class="yr__grid">
                 <div class="row">
                     <div class="col-12 col-lg-auto">
-                        <h2 class="yr__title" data-aos="fade-right" data-aos-delay="200" data-aos-anchor=".yr"> Yoga retreat</h2>
+                        <h2 class="yr__title" data-aos="fade-right" data-aos-delay="200" data-aos-anchor=".yr">
+
+                        <?php echo cchideaway_text_icons(get_field('retreat_header', 'options'));  ?>
+                        </h2>
                     </div>
                     <div class="col-10 offset-2 col-lg offset-lg-0">
                         <div class="row">
                             <div class="col-lg-12">
                                 <picture class="yr__image" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".yr">
-                                    <img src="<?php echo get_theme_file_uri('assets/images/img-yr.png'); ?>" alt="[Alt]" />
+                                    <img src="<?php echo wp_get_attachment_image_url(get_field('retreat_image', 'options'), 'medium_large'); ?>" alt="[Alt]" />
                                 </picture>
                             </div>
                             <div class="col-lg-8">
-                                <p class="yr__text yr__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".yr"> Included: unlimited Drinking Water, Face Towels, Yoga equipment, Cleaning Services.</p>
+                                <p class="yr__text yr__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".yr">
+                                <?php echo get_field('retreat_short_text', 'options');  ?>
+                                </p>
                             </div>
                             <div class="col-lg-4">
-                                <p class="yr__text yr__text--02" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".yr"> Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath.
-                                    <br> If you like a strong power yoga or vinyasa class then you should find this challenging and rewarding. Primary Series works to heal and align the body, with a particular focus on realignment of the spine and detoxification.
+                                <p class="yr__text yr__text--02" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".yr"> 
+                                <?php echo get_field('retreat_long_text', 'options');  ?>
                                 </p>
                             </div>
                         </div>
@@ -58,42 +63,26 @@ $textType = get_field('plain_text_type');
         <div class="container-fluid">
             <h2 class="why__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".why">Why <mark>CC’s</mark> yoga retreat?</h2>
             <ul class="why__list" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".why">
+
+                <?php 
+                $whys = get_field('retreat_why', 'options');
+
+                foreach ($whys as $why) { ?>
+
                 <li>
                     <div class="why__item">
-                        <h3 class="why__item-title">Anytime</h3>
-                        <p class="why__item-text">Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath. </p>
+                        <h3 class="why__item-title"><?php echo $why['header']; ?></h3>
+                        <p class="why__item-text">
+                        <?php echo $why['text']; ?>
+                        </p>
                     </div>
                 </li>
-                <li>
-                    <div class="why__item">
-                        <h3 class="why__item-title">Adventurous/relaxing</h3>
-                        <p class="why__item-text">Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath. </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="why__item">
-                        <h3 class="why__item-title">Flexible duration</h3>
-                        <p class="why__item-text">Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath. </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="why__item">
-                        <h3 class="why__item-title">All inclusive</h3>
-                        <p class="why__item-text">Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath. </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="why__item">
-                        <h3 class="why__item-title">Suitable for all levels of practice</h3>
-                        <p class="why__item-text">Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath. </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="why__item">
-                        <h3 class="why__item-title">Bring a Corporation</h3>
-                        <p class="why__item-text">Ashtanga is the original power yoga. A systematic sequence of predetermined flowing postures linked together with the breath. </p>
-                    </div>
-                </li>
+
+
+                <?php }
+                
+                ?>
+
             </ul>
         </div>
     </section><!-- Why  :: End-->
@@ -247,58 +236,7 @@ $textType = get_field('plain_text_type');
 
     
 
-    <!-- Tariffs :: Start-->
-    <section class="tariffs" data-aos="fade-in" data-aos-anchor=".tariffs">
-        <div class="container-fluid">
-            <div class="tariffs__wrapper">
-                <h2 class="tariffs__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".tariffs">Rates & Plans</h2>
-                <ul class="tariffs__list" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".tariffs">
-                    <li>
-                        <div class="tariffs__item">
-                            <h3 class="tariffs__item-title">1 Class </h3>
-                            <p class="tariffs__item-text">Drinking Water, Face Towels, Yoga Equipment, Green tea after session, Outdoor Pool & Shower, Free wifi. </p>
-                            <span class="tariffs__item-price">$ 100</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tariffs__item">
-                            <h3 class="tariffs__item-title">1 Class </h3>
-                            <p class="tariffs__item-text">Drinking Water, Face Towels, Yoga Equipment, Green tea after session, Outdoor Pool & Shower, Free wifi. </p>
-                            <span class="tariffs__item-price">$ 100</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tariffs__item">
-                            <h3 class="tariffs__item-title">1 Class </h3>
-                            <p class="tariffs__item-text">Drinking Water, Face Towels, Yoga Equipment, Green tea after session, Outdoor Pool & Shower, Free wifi. </p>
-                            <span class="tariffs__item-price">$ 100</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tariffs__item">
-                            <h3 class="tariffs__item-title">1 Class </h3>
-                            <p class="tariffs__item-text">Drinking Water, Face Towels, Yoga Equipment, Green tea after session, Outdoor Pool & Shower, Free wifi. </p>
-                            <span class="tariffs__item-price">$ 100</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tariffs__item">
-                            <h3 class="tariffs__item-title">1 Class </h3>
-                            <p class="tariffs__item-text">Drinking Water, Face Towels, Yoga Equipment, Green tea after session, Outdoor Pool & Shower, Free wifi. </p>
-                            <span class="tariffs__item-price">$ 100</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tariffs__item">
-                            <h3 class="tariffs__item-title">1 Class </h3>
-                            <p class="tariffs__item-text">Drinking Water, Face Towels, Yoga Equipment, Green tea after session, Outdoor Pool & Shower, Free wifi. </p>
-                            <span class="tariffs__item-price">$ 100</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section><!-- Tariffs :: End-->
+    <?php get_template_part('template-parts/blocks/rates', null, $args = array('field_name' => 'retreat_rates')); ?>
 
     <!-- Hotel :: Start-->
     <section class="hotel" data-aos="fade-in">
@@ -306,7 +244,7 @@ $textType = get_field('plain_text_type');
             <div class="hotel__wrapper">
                 <picture class="hotel__image">
 
-                    <img src="<?php echo get_theme_file_uri('assets/images/teacher-tr.jpg'); ?>" alt="Teacher training" />
+                    <img src="<?php echo wp_get_attachment_image_url(get_field('retreat_training_image', 'options'), 'medium_large'); ?>" alt="Teacher training" />
                 </picture>
                 <div class="hotel__desc" data-aos="fade-up" data-aos-delay="200">
                     <h2 class="hotel__title">
@@ -314,7 +252,7 @@ $textType = get_field('plain_text_type');
                     </h2>
                 </div>
                 <div class="hotel__button" data-aos="fade-up" data-aos-delay="400">
-                    <a class="ui-btn ui-btn--responsive ui-btn--primary" href="<?php echo get_site_url() . '/hotel'; ?>">view more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a class="ui-btn ui-btn--responsive ui-btn--primary" href="<?php echo get_site_url(); ?>">view more<svg width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M26.5303 7.03033C26.8232 6.73744 26.8232 6.26256 26.5303 5.96967L21.7574 1.1967C21.4645 0.903806 20.9896 0.903806 20.6967 1.1967C20.4038 1.48959 20.4038 1.96447 20.6967 2.25736L24.9393 6.5L20.6967 10.7426C20.4038 11.0355 20.4038 11.5104 20.6967 11.8033C20.9896 12.0962 21.4645 12.0962 21.7574 11.8033L26.5303 7.03033ZM6.55671e-08 7.25L26 7.25V5.75L-6.55671e-08 5.75L6.55671e-08 7.25Z" fill="#444444" />
                         </svg>
                     </a>

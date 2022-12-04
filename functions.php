@@ -262,10 +262,24 @@ if( function_exists('acf_add_options_page')) {
         'parent_slug'   => 'theme-settings',
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Rooftop Settings',
+        'menu_title'    => 'Rooftop',
+        'parent_slug'   => 'theme-settings',
+    ));
 
-    // acf_add_options_page();
-    // acf_add_options_sub_page('Mainpage');
-    // acf_add_options_sub_page('Hotel');
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Retreat Settings',
+        'menu_title'    => 'Retreat',
+        'parent_slug'   => 'theme-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Spa Settings',
+        'menu_title'    => 'Spa',
+        'parent_slug'   => 'theme-settings',
+    ));
+
 }
 
 
