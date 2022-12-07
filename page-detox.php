@@ -2,55 +2,8 @@
 
 <!-- Main :: Start-->
 <main class="main">
-    <!-- Intro :: Start-->
-    <section class="intro" data-aos="fade-in" data-aos-anchor=".intro">
-        <div class="container-fluid">
-            <picture class="intro__image">                
-                <img src="<?php echo get_the_post_thumbnail_url($post, 'large'); ?>" alt="Nutrition and detox wallpaper" />
-            </picture>
-            <div class="intro__desc">
-                <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro">Nutrition & Detox</h1>
-                <p class="intro__text" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".intro">Receive a detailed evaluation of your health through holistic nutrition, including current diet and medical history analysis, and follow up wellness guidelines.</p>
-            </div>
-            <div class="intro__booking" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".intro">
-                <div class="ui-booking">
-                    <form action="#">
-                        <div class="ui-booking__data">
-                            <div class="row">
-                                <div class="col-3">
-                                    <label class="ui-booking__label">From date</label>
-                                    <input class="ui-booking__input js-datepicker" type="text" value="01/06" readonly>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">To date</label>
-                                    <input class="ui-booking__input js-datepicker" type="text" value="14/06" readonly>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">Adults</label>
-                                    <div class="ui-booking__number">
-                                        <button class="ui-booking__decrease">-</button>
-                                        <input class="ui-booking__input" type="number" value="2">
-                                        <button class="ui-booking__increase">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <label class="ui-booking__label">Children</label>
-                                    <div class="ui-booking__number">
-                                        <button class="ui-booking__decrease">-</button>
-                                        <input class="ui-booking__input" type="number" value="0">
-                                        <button class="ui-booking__increase">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ui-booking__button">
-                            <a class="ui-btn ui-btn--booking" href="#">Book</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section><!-- Intro :: End-->
+
+<?php get_template_part('template-parts/blocks/intro', 'description'); ?>
     <!-- Clean  :: Start-->
     <section class="clean" data-aos="fade-in" data-aos-anchor=".clean">
         <div class="container-fluid">
@@ -60,12 +13,17 @@
                 </svg>
             </div>
             <div class="clean__wrapper">
-                <h2 class="clean__title" data-aos="fade-left" data-aos-delay="400" data-aos-anchor=".clean"> Holistic cleanse day</h2>
+                <h2 class="clean__title" data-aos="fade-left" data-aos-delay="400" data-aos-anchor=".clean"> 
+
+                <?php echo get_field('detox_header', 'options');  ?>
+                </h2>
                 <picture class="clean__image" data-aos="fade-right" data-aos-delay="600" data-aos-anchor=".clean">
                     
-                    <img src="<?php echo get_theme_file_uri('assets/images/img-clean.png'); ?>" alt="Holistic cleanse day" />
+                    <img src="<?php echo wp_get_attachment_image_url(get_field('detox_image', 'options'), 'medium_large'); ?>" alt="Holistic cleanse day" />
                 </picture>
-                <p class="clean__text" data-aos="fade-left" data-aos-delay="800" data-aos-anchor=".clean"> Nutritionally balanced & delicious detox cleanse day - a moderate cleanse perfect for the first time detox experience, focuses on natural detoxing of our physical and emotional self with a plant-based meals, superfood drinks, alkaline cold pressed juices and natural supplements. </p>
+                <p class="clean__text" data-aos="fade-left" data-aos-delay="800" data-aos-anchor=".clean"> 
+                <?php echo get_field('detox_start_text', 'options');  ?>
+                </p>
             </div>
         </div>
     </section><!-- Clean  :: End-->
@@ -79,7 +37,9 @@
                                 <path d="M36.5303 23.5303C36.8232 23.2374 36.8232 22.7626 36.5303 22.4697L31.7574 17.6967C31.4645 17.4038 30.9896 17.4038 30.6967 17.6967C30.4038 17.9896 30.4038 18.4645 30.6967 18.7574L34.9393 23L30.6967 27.2426C30.4038 27.5355 30.4038 28.0104 30.6967 28.3033C30.9896 28.5962 31.4645 28.5962 31.7574 28.3033L36.5303 23.5303ZM10 23.75L36 23.75V22.25L10 22.25L10 23.75Z" fill="currentColor" />
                             </svg>
                         </h3>
-                        <p class="move__item-text">Prana Eatery Restaurant with the most delicious breakfasts that will make your day</p>
+                        <p class="move__item-text">
+                        <?php echo get_field('detox_nutrition_button', 'options');  ?>
+                        </p>
                     </a>
                 </li>
                 <li data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".move">
@@ -88,7 +48,9 @@
                                 <path d="M36.5303 23.5303C36.8232 23.2374 36.8232 22.7626 36.5303 22.4697L31.7574 17.6967C31.4645 17.4038 30.9896 17.4038 30.6967 17.6967C30.4038 17.9896 30.4038 18.4645 30.6967 18.7574L34.9393 23L30.6967 27.2426C30.4038 27.5355 30.4038 28.0104 30.6967 28.3033C30.9896 28.5962 31.4645 28.5962 31.7574 28.3033L36.5303 23.5303ZM10 23.75L36 23.75V22.25L10 22.25L10 23.75Z" fill="currentColor" />
                             </svg>
                         </h3>
-                        <p class="move__item-text">Learn more about our nutrition concept, unique techniques will help you take a fresh look at the whole process</p>
+                        <p class="move__item-text">
+                        <?php echo get_field('detox_detox_button', 'options');  ?>
+                        </p>
                     </a>
                 </li>
             </ul>

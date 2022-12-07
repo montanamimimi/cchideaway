@@ -280,6 +280,25 @@ if( function_exists('acf_add_options_page')) {
         'parent_slug'   => 'theme-settings',
     ));
 
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Adventures Settings',
+        'menu_title'    => 'Adventures',
+        'parent_slug'   => 'theme-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Detox Settings',
+        'menu_title'    => 'Detox',
+        'parent_slug'   => 'theme-settings',
+    ));
+
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Yoga Settings',
+        'menu_title'    => 'Yoga',
+        'parent_slug'   => 'theme-settings',
+    ));
+
 }
 
 

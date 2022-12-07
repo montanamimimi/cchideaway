@@ -1,86 +1,38 @@
 <?php get_header(); ?>
 
-<!-- Intro :: Start-->
-<section class="intro" data-aos="fade-in" data-aos-anchor=".intro">
-    <div class="container-fluid">
-        <picture class="intro__image">
-            <img src="<?php echo get_theme_file_uri('/assets/images/img-intro-yr.png'); ?>" alt="Best yoga retreats" />
-        </picture>
-        <div class="intro__desc">
-            <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro">Yoga & Wellness</h1>
-            <p class="intro__text" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".intro">Ashtanga is the original power yoga.
-                A systematic sequence of predetermined flowing postures linked together with the breath.
-            </p>
-        </div>
-        <div class="intro__booking" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".intro">
-            <div class="ui-booking">
-                <form action="#">
-                    <div class="ui-booking__data">
-                        <div class="row">
-                            <div class="col-3">
-                                <label class="ui-booking__label">From date</label>
-                                <input class="ui-booking__input js-datepicker" type="text" value="01/06" readonly>
-                            </div>
-                            <div class="col-3">
-                                <label class="ui-booking__label">To date</label>
-                                <input class="ui-booking__input js-datepicker" type="text" value="14/06" readonly>
-                            </div>
-                            <div class="col-3">
-                                <label class="ui-booking__label">Adults</label>
-                                <div class="ui-booking__number">
-                                    <button class="ui-booking__decrease">-</button>
-                                    <input class="ui-booking__input" type="number" value="2">
-                                    <button class="ui-booking__increase">+</button>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <label class="ui-booking__label">Children</label>
-                                <div class="ui-booking__number">
-                                    <button class="ui-booking__decrease">-</button>
-                                    <input class="ui-booking__input" type="number" value="0">
-                                    <button class="ui-booking__increase">+</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui-booking__button">
-                        <a class="ui-btn ui-btn--booking" href="#">Book</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section><!-- Intro :: End-->
+<?php get_template_part('template-parts/blocks/intro', 'description'); ?>
 
 <!-- Rooftop  :: Start-->
 <section class="rooftop" data-aos="fade-in" data-aos-anchor=".rooftop" style="margin-top: -50px;">
     <div class="container-fluid">
         <div class="rooftop__wysiwyg">
-            <h2 data-aos="fade-left" data-aos-delay="200" data-aos-anchor=".rooftop"> Yoga & Wellness</h2>
+            <h2 data-aos="fade-left" data-aos-delay="200" data-aos-anchor=".rooftop"> 
+            <?php echo get_field('yoga_header', 'options');  ?>
+            </h2>
             <p data-aos="fade-left" data-aos-delay="400" data-aos-anchor=".rooftop">
-                Our Mission: To instill a connection and commitment to the environment and each other through experiential learning.
+            <?php echo get_field('yoga_description', 'options');  ?>
             </p>
         </div>
         <div class="rooftop__grid">
             <div class="row">
                 <div class="col-lg-4">
                     <mark class="rooftop__mark" data-aos="fade-right" data-aos-delay="200" data-aos-anchor=".rooftop__grid">
-                        Yoga is the source of youth. You are young as long as your spine is flexible.
+                    <?php echo get_field('yoga_second_header', 'options');  ?>
                     </mark>
                 </div>
                 <div class="col-lg-5">
                     <picture class="rooftop__image" data-aos="fade-in" data-aos-delay="400" data-aos-anchor=".rooftop__grid">
-                        <img src="<?php echo get_theme_file_uri('assets/images/img-yoga-welness.jpg'); ?>" alt="Wellness" />
+                        <img src="<?php echo wp_get_attachment_image_url(get_field('yoga_image', 'options'), 'medium_large'); ?>" alt="Wellness" />
                     </picture>
                 </div>
                 <div class="col-lg-4">
                     <p class="rooftop__text rooftop__text--01" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".rooftop__grid">
-                        Our Vision: A healthy planet where all people live in balance with the Earth.
+                    <?php echo get_field('yoga_short_text', 'options');  ?>
                     </p>
                 </div>
                 <div class="col-lg-3 push-lg-5">
                     <p class="rooftop__text rooftop__text--02" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".rooftop__grid">
-                        Our Core Values: We demonstrate respect, care and passion for the Earth, all people and all living things. We strive for excellence in everything we do through integrity, open communication and teamwork.
+                    <?php echo get_field('yoga_long_text', 'options');  ?>
                     </p>
                 </div>
             </div>
@@ -314,6 +266,12 @@
     </div>
 </section><!-- Packeages :: End-->
 
+    <!-- Plain text :: Start -->
+    <?php
+    wp_reset_query();
+    $textType = get_field('plain_text_type');
+    get_template_part('template-parts/blocks/text', $textType); ?>
+    <!-- Plain text :: End -->
 
 <!-- Team  :: Start-->
 <section class="team" data-aos="fade-in" data-aos-anchor=".team">
