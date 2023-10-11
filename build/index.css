@@ -6230,16 +6230,16 @@ button.swiper-pagination-bullet {
   background-color: transparent !important;
 }
 
-.simcal-event-description {
+.simcal-events {
+  margin-left: 0 !important;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
   display: none;
-}
-
-.simcal-event-description-show {
-  display: block;
-}
-
-.simcal-event-details {
-  cursor: pointer;
 }
 
 .intro {

@@ -1,10 +1,8 @@
 import "../css/main.scss";
 
 import GMap from "./modules/GoogleMap";
-import Calendar from "./modules/Calendar";
 
 const googleMap = new GMap();
-const calendar = new Calendar();
 
 $(function() {
 	

@@ -2,32 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/modules/Calendar.js":
-/*!*********************************!*\
-  !*** ./src/modules/Calendar.js ***!
-  \*********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-class Calendar {
-  constructor() {
-    document.querySelectorAll(".simcal-event-details").forEach(el => {
-      this.addListeners(el);
-    });
-  }
-  addListeners(el) {
-    el.addEventListener('click', () => {
-      const description = el.querySelector('.simcal-event-description');
-      if (description) {
-        description.classList.toggle('simcal-event-description-show');
-      }
-    });
-  }
-}
-/* harmony default export */ __webpack_exports__["default"] = (Calendar);
-
-/***/ }),
-
 /***/ "./src/modules/GoogleMap.js":
 /*!**********************************!*\
   !*** ./src/modules/GoogleMap.js ***!
@@ -174,12 +148,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/main.scss */ "./css/main.scss");
 /* harmony import */ var _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/GoogleMap */ "./src/modules/GoogleMap.js");
-/* harmony import */ var _modules_Calendar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Calendar */ "./src/modules/Calendar.js");
-
 
 
 const googleMap = new _modules_GoogleMap__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const calendar = new _modules_Calendar__WEBPACK_IMPORTED_MODULE_2__["default"]();
 $(function () {
   // --------------------------------------------------------------------------
   // Mouse Follow
