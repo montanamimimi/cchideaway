@@ -1,8 +1,19 @@
 class GMap {
     constructor() {
-      document.querySelectorAll(".acf-map").forEach(el => {
-        this.new_map(el)
-      })
+
+      this.maps();
+
+    }
+
+    maps() {
+      
+      const maps = document.querySelectorAll(".acf-map");
+      
+      if (maps) {
+        maps.forEach(el => {
+          this.new_map(el)
+        })
+      }
     }
   
     new_map($el) {

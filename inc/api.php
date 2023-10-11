@@ -4,6 +4,7 @@ add_action('rest_api_init', function () {
     register_rest_route('cc/v2', 'register', [
         'method' => WP_REST_SERVER::CREATABLE,
         'callback' => 'user_create_callback',
+        'permission_callback' => true
     ]);
 });
 

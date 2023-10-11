@@ -6221,6 +6221,27 @@ button.swiper-pagination-bullet {
   }
 }
 
+.simcal-day-label {
+  margin: 0 !important;
+  height: 1px;
+}
+.simcal-day-label span {
+  display: none;
+  background-color: transparent !important;
+}
+
+.simcal-event-description {
+  display: none;
+}
+
+.simcal-event-description-show {
+  display: block;
+}
+
+.simcal-event-details {
+  cursor: pointer;
+}
+
 .intro {
   background: #444444;
   color: #F0F1EC;
