@@ -6234,6 +6234,10 @@ button.swiper-pagination-bullet {
   margin-left: 0 !important;
 }
 
+details {
+  cursor: pointer;
+}
+
 details > summary {
   list-style: none;
 }
