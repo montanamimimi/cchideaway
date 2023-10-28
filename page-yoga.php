@@ -66,7 +66,7 @@
                 </a>
             </li>
             <li>
-                <a class="includes__item" href="#">
+                <a class="includes__item" href="<?php echo get_site_url() . '/wellness'; ?>">
                     <span class="includes__item-icon">
                         <svg width="56" height="43" viewBox="0 0 56 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.373 18.4167H20.9475V38.8194C20.9475 39.534 20.37 40.1111 19.6603 40.1111C18.9505 40.1111 18.373 39.534 18.373 38.8194V18.4167Z" fill="#DAD9D3" stroke="#444444" />
@@ -85,7 +85,7 @@
                 </a>
             </li>
             <li>
-                <a class="includes__item" href="#">
+                <a class="includes__item" href="<?php echo get_site_url() . '/yoga-retreats'; ?>">
                     <span class="includes__item-icon">
                         <svg width="56" height="43" viewBox="0 0 56 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M40.5269 25.5099C38.9104 29.5223 35.4416 31.8978 33.0488 32.3422L29.607 31.3753C27.6018 29.6954 25.6028 25.3373 26.1857 21.4812C26.7198 17.9481 32.8391 12.8907 36.5875 10.2576C37.0898 9.90467 37.7812 10.1029 38.0195 10.6695C39.6999 14.6649 42 21.8536 40.5269 25.5099Z" fill="#DAD9D3" stroke="#444444" stroke-linecap="round" />

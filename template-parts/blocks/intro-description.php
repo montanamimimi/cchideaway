@@ -1,11 +1,16 @@
+    <?php 
+    $title = get_field('banner_header');
+    $image = get_the_post_thumbnail_url($post, 'large');
+    ?>
+    
     <section class="intro" data-aos="fade-in" data-aos-anchor=".intro">
         <div class="container-fluid">
             <picture class="intro__image">
 
-                <img src="<?php echo get_the_post_thumbnail_url($post, 'large'); ?>" alt="Hotel location" />
+                <img src="<?php echo $image ? $image : get_theme_file_uri('/assets/images/img-demo-03.jpg'); ?>" />
             </picture>
             <div class="intro__desc">
-                <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro"><?php echo get_field('banner_header'); ?></h1>
+                <h1 class="intro__title" data-aos="fade-up" data-aos-delay="200" data-aos-anchor=".intro"><?php echo $title ? $title : get_the_title(); ?></h1>
                 <p class="intro__text" data-aos="fade-up" data-aos-delay="400" data-aos-anchor=".intro"><?php echo get_field('banner_description'); ?> </p>
             </div>
             <div class="intro__booking" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".intro">
